@@ -306,7 +306,7 @@ const itineraryPlaces = [
             { place: 'Central Park', price: 300 },
             { place: 'Empire State Building', price: 250 },
             { place: 'Times Square', price: 400 },
-            { place: 'Metropolitan Museum of Art', price: 500 },
+            { place: 'Metropolitan Museum of Art', price: 550 },
             { place: 'Brooklyn Bridge', price: 300 },
             { place: 'The High Line', price: 250 }
         ]

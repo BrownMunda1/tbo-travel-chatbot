@@ -1,0 +1,141 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: want_to_travel
+  examples: |
+    - i want to go on a vacation
+    - i want to go
+    - i want to travel
+    - i want to go on a trip
+    - want to travel
+- intent: inform
+  examples: |
+    - i want to go to [kasauli](place) in [low](budget)
+    - i want to go on a trip to [kasauli](place) in [low](budget)
+    - i want to go to [kasauli](place) in [december](month) in [low](budget)
+    - i want to go to a trip in [december](month) in [low](budget)
+    - for [kasauli](place) in [december](month) in [low](budget)
+    - [kasauli](place) in [low](budget)
+    - [shimla](place)
+    - [delhi](place)
+    - [new delhi](place)
+    - [manali](place)
+    - [goa](place)
+    - [munnar](place)
+    - [srinagar](place)
+    - [chandigarh](place)
+    - [mumbai](place)
+    - [gangtok](place)
+    - [ladakh](place)
+    - [nainital](place)
+    - [london](place)
+    - [new york](place)
+    - [dubai](place)
+    - [abu dhabi](place)
+    - [bali](place)
+    - [thailand](place)
+    - [singapore](place)
+    - [paris](place)
+    - [melbourne](place)
+    - [auckland](place)
+    - [tokyo](place)
+    - [rio de janeiro](place)
+    - [january](month)
+    - [februray](month)
+    - [march](month)
+    - [april](month)
+    - [may](month)
+    - [june](month)
+    - [july](month)
+    - [august](month)
+    - [september](month)
+    - [october](month)
+    - [november](month)
+    - [december](month) in [low](budget)
+    - [low](budget)
+    - [mid](budget)
+    - [high](budget)
+
+
+# future scope: can incorporate the attractions, hotel facilities thing from Hotel Details.

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./App.css";
+import Basic from './components/Basic';
 
 function App() {
   const [userMessage, setUserMessage] = useState('');
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>Simple Chatbot</h1>
+      {/* <h1>Simple Chatbot</h1>
       <div>
         <div>
           <input
@@ -31,7 +32,8 @@ function App() {
           <p>User: {userMessage}</p>
           <p>Bot: {botResponse}</p>
         </div>
-      </div>
+      </div> */}
+      <Basic/>
     </div>
   );
 }

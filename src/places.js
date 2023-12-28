@@ -312,3 +312,5 @@ const itineraryPlaces = [
         ]
     }
 ];
+
+export default itineraryPlaces;

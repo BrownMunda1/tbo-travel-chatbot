@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust the height of the navbar */
+    background-color: #70a5fa;
+    opacity: 0.8; /* Change the background color of the navbar */
+  }
+  
+  .logo img {
+    width: auto;
+    height: 50px;
+  }
+  
 .chatbot-container {
-    background-color: #f36b21;
+    background-color: rgba(247, 249, 250, 0.6);
     width: 40%;
     height: 80vh; /* 80% of the viewport height */
     border: 1px solid #ccc;
@@ -13,3 +27,4 @@
     overflow-y: auto; /* Enable vertical scrolling */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
+  

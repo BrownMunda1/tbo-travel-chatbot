@@ -15,13 +15,22 @@ function App() {
   
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="chatbot-container">
-        <CategoryPrompt setCategory={setCategory}/>
-        {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
-        {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
-        {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
-        {month === ""?"":<DaysPrompt setDays={setDays}/>}
+    <div>
+      <div>
+        <nav className="navbar">
+          <div className="logo">
+            <img src={require('./images/logo.png')} alt="logo" />
+          </div>
+        </nav>
+      </div>
+      <div className="flex justify-center items-center h-screen">
+        <div className="chatbot-container">
+          <CategoryPrompt setCategory={setCategory}/>
+          {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
+          {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
+          {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
+          {month === ""?"":<DaysPrompt setDays={setDays}/>}
+        </div>
       </div>
     </div>
     

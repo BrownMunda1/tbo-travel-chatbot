@@ -24,14 +24,14 @@ function App() {
           </div>
         </nav>
       </div>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center my-5 h-full">
         <div className="chatbot-container">
           <CategoryPrompt setCategory={setCategory}/>
           {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
           {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
           {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
           {month === ""?"":<DaysPrompt setDays={setDays}/>}
-        {days === ""?"":<OriginPrompt setDays={setOrigin}/>}
+          {days === ""?"":<OriginPrompt setDays={setOrigin}/>}
         </div>
       </div>
     </div>

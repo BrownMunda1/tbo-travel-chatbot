@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.chatbot-container {
+    background-color: #f36b21;
+    width: 40%;
+    height: 80vh; /* 80% of the viewport height */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 0 auto; /* Center the container horizontally */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }

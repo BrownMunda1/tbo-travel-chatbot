@@ -50,6 +50,8 @@
 
 .usermsg{
     background-color: rgb(235, 220, 252);
+    display: flex;
+    justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
     height:auto;

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-[#f36b21] block max-w-sm p-6 border border-gray-200 rounded-lg h-fit w-96 gap-2.5">
+      <div className="chatbot-container">
         <CategoryPrompt setCategory={setCategory}/>
         {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
         {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}

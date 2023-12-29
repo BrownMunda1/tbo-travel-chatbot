@@ -5,6 +5,7 @@ import CategoryPrompt from './components/CategoryPrompt';
 import CityPrompt from './components/CityPrompt';
 import DaysPrompt from './components/DaysPrompt';
 import MonthPrompt from './components/MonthPrompt';
+import OriginPrompt from './components/OriginPrompt';
 
 function App() {
   const [category, setCategory] = useState("");
@@ -12,6 +13,7 @@ function App() {
   const [budget, setBudget] = useState("");
   const [month, setMonth] = useState("");
   const [days, setDays] = useState("");
+  const [origin, setOrigin] = useState("");
   
 
   return (
@@ -22,6 +24,7 @@ function App() {
         {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
         {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
         {month === ""?"":<DaysPrompt setDays={setDays}/>}
+        {days === ""?"":<OriginPrompt setDays={setOrigin}/>}
       </div>
     </div>
     

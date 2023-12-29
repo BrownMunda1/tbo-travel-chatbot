@@ -10,7 +10,7 @@ export default function DaysPrompt(props) {
     return (
         <>
             <QuePrompt question="No. of Days" />
-            <ListGroup type="days" list={categories} setDays={props.setDays} setResponse={setResponse}/>
+            {response === ""?<ListGroup type="days" list={categories} setDays={props.setDays} setResponse={setResponse}/>:""}
             {response === ""?"":<Response response={response}/>}
         </>
     );

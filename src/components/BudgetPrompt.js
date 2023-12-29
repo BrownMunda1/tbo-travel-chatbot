@@ -10,7 +10,7 @@ function BudgetPrompt(props) {
     return (
         <>
             <QuePrompt question="Budget"/>
-            <ListGroup type="budget" list={categories} setBudget={props.setBudget} setResponse={setResponse}/>
+            {response === ""?<ListGroup type="budget" list={categories} setBudget={props.setBudget} setResponse={setResponse}/>:""}
             {response === ""?"":<Response response={response}/>}
         </>
     );

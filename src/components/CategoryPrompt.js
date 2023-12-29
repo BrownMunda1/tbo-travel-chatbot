@@ -10,7 +10,7 @@ function CategoryPrompt(props) {
     return (
         <>
             <QuePrompt question="Where do you want to travel...??"/>
-            <ListGroup type="category" list={categories} setCategory= {props.setCategory} setResponse={setResponse}/>
+            {response === ""?<ListGroup type="category" list={categories} setCategory= {props.setCategory} setResponse={setResponse}/>:""}
             {response === ""?"":<Response response={response}/>}
         </>
     );

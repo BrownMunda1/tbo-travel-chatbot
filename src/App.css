@@ -13,3 +13,14 @@
     overflow-y: auto; /* Enable vertical scrolling */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #307fe2;
+    border: 1px;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3791ff;
+  }

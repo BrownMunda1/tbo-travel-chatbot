@@ -1,14 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import ListGroup from "./ListGroup";
 import QuePrompt from "./QuePrompt";
+import Response from "./Response";
 
-function BudgetPrompt() {
+function BudgetPrompt(props) {
     const categories = ['Low', 'Low-Mid', 'Mid', 'High'];
+    const [response, setResponse] = useState("");
 
     return (
         <>
             <QuePrompt question="Budget"/>
-            <ListGroup list={categories}/>
+            <ListGroup type="budget" list={categories} setBudget={props.setBudget} setResponse={setResponse}/>
+            {response === ""?"":<Response response={response}/>}
         </>
     );
 }

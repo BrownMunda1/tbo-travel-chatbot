@@ -7,15 +7,21 @@ import DaysPrompt from './components/DaysPrompt';
 import MonthPrompt from './components/MonthPrompt';
 
 function App() {
+  const [category, setCategory] = useState("");
+  const [city, setCity] = useState("");
+  const [budget, setBudget] = useState("");
+  const [month, setMonth] = useState("");
+  const [days, setDays] = useState("");
+  
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="bg-[#f36b21] block max-w-sm p-6 border border-gray-200 rounded-lg h-fit w-96 gap-2.5">
-
-        <CategoryPrompt/>
-        <CityPrompt/>
-        <BudgetPrompt/>
-        <MonthPrompt/>
-        <DaysPrompt/>
+        <CategoryPrompt setCategory={setCategory}/>
+        {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
+        {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
+        {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
+        {month === ""?"":<DaysPrompt setDays={setDays}/>}
       </div>
     </div>
     

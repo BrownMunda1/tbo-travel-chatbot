@@ -9,7 +9,7 @@ function MonthPrompt(props){
 
     return (
         <>
-            <QuePrompt question="Month" />
+            <QuePrompt question="Could you please specify the month in which you are planning your trip?" />
             {response === ""?<ListGroup type="month" list={categories} setMonth={props.setMonth} setResponse={setResponse}/>:""}
             {response === ""?"":<Response response={response}/>}
         </>

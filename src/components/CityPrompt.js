@@ -19,7 +19,7 @@ function CityPrompt(props) {
 
     return (
         <>
-            <QuePrompt question="Please select one of the following destinations"/>
+            <QuePrompt question="Here are some of the most visited and top recommendations"/>
             {response === ""?<ListGroup type="city" list={CitiesList} setCity= {props.setCity} setResponse={setResponse}/>:""}
             {response === ""?"":<Response response={response}/>}
         </>

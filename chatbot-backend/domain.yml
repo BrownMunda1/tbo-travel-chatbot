@@ -1,0 +1,86 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- inform
+- mood_great
+- mood_unhappy
+- want_to_travel
+
+entities:
+- place
+- month
+- budget
+
+slots:
+  place:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: place
+      condition: 
+      - requested_slot: place
+    influence_conversation: true
+  month:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: month
+      condition: 
+      - requested_slot: month
+    influence_conversation: true
+  budget:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: budget
+      condition: 
+      - requested_slot: budget
+    influence_conversation: true
+forms:
+  travel_form:
+    required_slots:
+      - place 
+      - month
+      - budget
+      
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_travel_slots:
+  - text: i will prepare an itinerary for {place} in {month} for {budget} budget ...
+  utter_ask_place:
+  - text: please mention the city where you want to go
+  utter_ask_month:
+  - text: please mention the month when you want to go
+  utter_ask_budget:
+  - text: please mention the budget in which you want to travel
+  utter_hotels_response:
+  - custom:
+      text: ""
+      results: "{results}"
+
+
+actions:
+- utter_travel_slots
+- validate_travel_form
+- action_fetch_hotels
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

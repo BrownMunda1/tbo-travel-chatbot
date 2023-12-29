@@ -30,6 +30,7 @@ function App() {
           {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
           {budget === ""?"":<MonthPrompt setMonth={setMonth}/>}
           {month === ""?"":<DaysPrompt setDays={setDays}/>}
+        {days === ""?"":<OriginPrompt setDays={setOrigin}/>}
         </div>
       </div>
     </div>

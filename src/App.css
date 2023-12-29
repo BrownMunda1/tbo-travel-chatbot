@@ -19,7 +19,7 @@
 .chatbot-container {
     background-color: rgba(247, 249, 250, 0.6);
     width: 40%;
-    height: 80vh; /* 80% of the viewport height */
+    height: 75vh; /* 80% of the viewport height */
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 24px;

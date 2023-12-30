@@ -4,7 +4,6 @@ import BudgetPrompt from './components/BudgetPrompt';
 import CategoryPrompt from './components/CategoryPrompt';
 import CityPrompt from './components/CityPrompt';
 import DaysPrompt from './components/DaysPrompt';
-// import MonthPrompt from './components/MonthPrompt';
 import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
 import axios from 'axios';
@@ -14,26 +13,32 @@ function App() {
   const [category, setCategory] = useState("");
   const [city, setCity] = useState("");
   const [budget, setBudget] = useState("");
-  // const [month, setMonth] = useState("");
   const [days, setDays] = useState("");
   const [origin,setOrigin] = useState("")
   const [startDate,setStartDate] = useState("")
   const [showModal, setShowModal] = useState(false);
 
-
-  const handleSubmit = (e) => {
-    
-    e.preventDefault();
-    const message = `/inform{"place": "${city}", "days": "${days}", "budget": "${budget}", "origin": "${origin}", "startDate": "${startDate}"}`;
-    const body = JSON.stringify({ "sender": "Sharmaji Family", "message": message })
-    axios.post("localhost:5005/webhooks/rest/webhook/",body).then(
-      (response)=>{
-        console.log(response);
-        setShowModal(true);
-      }
-    );
+  const fetchData = async () => {
+    const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
+    const body = JSON.stringify({ "sender": "Sharmaji Family", "message": message });
+    const response = await fetch("http://localhost:5005/webhooks/rest/webhook",{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'charset':'UTF-8',
+      },
+      body: body
+    })
+    const json = await response.json();
+    console.log(json);
+    console.log(JSON.parse(json[1]["text"]));
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchData();
+  }
   
   return (
     <div>
@@ -49,7 +54,6 @@ function App() {
           <CategoryPrompt setCategory={setCategory}/>
           {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
           {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
-          {/* {budget === ""?"":<MonthPrompt setMonth={setMonth}/>} */}
           {budget === ""?"":<DaysPrompt setDays={setDays}/>}
           {days === ""?"":<OriginPrompt setOrigin={setOrigin}/>}
           {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }

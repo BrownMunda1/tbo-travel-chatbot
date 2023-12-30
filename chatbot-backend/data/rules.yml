@@ -12,6 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+
 - rule: Activate Travel Form
   steps: 
   - intent: want_to_travel
@@ -21,6 +22,7 @@ rules:
 - rule: Activate Travel Form2
   steps: 
   - intent: inform
+  - action: action_fetch_details_from_text
   - action: travel_form
   - active_loop: travel_form
 

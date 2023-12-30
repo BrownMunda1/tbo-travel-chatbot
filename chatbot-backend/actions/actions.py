@@ -1,27 +1,32 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import EventType
+from rasa_sdk.events import EventType, SlotSet
 from rasa_sdk.types import DomainDict
 import requests
 import json
 from datetime import datetime, timedelta
 from functools import cmp_to_key
+import datetime as dt
 
-city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326}
+city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326, 'leh': 125144, 'varanasi': 141618, 'banaras': 141618, 'dharamshala': 115880, 'meghalaya': 138670, 'shillong': 138670, 'kochi':101204}
 
 travel_type = {
-    'cityscapes': ['chandigarh','udaipur','delhi','mumbai','jaisalmer'],
-    'mountains': ['ladakh','manali','nainital','shimla','srinagar'],
-    'beach': ['goa','pondicherry','port blair','puri','daman'],
+    'cityscapes': ['chandigarh','udaipur','delhi','mumbai', 'varanasi'],
+    'mountains': ['shimla','srinagar', 'leh', 'dharamshala','meghalaya'],
+    'beach': ['goa','pondicherry','port blair','daman','kochi'],
     'foreign': ['dubai', 'bali', 'singapore', 'paris', 'london'],
 }
 
-hotel_budget_mapping = {
+budget_mapping = {
     'low': ['OneStar','TwoStar'],
     'low-mid': ['ThreeStar'],
     'mid': ['FourStar'],
     'high': ['FiveStar']
+}
+
+airport_codes = {
+    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'new york': 130452,'newyork': 130452, 'pondicherry': "PNY", 'puri': 132593, 'port blair': "IXZ", 'daman': "NMB", 'jaisalmer': 122326, "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK",
 }
 
 cities = ['chandigarh', 'gangtok', 'goa', 'kasauli', 'ladakh', 'manali', 'munnar', 'nainital', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai', 'bali', 'singapore', 'thailand', 'tokyo', 'rio de janeiro', 'auckland', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'puri','daman','port blair','jaisalmer']
@@ -29,18 +34,18 @@ cities = ['chandigarh', 'gangtok', 'goa', 'kasauli', 'ladakh', 'manali', 'munnar
 months = ['january','february','march','april','may','june','july','august','september','october','november','december']
 
 month_mapping = {
-    'january':["01",31],
-    'february':["02",29],
-    'march':["03",31],
-    'april':["04",30],
-    'may':["05",31],
-    'june':["06",30],
-    'july':["07",31],
-    'august':["08",31],
-    'september':["09",30],
-    'october':["10",31],
-    'november':["11",30],
-    'december':["12",31]
+    "01": 31,
+    "02": 29,
+    "03": 31,
+    "04": 30,
+    "05": 31,
+    "06": 30,
+    "07": 31,
+    "08": 31,
+    "09": 30,
+    "10": 31,
+    "11": 30,
+    "12": 31,
 }
 
 class ValidateTravelForm(FormValidationAction):
@@ -63,35 +68,52 @@ class ValidateTravelForm(FormValidationAction):
         else:
             return {"place": slot_value}
         
-    async def validate_month(
+    async def validate_origin(
             self, 
             slot_value: Any,
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text,Any]:
-        """Validate `month` value"""
-        # print("i'm here3")
-        if slot_value.lower() not in months: 
-            dispatcher.utter_message(text=f"Enter a valid month or please check spellings")
-            return {"month": None}
-        else: 
-            return {"month": slot_value}
+        """Validate `origin` value"""
+        # print("i'm here2")
+        if slot_value.lower() not in cities: 
+            dispatcher.utter_message(text=f"Entered value is not accepted in our database yet")
+            return {"origin": None}
+        else:
+            return {"origin": slot_value}
         
-    async def validate_hotel_budget(
+    async def validate_startDate(
             self, 
             slot_value: Any,
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text,Any]:
-        """Validate `hotel_budget` value"""
+        """Validate `startDate` value"""
+        # print("i'm here3")
+
+        date_today = str(dt.date.today())
+        if slot_value > date_today:
+            return {"startDate": slot_value}
+        else:
+            dispatcher.utter_message(text=f"Enter a valid date starting from tomorrow")
+            return {"startDate": None}
+        
+    async def validate_budget(
+            self, 
+            slot_value: Any,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: DomainDict,
+    ) -> Dict[Text,Any]:
+        """Validate `budget` value"""
         # print("i'm here3")
         if slot_value.lower() not in ['low','low-mid','mid','high']:
             dispatcher.utter_message(text=f"Enter a valid budget, we only support 'low', 'low-mid', 'mid' and 'high'")
-            return {"hotel_budget": None}
+            return {"budget": None}
         else: 
-            return {"hotel_budget": slot_value}
+            return {"budget": slot_value}
         
     async def validate_days(
             self, 
@@ -110,6 +132,33 @@ class ValidateTravelForm(FormValidationAction):
             return {"days": None}
 
 
+class ActionFetchDetailsFromText(Action):
+    def name(self) -> Text:
+        # print("i'm here1")
+        return "action_fetch_details_from_text"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        text_entered = tracker.latest_message.get("text")
+        place_attr, origin_attr, startdate_attr, budget_attr, days_attr = text_entered.split(",")
+        
+        placename = place_attr.split(":")[0].strip()
+        placevalue = place_attr.split(":")[1].strip()
+        originname = origin_attr.split(":")[0].strip()
+        originvalue = origin_attr.split(":")[1].strip()
+        startdatename = startdate_attr.split(":")[0].strip()
+        startdatevalue = startdate_attr.split(":")[1].strip()
+        budgetname = budget_attr.split(":")[0].strip()
+        budgetvalue = budget_attr.split(":")[1].strip()
+        daysname = days_attr.split(":")[0].strip()
+        daysvalue = days_attr.split(":")[1].strip()
+
+        print(text_entered)
+        print(placename,placevalue,originname,originvalue,startdatename,startdatevalue,budgetname,budgetvalue,daysname,daysvalue)
+        return [SlotSet(placename,placevalue), SlotSet(originname,originvalue), SlotSet(startdatename,startdatevalue), SlotSet(budgetname,budgetvalue), SlotSet(daysname,daysvalue)]
+
+
 class ActionFetchHotels(Action):
     def name(self) -> Text:
         # print("i'm here1")
@@ -118,12 +167,19 @@ class ActionFetchHotels(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        city = tracker.get_slot("place")
-        month = tracker.get_slot("month")
-        budget = tracker.get_slot("hotel_budget")
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
+        
+        destination = tracker.get_slot("place").lower()
+        startDate = tracker.get_slot("startDate")
+        budget = tracker.get_slot("budget").lower()
+        origin = tracker.get_slot("origin").lower()
         days_of_travel = int(tracker.get_slot("days"))
-        rating = hotel_budget_mapping[budget]
-        code = city_codes[city]
+        rating = budget_mapping[budget]
+        dest_city_code = city_codes[destination]
+
+        print(destination,origin)
 
         def compare_hotels(h1, h2):
             rating1 = h1.get("HotelInfo").get("TripAdvisorRating")
@@ -151,148 +207,162 @@ class ActionFetchHotels(Action):
                     return 1
                 
         def compare_flight(f1, f2):
-            price1 = float(f1.get("Fare").get("PublishedFare"))
-            price2 = float(f2.get("Fare").get("PublishedFare"))
+            price1 = float(f1.get("Fare").get("OfferedFare"))
+            price2 = float(f2.get("Fare").get("OfferedFare"))
             if price1 < price2:
                 return -1
             else:
                 return 1
 
-        total_price = 1000000
+        total_price = 0
         hotel_details=[]
-        arrival_flight_details={}
-        depart_flight_details={}
-        for date in [1,10,20]:
-            curr_price=0
-            if date + days_of_travel > month_mapping[month][1]:
-                break
-            first_day = ""
-            if date < 10:
-                first_day = "2024-" + month_mapping[month][0] + "-0" + str(date)
-            else:
-                first_day = "2024-" + month_mapping[month][0] + "-" + str(date)
-            
-            start_date_obj = datetime.strptime(first_day, '%Y-%m-%d')
-            result_date_obj = start_date_obj + timedelta(days=days_of_travel)
-            last_day= result_date_obj.strftime('%Y-%m-%d')
-            # print(type(first_day))
-            hotel_body = {
-                "CheckIn": first_day,
-                "CheckOut": last_day,
-                "HotelCodes": "",
-                "CityCode": str(code),
-                "CityName": city.capitalize(),
-                "CountryName": "India",
-                "GuestNationality": "IN",
-                "PreferredCurrencyCode": "INR",
-                "PaxRooms": [
-                    {
-                        "Adults": 1,
-                        "Children": 0
-                    }
-                ],
-                "IsDetailResponse": True,
-                "ResponseTime": 23,
-                "Filters": {
-                    "MealType": "All",
-                    "Refundable": "all",
-                    "NoOfRooms": 1,
-                    "StarRating": "All"
+        
+        
+        start_date_obj = datetime.strptime(startDate, '%Y-%m-%d')
+        result_date_obj = start_date_obj + timedelta(days=days_of_travel)
+        last_day= result_date_obj.strftime('%Y-%m-%d')
+        
+        hotel_body = {
+            "CheckIn": startDate,
+            "CheckOut": last_day,
+            "HotelCodes": "",
+            "CityCode": str(dest_city_code),
+            "CityName": destination.capitalize(),
+            "CountryName": "India",
+            "GuestNationality": "IN",
+            "PreferredCurrencyCode": "INR",
+            "PaxRooms": [
+                {
+                    "Adults": 1,
+                    "Children": 0
                 }
+            ],
+            "IsDetailResponse": True,
+            "ResponseTime": 23,
+            "Filters": {
+                "MealType": "All",
+                "Refundable": "all",
+                "NoOfRooms": 1,
+                "StarRating": "All"
             }
-            # print("rating: ", rating)
-            # print("HOTEL BODY: ",hotel_body)
-            hotel_response = requests.post("http://api.tbotechnology.in/TBOHolidays_HotelAPI/HotelSearch",json=hotel_body,auth=("hackathontest","Hac@48298799")).json()
-            # print(hotel_response)
-            temp_hotel_details=[]
-            if hotel_response.get("Status").get("Code")==200:
-                print("here")
-                if hotel_response.get("HotelSearchResults"):
-                    temp = sorted(hotel_response.get("HotelSearchResults"),key=cmp_to_key(compare_hotels))
-                    print("Hotel Data -> ",temp)
-                    for hotel in temp:
-                        if hotel.get("HotelInfo").get("Rating") in rating:
-                            curr_price += hotel.get("MinHotelPrice").get("TotalPrice")
-                            break
-                    for hotel in temp:
-                        if len(temp_hotel_details) == 5:
-                            if hotel.get("HotelInfo").get("Rating") in rating:
-                                temp_hotel_details.append(hotel)
+        }
+        
+        hotel_response = requests.post("http://api.tbotechnology.in/TBOHolidays_HotelAPI/HotelSearch",json=hotel_body,auth=("hackathontest","Hac@48298799")).json()
+        
+        temp_hotel_details=[]
+        if hotel_response.get("Status").get("Code")==200:
+            print("here")
+            if hotel_response.get("HotelSearchResults"):
+                temp = sorted(hotel_response.get("HotelSearchResults"),key=cmp_to_key(compare_hotels))
 
-            print("Hotel Price = ", curr_price)
+                for hotel in temp:
+                    if hotel.get("HotelInfo").get("Rating") in rating:
+                        total_price += hotel.get("MinHotelPrice").get("TotalPrice")
+                        break
+                for hotel in temp:
+                    if len(temp_hotel_details) == 5: break
+                    if hotel.get("HotelInfo").get("Rating") in rating:
+                        temp_hotel_details.append(hotel)
 
-
-            flight_body = {
-                "EndUserIp": "192.168.10.10",
-                "TokenId": "5542cebd-f6d5-4e94-a11d-eea3f0e18e37",
-                "AdultCount": "1",
-                "ChildCount": "0",
-                "InfantCount": "0",
-                "DirectFlight": "false",
-                "OneStopFlight": "false",
-                "JourneyType": "2",
-                "PreferredAirlines": None,
-                "Segments": [
-                    {
-                        "Origin": "DEL",
-                        "Destination": "BOM",
-                        "FlightCabinClass": "1",
-                        "PreferredDepartureTime": first_day + "T00: 00: 00",
-                        "PreferredArrivalTime": first_day + "T00: 00: 00"
-                    },
-                    {
-                        "Origin": "BOM",
-                        "Destination": "DEL",
-                        "FlightCabinClass": "1",
-                        "PreferredDepartureTime": last_day + "T00: 00: 00",
-                        "PreferredArrivalTime": last_day + "T00: 00: 00"
-                    },
-                ],
-                "Sources": None
-            }
-            # print("FLIGHT BODY: ",flight_body)
-            flight_response = requests.post("http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search",json=flight_body,auth=("Hackathon","Hackathon@1234")).json().get("Response")
-            # print(flight_response)
-            flight_cost = 0
-            temp_depart={}
-            temp_return={}
-            if flight_response.get("ResponseStatus") == 1:
-                if flight_response.get("Results"):
-                    # print("here1")
-                    depart_flight = flight_response.get("Results")[0]
-                    return_flight = flight_response.get("Results")[1]
-                    # print("here2")
-                    temp_depart = sorted(depart_flight,key=cmp_to_key(compare_flight))[0]
-                    temp_return = sorted(return_flight,key=cmp_to_key(compare_flight))[0]
-                    # print("here3")
-                    flight_cost = temp_depart.get("Fare").get("PublishedFare") + temp_return.get("Fare").get("PublishedFare")
-                    print("here4")
+        print(temp_hotel_details)
+        print("Hotel Price = ", total_price)
 
 
-            print("Flight Cost = ",flight_cost)
+        flight_body = {
+            "EndUserIp": "192.168.10.10",
+            "TokenId": "5542cebd-f6d5-4e94-a11d-eea3f0e18e37",
+            "AdultCount": "1",
+            "ChildCount": "0",
+            "InfantCount": "0",
+            "DirectFlight": "false",
+            "OneStopFlight": "false",
+            "JourneyType": "2",
+            "PreferredAirlines": None,
+            "Segments": [
+                {
+                    "Origin": airport_codes[origin],
+                    "Destination": airport_codes[destination],
+                    "FlightCabinClass": "1",
+                    "PreferredDepartureTime": startDate + "T00: 00: 00",
+                    "PreferredArrivalTime": startDate + "T00: 00: 00"
+                },
+                {
+                    "Origin": airport_codes[destination],
+                    "Destination": airport_codes[origin],
+                    "FlightCabinClass": "1",
+                    "PreferredDepartureTime": last_day + "T00: 00: 00",
+                    "PreferredArrivalTime": last_day + "T00: 00: 00"
+                },
+            ],
+            "Sources": None
+        }
+        # print(flight_body)
+        flight_response = requests.post("http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search",json=flight_body,auth=("Hackathon","Hackathon@1234")).json().get("Response")
+        # print(flight_response)
+        flight_cost = 0
+        depart_flight=[]
+        return_flight=[]
+        if flight_response.get("ResponseStatus") == 1:
+            if flight_response.get("Results"):
+                # print("here1")
+                depart_flight_temp = flight_response.get("Results")[0]
+                return_flight_temp = flight_response.get("Results")[1]
+                # print("here2")
+                depart_flight = sorted(depart_flight_temp,key=cmp_to_key(compare_flight))
+                return_flight = sorted(return_flight_temp,key=cmp_to_key(compare_flight))
+                # print("here3")
+                temp_depart = depart_flight[0]
+                temp_return = return_flight[0]
+                flight_cost = temp_depart.get("Fare").get("PublishedFare") + temp_return.get("Fare").get("PublishedFare")
 
-            curr_price += flight_cost
 
-            if curr_price < total_price:
-                total_price = curr_price
-                depart_flight_details = temp_depart
-                arrival_flight_details = temp_return
-                hotel_details = temp_hotel_details
+        print("Flight Cost = ",flight_cost)
+
+        total_price += flight_cost
+
+        # depart_flight_details = temp_depart
+        # arrival_flight_details = temp_return
+        hotel_details = temp_hotel_details
+
+        morning_departure = {} # anything bw 12 am to 12pm
+        afternoon_departure = {} # anything bw 12pm to 5pm 
+        evening_departure = {} # anything bw 5pm to 12am
+
+        morning_arrival = {} # anything bw 12 am to 12pm
+        afternoon_arrival = {} # anything bw 12pm to 5pm
+        evening_arrival = {} # anything bw 5pm to 12am
+
+        for flight in depart_flight:
+            if bool(morning_departure) and bool(afternoon_departure) and bool(evening_departure): break
+            hour = int(flight.get("Segments")[0][0].get("Origin").get("DepTime").split("T")[1].split(":")[0])
+            if hour >=0 and hour <12 and (not morning_departure):
+                morning_departure = flight
+            elif hour>=12 and hour<17 and (not afternoon_departure):
+                afternoon_departure = flight
+            elif hour>=17 and hour<=24 and (not evening_departure):
+                evening_departure = flight
+
+        for flight in return_flight:
+            if bool(morning_arrival) and bool(afternoon_arrival) and bool(evening_arrival): break
+            hour = int(flight.get("Segments")[0][0].get("Origin").get("DepTime").split("T")[1].split(":")[0])
+            if hour >=0 and hour <12 and (not morning_arrival):
+                morning_arrival = flight
+            elif hour>=12 and hour<17 and (not afternoon_arrival):
+                afternoon_arrival = flight
+            elif hour>=17 and hour<=24 and (not evening_arrival):
+                evening_arrival = flight
+
         
         result = {
-            "DepartureFlightDetails": depart_flight_details,
+            "DepartureFlightDetails": [morning_departure,afternoon_departure,evening_departure],
             "HotelDetailsList": hotel_details,
-            "ArrivalFlightDetails": arrival_flight_details
+            "ArrivalFlightDetails": [morning_arrival,afternoon_arrival,evening_arrival]
         }
+
         print(result)
         dispatcher.utter_message(json.dumps(result))
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
         return []
 
-
-# city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452}
-
-# [{'Code': '114107', 'Name': 'Chandigarh,   Chandigarh'}, {'Code': '119221', 'Name': 'Gangtok,   Sikkim'}, {'Code': '119805', 'Name': 'Goa,   GOA'}, {'Code': '122950', 'Name': 'Kasauli,   Himachal Pradesh'}, {'Code': '150363', 'Name': 'Ladakh,   Jammu and Kashmir'}, {'Code': '126388', 'Name': 'Manali,   Himachal pradesh'}, {'Code': '128573', 'Name': 'Munnar,   Kerala'}, {'Code': '129726', 'Name': 'Nainital,   Uttarakhand'}, {'Code': '138673', 'Name': 'Shimla,   Himachal Pradesh'}, {'Code': '140522', 'Name': 'Udaipur,   Rajasthan'},{"Code": "130443","Name": "New Delhi,   DELHI"}, {"Code": "139456","Name": "Srinagar,   Jammu and Kashmir"},{"Code": "144306","Name": "Mumbai,   Maharashtra"}, {"Code": "115936","Name": "Dubai"}, {"Code": "110670","Name": "Bali"}, {"Code": "138703","Name": "Singapore"}, {"Code": "107167","Name": "Thailand"}, {"Code": "148251","Name": "Tokyo"}, {"Code": "134921","Name": "Rio de Janeiro"}, {"Code": "109654","Name": "Auckland"}, {"Code": "131408","Name": "Paris"}, {"Code": "127718","Name": "Melbourne,   Victoria"}, {"Code": "126632","Name": "London"}, {"Code": "130452","Name": "New York,   New York"}]
-
-# list of states = ['kerala', 'andaman & nicobar', 'gujarat', 'daman and diu', 'west bengal', 'west bengal', 'uttar pradesh', 'meghalaya', 'odisha', 'andra pradesh', 'tripura', 'madhya pradesh', 'uttarakhand', 'delhi national territory', 'himachal pradesh', 'bihar', 'himachal pradesh', 'goa', 'tamil nadu', 'karnataka', 'tamil nadu', 'telangana', 'jammu and kashmir', 'maharashtra', 'dadra and nagar have', 'uttarakhand', 'orissa', 'gujrat', 'kerala', 'andhra pradesh', 'delhi', 'haryana', 'mizoram', 'chhattisgarh', 'uttar pradesh', 'karnataka', 'chandigarh', 'goa', 'punjab', 'himachal pradesh', 'rajasthan', 'jharkhand', 'rajasthan', 'assam', 'sikkim']
-
-# list of cities = ['rohet', 'giridih', 'shamirpet', 'north paravur', 'muzaffarnagar', 'vadodara', 'cherai beach', 'zirakpur', 'munsiyari', 'malappuram', 'vizhinjam', 'gwalior', 'raipur', 'darjeeling', 'kurnool', 'nalkeri', 'krishnagiri', 'vishakapatnam', 'arambol', 'pandikkad', 'sangli', 'asansol', 'nashik', 'bhandardara', 'mathura', 'latur', 'raigad', 'choglamsar', 'hebbal', 'guirim', 'umaria', 'solapur', 'kuchaman', 'velangani', 'mandrem', 'sambalpur', 'chundale', 'kothamangalam', 'shahpur', 'greater noida', 'cavelossim', 'canacona', 'mandarmoni', 'murud', 'benaulim', 'covelong', 'bharuch', 'agartala', 'aizawl', 'moradabad', 'veraval', 'sirkazhi', 'sasan gir', 'balangir', 'coochbehar', 'vrindavan', 'calcutta', 'matheran', 'tarangambadi', 'hampi', 'chidambaram', 'chittaurgarh', 'purakkad', 'karimnagar', 'ludhiana', 'chakan', 'kamalpur', 'chhota udaipur', 'surat', 'mettupalayam', 'kalpetta', 'varca beach', 'candolim beach', 'malpura', 'aurangabad', 'nyerak', 'nanded', 'bangaram island', 'dimapur', 'rajkot', 'glenburn', 'nadiad', 'ranakpur', 'kanpur', 'bakkhali', 'salem', 'dankuni', 'satpura', 'calicut', 'balaghat', 'jhansi', 'devikulam', 'kanyakumari', 'pollachi', 'shahpura', 'ajabgarh', 'mukteshwar', 'kota', 'tiruppur', 'kamba', 'thanneermukkom', 'dharampur', 'shivpuri', 'lataguri', 'kasauli', 'guruvayur', 'bhatinda', 'guntur', 'tirupati', 'fatehgarh', 'ratlam', 'pakhal', 'chikmagalur', 'sravasti', 'abu road', 'candolim', 'hisar', 'saharanpur', 'tib bago', 'rajgir', 'jispa', 'govardhan', 'kappad', 'shirdi', 'thiruvananthapuram', 'arcot', 'sonamarg', 'skara', 'sitlakhet', 'jwalamukhi', 'b. r. hills', 'muradabad', 'bhat', 'hyderabad', 'shamshabad', 'sikar', 'jeypore', 'shimoga', 'badami', 'car nicobar', 'lachung', 'bangalore', 'dharamsala', 'panipat', 'pantnagar', 'vandanmedu', 'fatehabad', 'jhunjhunu', 'bagdogra', 'bhubaneswar', 'dausa', 'solan', 'karwar', 'nattika', 'rupsi', 'porbandar', 'utorda beach', 'kudal', 'pulamanthole', 'arpora', 'kutch', 'yuksom', 'sanand', 'pokhran', 'ajmer', 'kanha', 'ahmednagar', 'ravangla', 'majorda beach', 'warangal', 'coorg', 'turia', 'igatpuri', 'nagarhole national park', 'sindhudi', 'digha', 'kumarakom', 'ramagundam', 'jodhpur', 'jaipur', 'mcleod ganj', 'chhindwara', 'cuddapah', 'haridwar', 'kashid', 'nagoa', 'sultan bathery', 'yavatmal', 'badrinath', 'vasco da gama', 'hosur', 'shingrak', 'deogarh', 'gosaba', 'uchiyarda', 'roorkee', 'colva', 'bhowali', 'indore', 'ranchi', 'vagamon', 'daman', 'itanagar', 'mount abu', 'dhikuli', 'sinquerim beach', 'mumbai', 'namchi', 'phalodi', 'dhanaulti', 'somnath', 'chalakudy', 'hansi', 'malayattoor', 'nilgiri', 'secunderabad', 'burhanpur', 'yamunotri', 'dhanbad', 'auli', 'nakinda', 'jalore', 'mandawa', 'tawang', 'ratnagiri', 'palani', 'tirunelveli', 'gurgaon', 'havelock island', 'mangalore', 'kushinagar', 'pench', 'panjim', 'ramathra fort', 'baga', 'tarapith', 'sunderban', 'karur', 'amer', 'kaziranga', 'navi mumbai', 'ramgarh', 'dwarka', 'rewa', 'kedarnath', 'beawar', 'mohali', 'bundi', 'lakkidi', 'murinjapuzha', 'sanchi', 'ponmudi', 'cansaulim beach', 'tala', 'bilaspur', 'kollam', 'devprayag', 'alwar', 'neil island', 'katihar', 'sahibzada ajit singh nagar', 'gokarna', 'kodaikanal', 'thekkady', 'barbil', 'tezpur', 'tiruchirappalli', 'kasarde', 'alto porvorim', 'bhiwadi', 'gorakhpur', 'rameshwaram', 'balurghat', 'bijaipur', 'durgapur', 'kushalnagar', 'dhanachuli', 'periyar', 'whitefield', 'chamba', 'kumbhalgarh', 'agra', 'bijainagar', 'kathgodam', 'mahabaleshwar', 'sholayur', 'khajjiar', 'pahalgam', 'pathankot', 'koti', 'puttaparthi', 'silchar', 'guwahati', 'kovalam', 'dharmapuri', 'kihim', 'keshod', 'midnapur', 'fort tiracol', 'phaltan', 'zaribago', 'jalgaon', 'cochin', 'chandigarh', 'nawalgarh', 'aligarh', 'hubli', 'jalandhar', 'jammu', 'kashipur', 'madurai', 'guna', 'vellore', 'kalady', 'thalassery', 'bhagalpur', 'charholi budruk', 'pernem', 'wankaner', 'madikeri', 'pachmarhi', 'pangong tso lake', 'bekal', 'kotputli', 'tinsukia', 'sriperumbudur', 'jagdalpur', 'thane', 'anand', 'meerut', 'gaya', 'neyveli', 'rajahmundry', 'alleppey', 'murbad', 'dirang', 'bijapur', 'kalpatta', 'fatehpur sikri', 'faridabad', 'seoni', 'mashobra', 'tura', 'vapi', 'visakhapatnam', 'bandipur', 'mahabalipuram', 'varanasi', 'kottayam', 'mandi', 'bharatpur', 'padappai', 'angul', 'khandela', 'palanpur', 'darbhanga', 'maheshwar', 'hospet', 'dungarpur', 'margao', 'north lakhimpur', 'vizianagaram', 'muzaffarpur', 'nainital', 'bhimtal', 'karnal', 'balrampur', 'junagadh', 'nimaj', 'gandhinagar', 'bellary', 'rajapalayam', 'baindur', 'rourkela', 'jamnagar', 'dhela', 'khandwa', 'chittorgarh', 'theni', 'karad', 'sawai madhopur', 'adoor', 'edava', 'wandoor', 'paragpur', 'patna', 'shekhawati', 'lava', 'dundlod', 'siliguri', 'along', 'allahabad', 'bhilai', 'titwala', 'hoshiarpur', 'hanumangarh', 'kanadukathan', 'una', 'kasargod', 'marari beach', 'shimla', 'rohtak', 'kullu', 'siana', 'morbi', 'bandhavgarh-nationalpark', 'shantiniketan', 'palolem beach', 'cuttack', 'bhuj', 'alibag', 'bhopal', 'vythiri', 'pench nationalpark', 'unchagaon', 'kumbalgarh', 'hooghly', 'bhavnagar', 'kudasan', 'malda', 'narkanda', 'sariska national park', 'uruli kanchan', 'behror', 'mussoorie', 'pimpri-chinchwad', 'bodhgaya', 'amravati', 'anjuna', 'thanjavur', 'ayodhya', 'auroville', 'coimbatore', 'ramakkalmedu', 'srikakulam', 'arrosim beach', 'dadahu', 'jambulne', 'mysore', 'thrissur', 'paravur', 'manipal', 'ichalkaranji', 'dahej', 'poovar', 'rinchenpong', 'vayalar', 'champakulam', 'nagpur', 'mamallapuram', 'thiksey', 'kotagiri', 'mapusa', 'bhiwandi', 'rohetgarh', 'jalpaiguri', 'varkala', 'orchha', 'satna', 'bogmallo', 'yelagiri', 'hudikeri', 'kerala', 'betul', 'pelling', 'haldwani', 'samayapuram', 'satara', 'tiruttani', 'athirapilly', 'nagapattinam', 'velsao beach', 'bharmour', 'bhilwara', 'durg', 'trimbak', 'kasol', 'khilchipur', 'khajuraho', 'ooty', 'kalyan', 'morjim', 'wayanad', 'ganpatipule', 'kishangarh', 'ankleshwar', 'betalbatim beach', 'dandeli', 'majorda', 'vazhoor', 'corbett-nationalpark', 'mayiladuthurai', 'chennai', 'jorhat', 'pushkar', 'panchkula', 'chorao island', 'bikaner', 'kolhapur', 'nalagarh', 'dehradun', 'neeleshwar', 'dhule', 'katra', 'konark', 'kochi', 'nellore', 'binsar', 'pune', 'gangotri', 'howrah', 'stok', 'chaukori', 'kalimpong', 'tiruvannamalai', 'perinthalmanna', 'ramnagar', 'patnitop', 'diu', 'brahmapur', 'renigunta', 'thakurdwara', 'palampur', 'ghaziabad', 'luni', 'rewari', 'goa velha', 'ahmedabad', 'junagarh', 'rudrapur', 'basara', 'narlai', 'naggar', 'kottivakkam', 'athirapally', 'mahansar', 'jabalpur', 'benaulim beach', 'gangtok', 'chail', 'cherai', 'thumkunta', 'sirsa', 'bokkapuram', 'kandla', 'bheeramballi', 'kuruppanthara', 'perambalur', 'kanchipuram', 'chintpuri', 'bardez', 'yercaud', 'srinagar', 'salasar', 'bokaro', 'kannur', 'chandipur', 'kandaghat', 'kondotty', 'kaliel', 'baddi', 'kanniyakumari', 'panna', 'calangute', 'bishangarh', 'gudalur', 'patiala', 'meppadi', 'aronda', 'gorai beach', 'trivandrum', 'bhayandar', 'ujjain', 'deepyokma', 'manali', 'gangavathi', 'deoghar', 'rajgarh', 'ranikhet', 'rudraprayag', 'pathanamthitta', 'panchgani', 'bhuntar', 'nahar magra', 'imphal', 'dapoli', 'cauvery', 'lucknow', 'uttarkashi', 'vasai', 'thodupuzha', 'lahaul and spiti', 'ambala', 'neemrana', 'daund', 'udaipur', 'changanassery', 'barauni', 'chikmaglur', 'bhogapuram', 'mirik', 'tuticorin', 'pali', 'verem', 'caranzalem', 'lingshed', 'kargil', 'almora', 'dabolim', 'mandu', 'akola', 'puducherry', 'palakkad', 'changodar', 'saligao', 'chandrapur', 'balasinore', 'mukundgarh', 'ranthambore nationalpark', 'mahad', 'barmer', 'manmad', 'nedumbassery', 'orissa', 'vajrahalli', 'kausani', 'sri ganganagar', 'kumbakonam', 'rajakkad', 'goa', 'bomdila', 'vagator', 'port blair', 'silvassa', 'dindigul', 'jalna', 'churu', 'jhadol', 'hassan', 'bareilly', 'karaikudi', 'maradu', 'mararikulam', 'chinakakani', 'rishikesh', 'adyar', 'khimsar', 'kakinada', 'mohania', 'amritsar', 'pinjore', 'hinjawadi', 'gulmarg', 'sungal', 'pateri', 'kundapur', 'munnar', 'shillong', 'wakad', 'siolim', 'mukkam', 'lonavala', 'baramati', 'chowara', 'kumily', 'puri', 'parra', 'khandala', 'khas nagrota', 'leh', 'singrauli', 'vaikom', 'malvan', 'agatti', 'new delhi', 'jamshedpur', 'vallikunnam', 'namakkal', 'mollem', 'alipurduar', 'dibrugarh', 'dholpur', 'phagwara', 'parwanoo', 'anandpur', 'samode', 'ladakh', 'dalhousie', 'gandhidham', 'lansdowne', 'udupi', 'nerul', 'sitalakhet', 'hubli-dharwad', 'karauli', 'belgaum', 'ahmedpur mandvi', 'vijayawada', 'gopalpur on sea', 'chitrakoot', 'hemis skupachan', 'baratang island', 'kangra valley', 'kadmat island', 'kailashahar', 'mohan', 'dooars', 'vainguinim beach', 'pondicherry', 'noida', 'belur & halebid', 'wüste thar', 'pudukkotai', 'coonoor', 'suratgarh', 'nadukani', 'omkareshwar', 'chamoli', 'sardargarh', 'chinnakanal', 'chiplun', 'panvel', 'chilling', 'mobor beach', 'jaisalmer', 'ernakulam', 'mullor']

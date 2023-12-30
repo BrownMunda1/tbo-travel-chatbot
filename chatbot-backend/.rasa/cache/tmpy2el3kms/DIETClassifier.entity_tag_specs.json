@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-budget",
+      "2": "I-budget",
+      "3": "L-budget",
+      "4": "U-budget",
+      "5": "B-days",
+      "6": "I-days",
+      "7": "L-days",
+      "8": "U-days",
+      "9": "B-origin",
+      "10": "I-origin",
+      "11": "L-origin",
+      "12": "U-origin",
+      "13": "B-place",
+      "14": "I-place",
+      "15": "L-place",
+      "16": "U-place",
+      "17": "B-startDate",
+      "18": "I-startDate",
+      "19": "L-startDate",
+      "20": "U-startDate",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-budget": 1,
+      "I-budget": 2,
+      "L-budget": 3,
+      "U-budget": 4,
+      "B-days": 5,
+      "I-days": 6,
+      "L-days": 7,
+      "U-days": 8,
+      "B-origin": 9,
+      "I-origin": 10,
+      "L-origin": 11,
+      "U-origin": 12,
+      "B-place": 13,
+      "I-place": 14,
+      "L-place": 15,
+      "U-place": 16,
+      "B-startDate": 17,
+      "I-startDate": 18,
+      "L-startDate": 19,
+      "U-startDate": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

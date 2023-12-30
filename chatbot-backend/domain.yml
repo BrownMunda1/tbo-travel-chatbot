@@ -12,9 +12,10 @@ intents:
 
 entities:
 - place
-- month
-- hotel_budget
+- origin
+- budget
 - days
+- startDate
 
 slots:
   place:
@@ -25,21 +26,21 @@ slots:
       condition: 
       - requested_slot: place
     influence_conversation: true
-  month:
+  origin:
     type: text
     mappings:
     - type: from_entity
-      entity: month
+      entity: origin
       condition: 
-      - requested_slot: month
+      - requested_slot: origin
     influence_conversation: true
-  hotel_budget:
+  budget:
     type: text
     mappings:
     - type: from_entity
-      entity: hotel_budget
+      entity: budget
       condition: 
-      - requested_slot: hotel_budget
+      - requested_slot: budget
     influence_conversation: true
   days:
     type: text
@@ -49,13 +50,22 @@ slots:
       condition: 
       - requested_slot: days
     influence_conversation: true
+  startDate:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: startDate
+      condition: 
+      - requested_slot: startDate
+    influence_conversation: true
 forms:
   travel_form:
     required_slots:
       - place 
-      - month
-      - hotel_budget
+      - origin
+      - budget
       - days
+      - startDate
       
 
 responses:
@@ -73,13 +83,13 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_travel_slots:
-  - text: i will prepare an itinerary for {place} in {month} for {hotel_budget} hotel budget for {days} days ...
+  - text: i will prepare an itinerary for {place} from {origin} in {startDate} for {budget} budget for {days} days ...
   utter_ask_place:
   - text: please mention the city where you want to go
-  utter_ask_month:
-  - text: please mention the month when you want to go
-  utter_ask_hotel_budget:
-  - text: please mention the hotel_budget in which you want to travel
+  utter_ask_origin:
+  - text: please mention th place from where you want to go
+  utter_ask_budget:
+  - text: please mention the budget in which you want to travel
   utter_ask_days:
   - text: please mention the duration in days in which you want to travel
   utter_hotels_response:
@@ -92,6 +102,7 @@ actions:
 - utter_travel_slots
 - validate_travel_form
 - action_fetch_hotels
+- action_fetch_details_from_text
 
 session_config:
   session_expiration_time: 60

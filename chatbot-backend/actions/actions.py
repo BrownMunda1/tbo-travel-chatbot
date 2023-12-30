@@ -5,15 +5,43 @@ from rasa_sdk.events import EventType
 from rasa_sdk.types import DomainDict
 import requests
 import json
+from datetime import datetime, timedelta
+from functools import cmp_to_key
 
-city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452}
-budget_mapping = {
-    'low': ['TwoStar'],
-    'mid': ['ThreeStar'],
-    'high': ['FourStar','FiveStar']
+city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326}
+
+travel_type = {
+    'cityscapes': ['chandigarh','udaipur','delhi','mumbai','jaisalmer'],
+    'mountains': ['ladakh','manali','nainital','shimla','srinagar'],
+    'beach': ['goa','pondicherry','port blair','puri','daman'],
+    'foreign': ['dubai', 'bali', 'singapore', 'paris', 'london'],
 }
-cities = ['chandigarh', 'gangtok', 'goa', 'kasauli', 'ladakh', 'manali', 'munnar', 'nainital', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai', 'bali', 'singapore', 'thailand', 'tokyo', 'rio de janeiro', 'auckland', 'paris', 'melbourne', 'london', 'new york','newyork']
+
+hotel_budget_mapping = {
+    'low': ['OneStar','TwoStar'],
+    'low-mid': ['ThreeStar'],
+    'mid': ['FourStar'],
+    'high': ['FiveStar']
+}
+
+cities = ['chandigarh', 'gangtok', 'goa', 'kasauli', 'ladakh', 'manali', 'munnar', 'nainital', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai', 'bali', 'singapore', 'thailand', 'tokyo', 'rio de janeiro', 'auckland', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'puri','daman','port blair','jaisalmer']
+
 months = ['january','february','march','april','may','june','july','august','september','october','november','december']
+
+month_mapping = {
+    'january':["01",31],
+    'february':["02",29],
+    'march':["03",31],
+    'april':["04",30],
+    'may':["05",31],
+    'june':["06",30],
+    'july':["07",31],
+    'august':["08",31],
+    'september':["09",30],
+    'october':["10",31],
+    'november':["11",30],
+    'december':["12",31]
+}
 
 class ValidateTravelForm(FormValidationAction):
     def name(self) -> Text:
@@ -50,20 +78,36 @@ class ValidateTravelForm(FormValidationAction):
         else: 
             return {"month": slot_value}
         
-    async def validate_budget(
+    async def validate_hotel_budget(
             self, 
             slot_value: Any,
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text,Any]:
-        """Validate `budget` value"""
+        """Validate `hotel_budget` value"""
         # print("i'm here3")
-        if slot_value.lower() not in ['low','mid','high']: 
-            dispatcher.utter_message(text=f"Enter a valid budget, we only support 'low', 'mid' and 'high'")
-            return {"budget": None}
+        if slot_value.lower() not in ['low','low-mid','mid','high']:
+            dispatcher.utter_message(text=f"Enter a valid budget, we only support 'low', 'low-mid', 'mid' and 'high'")
+            return {"hotel_budget": None}
         else: 
-            return {"budget": slot_value}
+            return {"hotel_budget": slot_value}
+        
+    async def validate_days(
+            self, 
+            slot_value: Any,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: DomainDict,
+    ) -> Dict[Text,Any]:
+        """Validate `days` value"""
+        # print("i'm here3")
+        if slot_value.isnumeric():
+            slot_value = int(slot_value)
+            return {"days": slot_value}
+        else: 
+            dispatcher.utter_message(text=f"Enter valid number of days")
+            return {"days": None}
 
 
 class ActionFetchHotels(Action):
@@ -75,23 +119,172 @@ class ActionFetchHotels(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         city = tracker.get_slot("place")
-        budget = tracker.get_slot("budget")
-        rating = budget_mapping[budget]
+        month = tracker.get_slot("month")
+        budget = tracker.get_slot("hotel_budget")
+        days_of_travel = int(tracker.get_slot("days"))
+        rating = hotel_budget_mapping[budget]
         code = city_codes[city]
-        # print("rating: ", rating)
-        response = requests.post("http://api.tbotechnology.in/TBOHolidays_HotelAPI/TBOHotelCodeList",data={"CityCode":code},auth=("hackathontest","Hac@48298799")).json()
-        result=[]
-        if response:
-            hotel_list = response.get("Hotels")
-            for hotel in hotel_list:
-                if len(result)==3: break
-                # print(hotel.get("HotelRating"))
-                if (hotel.get("HotelRating")) in rating:
-                    result.append(hotel)
-                # else:
-                #     dispatcher.utter_message("Please mention a valid budget.")
-        else:
-            dispatcher.utter_message(text="There is an internal server error, please try again after some time.")
+
+        def compare_hotels(h1, h2):
+            rating1 = h1.get("HotelInfo").get("TripAdvisorRating")
+            rating2 = h2.get("HotelInfo").get("TripAdvisorRating")
+            price1 =  float(h1.get("MinHotelPrice").get("TotalPrice"))
+            price2 =  float(h2.get("MinHotelPrice").get("TotalPrice"))
+            if rating1==None: 
+                rating1=float(0)
+            else:
+                rating1 = float(h1.get("HotelInfo").get("TripAdvisorRating"))
+            if rating2==None:
+                rating2=float(0)
+            else:
+                rating2 = float(h2.get("HotelInfo").get("TripAdvisorRating"))
+
+            if rating1 == rating2:
+                if price1 < price2:
+                    return -1
+                else:
+                    return 1
+            else:
+                if rating1 > rating2:
+                    return -1
+                else: 
+                    return 1
+                
+        def compare_flight(f1, f2):
+            price1 = float(f1.get("Fare").get("PublishedFare"))
+            price2 = float(f2.get("Fare").get("PublishedFare"))
+            if price1 < price2:
+                return -1
+            else:
+                return 1
+
+        total_price = 1000000
+        hotel_details=[]
+        arrival_flight_details={}
+        depart_flight_details={}
+        for date in [1,10,20]:
+            curr_price=0
+            if date + days_of_travel > month_mapping[month][1]:
+                break
+            first_day = ""
+            if date < 10:
+                first_day = "2024-" + month_mapping[month][0] + "-0" + str(date)
+            else:
+                first_day = "2024-" + month_mapping[month][0] + "-" + str(date)
+            
+            start_date_obj = datetime.strptime(first_day, '%Y-%m-%d')
+            result_date_obj = start_date_obj + timedelta(days=days_of_travel)
+            last_day= result_date_obj.strftime('%Y-%m-%d')
+            # print(type(first_day))
+            hotel_body = {
+                "CheckIn": first_day,
+                "CheckOut": last_day,
+                "HotelCodes": "",
+                "CityCode": str(code),
+                "CityName": city.capitalize(),
+                "CountryName": "India",
+                "GuestNationality": "IN",
+                "PreferredCurrencyCode": "INR",
+                "PaxRooms": [
+                    {
+                        "Adults": 1,
+                        "Children": 0
+                    }
+                ],
+                "IsDetailResponse": True,
+                "ResponseTime": 23,
+                "Filters": {
+                    "MealType": "All",
+                    "Refundable": "all",
+                    "NoOfRooms": 1,
+                    "StarRating": "All"
+                }
+            }
+            # print("rating: ", rating)
+            # print("HOTEL BODY: ",hotel_body)
+            hotel_response = requests.post("http://api.tbotechnology.in/TBOHolidays_HotelAPI/HotelSearch",json=hotel_body,auth=("hackathontest","Hac@48298799")).json()
+            # print(hotel_response)
+            temp_hotel_details=[]
+            if hotel_response.get("Status").get("Code")==200:
+                print("here")
+                if hotel_response.get("HotelSearchResults"):
+                    temp = sorted(hotel_response.get("HotelSearchResults"),key=cmp_to_key(compare_hotels))
+                    print("Hotel Data -> ",temp)
+                    for hotel in temp:
+                        if hotel.get("HotelInfo").get("Rating") in rating:
+                            curr_price += hotel.get("MinHotelPrice").get("TotalPrice")
+                            break
+                    for hotel in temp:
+                        if len(temp_hotel_details) == 5:
+                            if hotel.get("HotelInfo").get("Rating") in rating:
+                                temp_hotel_details.append(hotel)
+
+            print("Hotel Price = ", curr_price)
+
+
+            flight_body = {
+                "EndUserIp": "192.168.10.10",
+                "TokenId": "5542cebd-f6d5-4e94-a11d-eea3f0e18e37",
+                "AdultCount": "1",
+                "ChildCount": "0",
+                "InfantCount": "0",
+                "DirectFlight": "false",
+                "OneStopFlight": "false",
+                "JourneyType": "2",
+                "PreferredAirlines": None,
+                "Segments": [
+                    {
+                        "Origin": "DEL",
+                        "Destination": "BOM",
+                        "FlightCabinClass": "1",
+                        "PreferredDepartureTime": first_day + "T00: 00: 00",
+                        "PreferredArrivalTime": first_day + "T00: 00: 00"
+                    },
+                    {
+                        "Origin": "BOM",
+                        "Destination": "DEL",
+                        "FlightCabinClass": "1",
+                        "PreferredDepartureTime": last_day + "T00: 00: 00",
+                        "PreferredArrivalTime": last_day + "T00: 00: 00"
+                    },
+                ],
+                "Sources": None
+            }
+            # print("FLIGHT BODY: ",flight_body)
+            flight_response = requests.post("http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search",json=flight_body,auth=("Hackathon","Hackathon@1234")).json().get("Response")
+            # print(flight_response)
+            flight_cost = 0
+            temp_depart={}
+            temp_return={}
+            if flight_response.get("ResponseStatus") == 1:
+                if flight_response.get("Results"):
+                    # print("here1")
+                    depart_flight = flight_response.get("Results")[0]
+                    return_flight = flight_response.get("Results")[1]
+                    # print("here2")
+                    temp_depart = sorted(depart_flight,key=cmp_to_key(compare_flight))[0]
+                    temp_return = sorted(return_flight,key=cmp_to_key(compare_flight))[0]
+                    # print("here3")
+                    flight_cost = temp_depart.get("Fare").get("PublishedFare") + temp_return.get("Fare").get("PublishedFare")
+                    print("here4")
+
+
+            print("Flight Cost = ",flight_cost)
+
+            curr_price += flight_cost
+
+            if curr_price < total_price:
+                total_price = curr_price
+                depart_flight_details = temp_depart
+                arrival_flight_details = temp_return
+                hotel_details = temp_hotel_details
+        
+        result = {
+            "DepartureFlightDetails": depart_flight_details,
+            "HotelDetailsList": hotel_details,
+            "ArrivalFlightDetails": arrival_flight_details
+        }
+        print(result)
         dispatcher.utter_message(json.dumps(result))
         return []
 

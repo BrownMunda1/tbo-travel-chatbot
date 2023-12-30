@@ -13,7 +13,8 @@ intents:
 entities:
 - place
 - month
-- budget
+- hotel_budget
+- days
 
 slots:
   place:
@@ -32,20 +33,29 @@ slots:
       condition: 
       - requested_slot: month
     influence_conversation: true
-  budget:
+  hotel_budget:
     type: text
     mappings:
     - type: from_entity
-      entity: budget
+      entity: hotel_budget
       condition: 
-      - requested_slot: budget
+      - requested_slot: hotel_budget
+    influence_conversation: true
+  days:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: days
+      condition: 
+      - requested_slot: days
     influence_conversation: true
 forms:
   travel_form:
     required_slots:
       - place 
       - month
-      - budget
+      - hotel_budget
+      - days
       
 
 responses:
@@ -63,13 +73,15 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_travel_slots:
-  - text: i will prepare an itinerary for {place} in {month} for {budget} budget ...
+  - text: i will prepare an itinerary for {place} in {month} for {hotel_budget} hotel budget for {days} days ...
   utter_ask_place:
   - text: please mention the city where you want to go
   utter_ask_month:
   - text: please mention the month when you want to go
-  utter_ask_budget:
-  - text: please mention the budget in which you want to travel
+  utter_ask_hotel_budget:
+  - text: please mention the hotel_budget in which you want to travel
+  utter_ask_days:
+  - text: please mention the duration in days in which you want to travel
   utter_hotels_response:
   - custom:
       text: ""

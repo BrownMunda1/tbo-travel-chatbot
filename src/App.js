@@ -8,7 +8,7 @@ import DaysPrompt from './components/DaysPrompt';
 import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
 import axios from 'axios';
-
+import DisplayModal from './components/DisplayModal';
 
 function App() {
   const [category, setCategory] = useState("");
@@ -18,19 +18,23 @@ function App() {
   const [days, setDays] = useState("");
   const [origin,setOrigin] = useState("")
   const [startDate,setStartDate] = useState("")
+  const [showModal, setShowModal] = useState(false);
 
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
     const message = `/inform{"place": "${city}", "days": "${days}", "budget": "${budget}", "origin": "${origin}", "startDate": "${startDate}"}`;
     const body = JSON.stringify({ "sender": "Sharmaji Family", "message": message })
     axios.post("localhost:5005/webhooks/rest/webhook/",body).then(
       (response)=>{
         console.log(response);
+        setShowModal(true);
       }
     );
   }
 
+  
   return (
     <div>
 
@@ -50,7 +54,7 @@ function App() {
           {days === ""?"":<OriginPrompt setOrigin={setOrigin}/>}
           {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }
           {startDate === ""?"": <button onClick={handleSubmit}>Generate Result</button> }
-          
+          {showModal && <DisplayModal />}
         </div>
       </div>
     </div>

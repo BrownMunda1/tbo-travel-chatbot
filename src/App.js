@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "./App.css";
 import BudgetPrompt from './components/BudgetPrompt';
 import CategoryPrompt from './components/CategoryPrompt';
@@ -23,7 +23,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [loading, setLoading] = useState(false)
-
 
   const fetchData = async () => {
     const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
@@ -74,6 +73,7 @@ function App() {
     console.log(completion.choices[0].message.content);
   }
 
+
   return (
     <div>
       {loading && <Spinner/>}
@@ -95,7 +95,7 @@ function App() {
           {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }
           {startDate === ""?"":<TravelMoodPrompt setTravelMood={setTravelMood}/>}
           {travelMood === ""?"": <div className='flex justify-center items-center gap-3'>
-                                  <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
+                                  <button className="h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700 transition duration-300 ease-in-out hover:bg-[#4CAF7D] hover:shadow-mdanimate-pulse" onClick={handleSubmit}>Generate Result</button>
                                 </div> }
           
 

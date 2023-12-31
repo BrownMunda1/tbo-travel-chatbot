@@ -10,6 +10,7 @@ import TravelMoodPrompt from './components/TravelMoodPrompt';
 import DisplayDetails from './components/DisplayDetails';
 import { OpenAI } from "openai";
 import Spinner from './components/Spinner';
+import ItineraryDetails from './components/ItineraryDetails';
 
 
 function App() {
@@ -76,6 +77,8 @@ function App() {
 
   return (
     <div>
+
+      {/* {loading && <Spinner/>}
       {loading && <Spinner/>}
       {showModal && <DisplayDetails handleItinerary={handleItinerary}/>}
       <nav className=" border-gray-200 dark:bg-gray-900">
@@ -100,8 +103,14 @@ function App() {
           
 
         </div>
-      </div>}
-    </div>
+
+      </div>
+      <div className='flex justify-center items-center gap-3'>
+        <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleItinerary}>Create an Itinerary</button>
+      </div> */}
+      <ItineraryDetails/>
+      </div>
+      
 
   );
 }

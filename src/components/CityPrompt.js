@@ -4,10 +4,10 @@ import QuePrompt from "./QuePrompt";
 import Response from "./Response";
 
 function CityPrompt(props) {
-    const BeachList = ['Goa','Puri','Daman','Port Blair','Pondicherry'];
+    const BeachList = ['Goa','Puri','Kochi','Daman','Port Blair'];
     const ForeignList = ['Bali','Paris','Dubai','London','Singapore'];
-    const MountainsList = ['Manali','Shimla','Ladakh','Nainital','Srinagar'];
-    const CityscapesList = ['Delhi','Mumbai','Udaipur','Jaisalmer','Chandigarh'];
+    const MountainsList = ['Leh','Shimla','Srinagar','Meghalaya','Dharamshala'];
+    const CityscapesList = ['Delhi','Mumbai','Udaipur','Varanasi','Chandigarh'];
 
     let CitiesList = [];
     if(props.category === "Beach") CitiesList = BeachList; 

@@ -22,6 +22,10 @@ function ListGroup(props) {
             props.setDays(element);
             props.setResponse(element);
         }
+        else if (props.type==="travelMood"){
+            props.setTravelMood(element);
+            props.setResponse(element);
+        }
       }
     return (
         <>

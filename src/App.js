@@ -6,6 +6,7 @@ import CityPrompt from './components/CityPrompt';
 import DaysPrompt from './components/DaysPrompt';
 import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
+import TravelMoodPrompt from './components/TravelMoodPrompt';
 import axios from 'axios';
 import DisplayModal from './components/DisplayModal';
 
@@ -14,6 +15,7 @@ function App() {
   const [city, setCity] = useState("");
   const [budget, setBudget] = useState("");
   const [days, setDays] = useState("");
+  const [travelMood, setTravelMood] = useState("");
   const [origin,setOrigin] = useState("")
   const [startDate,setStartDate] = useState("")
   const [showModal, setShowModal] = useState(false);
@@ -57,7 +59,8 @@ function App() {
           {budget === ""?"":<DaysPrompt setDays={setDays}/>}
           {days === ""?"":<OriginPrompt setOrigin={setOrigin}/>}
           {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }
-          {startDate === ""?"": <div className='flex justify-center items-center gap-3'>
+          {startDate === ""?"":<TravelMoodPrompt setTravelMood={setTravelMood}/>}
+          {travelMood === ""?"": <div className='flex justify-center items-center gap-3'>
                                   <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
                                 </div> }
           {showModal && <DisplayModal />}

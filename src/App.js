@@ -108,7 +108,7 @@ function App() {
         </div>
       </nav>
 
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-fit my-5">
         <div className="chatbot-container">
           <CategoryPrompt setCategory={setCategory} />
           {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}

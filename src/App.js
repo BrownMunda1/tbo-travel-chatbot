@@ -10,6 +10,7 @@ import TravelMoodPrompt from './components/TravelMoodPrompt';
 import DisplayDetails from './components/DisplayDetails';
 import {OpenAI} from "openai";
 import Spinner from './components/Spinner';
+import ItineraryDetails from './components/ItineraryDetails';
 
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
 
   return (
     <div>
-      {loading && <Spinner/>}
+      {/* {loading && <Spinner/>}
       <nav className=" border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <img src={require('./images/logo.png')} className="h-8 z-7" alt="Flowbite Logo" />
@@ -100,7 +101,8 @@ function App() {
       </div>
       <div className='flex justify-center items-center gap-3'>
         <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleItinerary}>Create an Itinerary</button>
-      </div>
+      </div> */}
+      <ItineraryDetails/>
     </div>
 
   );

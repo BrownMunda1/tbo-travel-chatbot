@@ -1,20 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Adjust the height of the navbar */
-    background-color: #70a5fa;
-    opacity: 0.8; /* Change the background color of the navbar */
-  }
   
-  .logo img {
-    width: auto;
-    height: 50px;
-  }
+
   
 .chatbot-container {
     background-color: rgba(247, 249, 250, 0.6);

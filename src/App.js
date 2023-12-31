@@ -57,7 +57,9 @@ function App() {
           {budget === ""?"":<DaysPrompt setDays={setDays}/>}
           {days === ""?"":<OriginPrompt setOrigin={setOrigin}/>}
           {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }
-          {startDate === ""?"": <button onClick={handleSubmit}>Generate Result</button> }
+          {startDate === ""?"": <div className='flex justify-center items-center gap-3'>
+                                  <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
+                                </div> }
           {showModal && <DisplayModal />}
         </div>
       </div>

@@ -32,7 +32,7 @@ import React from "react";
 const DisplayDetails = () => {
     return (
       <div>
-        <div>
+        <div className="flex justify-between">
             <h1 className="flex justify-center font-bold">Flight Recommendations</h1>
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">

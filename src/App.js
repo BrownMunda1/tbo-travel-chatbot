@@ -8,7 +8,7 @@ import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
 import TravelMoodPrompt from './components/TravelMoodPrompt';
 import DisplayDetails from './components/DisplayDetails';
-import {OpenAI} from "openai";
+import { OpenAI } from "openai";
 import Spinner from './components/Spinner';
 
 
@@ -18,8 +18,8 @@ function App() {
   const [budget, setBudget] = useState("");
   const [days, setDays] = useState("");
   const [travelMood, setTravelMood] = useState("");
-  const [origin,setOrigin] = useState("")
-  const [startDate,setStartDate] = useState("")
+  const [origin, setOrigin] = useState("")
+  const [startDate, setStartDate] = useState("")
   const [showModal, setShowModal] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [loading, setLoading] = useState(false)
@@ -55,7 +55,7 @@ function App() {
     console.log("here");
     const prompt = `Give me an itinerary for Chandigarh for 2 days in low budget starting 26th jan 2024`;
     console.log(prompt);
-    
+
     const client = new OpenAI({
       apiKey: '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',
       dangerouslyAllowBrowser: true
@@ -98,6 +98,7 @@ function App() {
                                   <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
                                 </div> }
           
+
         </div>
       </div>}
     </div>

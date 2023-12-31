@@ -3,6 +3,10 @@ import React from 'react'
 export default function ItineraryDetails() {
   return (
     <div>
+        <div class="h-screen flex items-center justify-center">
+        <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+        <div>
        
 <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
     <li class="mb-10 ms-6">            
@@ -42,6 +46,6 @@ export default function ItineraryDetails() {
 </ol>
 
 
-    </div>
+    </div></div></div></div>
   );
 }

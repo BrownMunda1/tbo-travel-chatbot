@@ -55,7 +55,7 @@ function App() {
     console.log(prompt);
     
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -94,7 +94,7 @@ function App() {
           {travelMood === ""?"": <div className='flex justify-center items-center gap-3'>
                                   <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
                                 </div> }
-          {showModal && <DisplayModal />}
+          {showModal && <DisplayDetails />}
           
         </div>
       </div>

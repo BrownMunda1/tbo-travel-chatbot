@@ -44,9 +44,11 @@ function App() {
   }
 
   const handleSubmit = (e) => {
+    setShowModal(true);
     e.preventDefault();
     setLoading(true);
     fetchData();
+
   }
 
   const handleItinerary = async (e) => {
@@ -75,13 +77,14 @@ function App() {
   return (
     <div>
       {loading && <Spinner/>}
+      {showModal && <DisplayDetails handleItinerary={handleItinerary}/>}
       <nav className=" border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <img src={require('./images/logo.png')} className="h-8 z-7" alt="Flowbite Logo" />
         </div>
       </nav>
 
-      <div className="flex justify-center items-center h-fit my-5">
+      {!showModal && <div className="flex justify-center items-center h-fit my-5">
         <div className="chatbot-container">
 
           <CategoryPrompt setCategory={setCategory}/>
@@ -94,13 +97,9 @@ function App() {
           {travelMood === ""?"": <div className='flex justify-center items-center gap-3'>
                                   <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
                                 </div> }
-          {showModal && <DisplayDetails />}
           
         </div>
-      </div>
-      <div className='flex justify-center items-center gap-3'>
-        <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleItinerary}>Create an Itinerary</button>
-      </div>
+      </div>}
     </div>
 
   );

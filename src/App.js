@@ -8,6 +8,7 @@ import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
 import DisplayDetails from './components/DisplayDetails';
 import {OpenAI} from "openai";
+import Spinner from './components/Spinner';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   const [origin, setOrigin] = useState("")
   const [startDate, setStartDate] = useState("")
   const [showDetails, setShowDetails] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const fetchData = async () => {
     const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
@@ -34,33 +36,22 @@ function App() {
     const json = await response.json();
     console.log(json);
     console.log(JSON.parse(json[1]["text"]));
-
+    setLoading(false);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     fetchData();
   }
 
   const handleItinerary = async (e) => {
     console.log("here");
-
-    // const configuration = new Configuration({
-    //   apiKey: "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",
-    // });
-  
-    // const openai = new OpenAIApi(configuration);
     const prompt = `Give me an itinerary for Chandigarh for 2 days in low budget starting 26th jan 2024`;
     console.log(prompt);
-    // const result = await openai.createCompletion({
-    //   model: "text-davinci-003",
-    //   prompt: prompt,
-    //   temperature: 0.5,
-    //   max_tokens: 4000,
-    // });
-    // console.log(result);
+    
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -75,33 +66,11 @@ function App() {
       response_format: { type: "json_object" },
     });
     console.log(completion.choices[0].message.content);
-
-    
-    // await fetch("https://api.openai.com/v1/chat/completions", 
-    // {
-    //   method: "POST",
-    //   headers: {
-    //     "Authorization": "Bearer " + API_KEY,
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify(apiRequestBody)
-    // }).then((data) => {
-      
-    //   return data.json();
-
-    // }).then((data) => {
-    //   console.log(data);
-    //   setMessages([...chatMessages, {
-    //     message: data.choices[0].message.content,
-    //     sender: "ChatGPT"
-    //   }]);
-    //   setIsTyping(false);
-    // });
   }
 
   return (
     <div>
-
+      {loading && <Spinner/>}
       <nav className=" border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <img src={require('./images/logo.png')} className="h-8 z-7" alt="Flowbite Logo" />

@@ -25,7 +25,7 @@ export default function ItineraryDetails({ data, setShowItinerary }) {
 
         <div>
             <div className="h-full flex items-center justify-center">
-                <div className=" max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <div className=" max-w-sm h-[75vh] overflow-y-auto p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                     <h1 className='text-center text-2xl font-bold mb-3'>Itinerary for your Vacation</h1>
                     <div>
                         <ol className="relative border-s border-gray-200 dark:border-gray-700">

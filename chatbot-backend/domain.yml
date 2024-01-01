@@ -87,8 +87,6 @@ responses:
   - text: please mention the city where you want to go
   utter_ask_startDate:
   - text: please mention the date in "yyyy-mm-dd" format when you want to start your trip
-  utter_ask_origin:
-  - text: please mention th place from where you want to go
   utter_ask_budget:
   - text: please mention the budget in which you want to travel
   utter_ask_days:

@@ -30,7 +30,7 @@ function App() {
   const [showItinerary, setShowItinerary] = useState(false);
   const [itineraryData, setItineraryData] = useState();
 
-  const [showBasic, setShowBasic] = useState(true);
+  const [showBasic, setShowBasic] = useState(false);
 
   useEffect(() => {
     setCategory("")
@@ -92,7 +92,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -131,7 +131,7 @@ function App() {
         </div>
       </nav>
 
-      {showBasic && <Basic/>}
+      {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} />}
 
       {!showBasic && !showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >
@@ -141,8 +141,7 @@ function App() {
             {budget === "" ? "" : <DaysPrompt setDays={setDays} />}
             {days === "" ? "" : <OriginPrompt setOrigin={setOrigin} />}
             {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
-            {startDate === "" ? "" : <TravelMoodPrompt setTravelMood={setTravelMood} />}
-            {travelMood === "" ? "" : <div className='flex justify-center items-center gap-3'>
+            {startDate === "" ? "" : <div className='flex justify-center items-center gap-3'>
               <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
             </div>}
         </div>

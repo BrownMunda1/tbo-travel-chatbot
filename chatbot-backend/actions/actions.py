@@ -9,13 +9,14 @@ from datetime import datetime, timedelta
 from functools import cmp_to_key
 import datetime as dt
 
-city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326, 'leh': 125144, 'varanasi': 141618, 'banaras': 141618, 'dharamshala': 115880, 'meghalaya': 138670, 'shillong': 138670, 'kochi':101204}
+city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326, 'leh': 125144, 'varanasi': 141618, 'banaras': 141618, 'dharamshala': 115880, 'meghalaya': 138670, 'shillong': 138670, 'kochi':101204, 'shirdi':137316, 'kolkata':113128, 'tirupati': 140311, 'amritsar': 101129, 'gaya':119358}
 
 travel_type = {
-    'cityscapes': ['chandigarh','udaipur','delhi','mumbai', 'varanasi'],
+    'cityscapes': ['chandigarh','udaipur','delhi','mumbai', 'kolkata'],
     'mountains': ['shimla','srinagar', 'leh', 'dharamshala','meghalaya'],
     'beach': ['goa','pondicherry','port blair','daman','kochi'],
     'foreign': ['dubai', 'bali', 'singapore', 'paris', 'london'],
+    'pilgrimage':['shirdi','varanasi','tirupati','amritsar','gaya']
 }
 
 budget_mapping = {
@@ -26,10 +27,10 @@ budget_mapping = {
 }
 
 airport_codes = {
-    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'new york': 130452,'newyork': 130452, 'pondicherry': "PNY", 'puri': 132593, 'port blair': "IXZ", 'daman': "NMB", 'jaisalmer': 122326, "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK",
+    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'new york': 130452,'newyork': 130452, 'pondicherry': "PNY", 'puri': 132593, 'port blair': "IXZ", 'daman': "NMB", 'jaisalmer': 122326, "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK", 'gaya': "GAY", 'amritsar': "ATQ", 'kolkata':"CCU", 'tirupati': "TIR", 'shirdi': "SAG"
 }
 
-cities = ['chandigarh', 'gangtok', 'goa', 'kasauli', 'ladakh', 'manali', 'munnar', 'nainital', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai', 'bali', 'singapore', 'thailand', 'tokyo', 'rio de janeiro', 'auckland', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'puri','daman','port blair','jaisalmer']
+cities = ['chandigarh', 'goa', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai' , 'bali', 'singapore', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'port blair', 'daman', 'leh', 'varanasi', 'dharamshala', 'meghalaya', 'kochi', 'shirdi', 'kolkata', 'tirupati','amritsar','gaya']
 
 months = ['january','february','march','april','may','june','july','august','september','october','november','december']
 
@@ -178,6 +179,7 @@ class ActionFetchHotels(Action):
         if not origin:
             origin = "delhi"
         origin = origin.lower()
+        print("origin: ",origin)
         days_of_travel = int(tracker.get_slot("days"))
         rating = budget_mapping[budget]
         dest_city_code = city_codes[destination]

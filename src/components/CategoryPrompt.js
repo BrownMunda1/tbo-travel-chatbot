@@ -4,7 +4,7 @@ import QuePrompt from "./QuePrompt";
 import Response from "./Response";
 
 function CategoryPrompt(props) {
-    const categories = ['Beach', 'Foreign', 'Mountains', 'Cityscapes'];
+    const categories = ['Beach', 'Foreign', 'Mountains', 'Cityscapes', 'Pilgrimage'];
     const [response, setResponse] = useState("");
 
     return (

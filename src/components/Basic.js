@@ -2,12 +2,14 @@ import './chatBot.css';
 import React, { useEffect, useState } from 'react';
 import { IoMdSend } from 'react-icons/io';
 import { BiBot, BiUser } from 'react-icons/bi';
+import '../App.css';
+import DisplayDetails from './DisplayDetails';
 
-function Basic() {
+function Basic({setData,setShowModal,setShowBasic}) {
     const [chat, setChat] = useState([]);
     const [inputMessage, setInputMessage] = useState('');
     const [botTyping, setbotTyping] = useState(false);
-
+    
 
     useEffect(() => {
 
@@ -23,7 +25,7 @@ function Basic() {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        const name = "shreyas";
+        const name = "sharmaji";
         const request_temp = { sender: "user", sender_id: name, msg: inputMessage };
 
         if (inputMessage !== "") {
@@ -43,8 +45,7 @@ function Basic() {
     const rasaAPI = async function handleClick(name, msg) {
 
         //chatData.push({sender : "user", sender_id : name, msg : msg});
-
-
+        console.log(msg);
         await fetch('http://localhost:5005/webhooks/rest/webhook', {
             method: 'POST',
             headers: {
@@ -54,7 +55,10 @@ function Basic() {
             },
             body: JSON.stringify({ "sender": name, "message": msg }),
         })
-            .then(response => response.json())
+            .then((response) => {
+                console.log("here", response);
+                response.json()
+            })
             .then((response) => {
                 if (response) {
                     console.log(response);
@@ -63,7 +67,18 @@ function Basic() {
                     const recipient_msg = temp["text"];
                     const response_temp = { sender: "bot", recipient_id: recipient_id, msg: recipient_msg };
                     setbotTyping(false);
-                    setChat(chat => [...chat, response_temp]);
+                    let resp = response_temp;
+                    try {
+                        resp = JSON.parse(response_temp);
+                        setData(resp);
+                        setShowModal(true);
+                        setShowBasic(false);
+
+                    } catch (error) {
+                        console.log("not a json");
+                        setChat(chat => [...chat, resp]);
+                    }
+                    
                 }
             })
     }
@@ -83,14 +98,14 @@ function Basic() {
         height: '4.5rem',
         borderBottom: '1px solid black',
         borderRadius: '30px 30px 0px 0px',
-        backgroundColor: '#8012c4',
+        backgroundColor: 'rgb(18 59 196)',
 
     }
     const styleFooter = {
         //maxWidth : '32rem',
         borderTop: '1px solid black',
         borderRadius: '0px 0px 30px 30px',
-        backgroundColor: '#8012c4',
+        backgroundColor: 'rgb(18 59 196)',
 
 
     }
@@ -101,14 +116,14 @@ function Basic() {
         overflowX: 'hidden',
 
     }
-
+    
     return (
         <div>
             {/* <button onClick={()=>rasaAPI("shreyas","hi")}>Try this</button> */}
 
 
-            <div className="container">
-                <div className="row justify-content-center">
+            <div className="container flex items-center justify-center">
+                <div className="row justify-content-center ">
 
                     <div className="card" style={stylecard}>
                         <div className="cardHeader text-white" style={styleHeader}>
@@ -150,9 +165,9 @@ function Basic() {
                                     <div className="col-10 text-black" style={{ paddingRight: '0px' }}>
                                         <input onChange={e => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp"></input>
                                     </div>
-                                    <div className="col-2 cola">
+                                    {/* <div className="col-2 cola">
                                         <button type="submit" className="circleBtn" ><IoMdSend className="sendBtn" /></button>
-                                    </div>
+                                    </div> */}
                                 </form>
                             </div>
                         </div>
@@ -160,6 +175,8 @@ function Basic() {
 
                 </div>
             </div>
+
+
 
         </div>
     );

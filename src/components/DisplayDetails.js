@@ -42,7 +42,7 @@ const DisplayDetails = ({ handleItinerary, data }) => {
                     </div>
                 <div className="h-[1px] bg-slate-500"></div>
                 <h1 className="flex justify-center font-40 text-3xl font-bold my-2">Hotel Recommendations</h1>
-                <p className="text-center mb-3 text-sm">Top 3 Budget Hotels (Price per Room)</p>
+                <p className="text-center mb-3 text-sm">Top 3 Budget Hotels (Price/Room for overall stay)</p>
                 <div className="flex justify-center gap-5">
                     {
                         data['HotelDetailsList'].map((data) => {

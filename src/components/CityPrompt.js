@@ -8,12 +8,14 @@ function CityPrompt(props) {
     const ForeignList = ['Bali','Paris','Dubai','London','Singapore'];
     const MountainsList = ['Leh','Shimla','Srinagar','Meghalaya','Dharamshala'];
     const CityscapesList = ['Delhi','Mumbai','Udaipur','Varanasi','Chandigarh'];
+    const PilgrimageList = ['Gaya','Shirdi','Tirupati','Amritsar', 'Varanasi'];
 
     let CitiesList = [];
     if(props.category === "Beach") CitiesList = BeachList; 
     else if(props.category === "Foreign") CitiesList = ForeignList; 
     else if(props.category === "Mountains") CitiesList = MountainsList; 
     else if(props.category === "Cityscapes") CitiesList = CityscapesList;
+    else if(props.category === "Pilgrimage") CitiesList = PilgrimageList;
 
     const [response, setResponse] = useState("");
 

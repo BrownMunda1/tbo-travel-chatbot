@@ -29,6 +29,17 @@ function App() {
   const [showItinerary, setShowItinerary] = useState(false);
   const [itineraryData, setItineraryData] = useState();
 
+  useEffect(() => {
+    setCategory("")
+    setCity("")
+    setBudget("")
+    setDays("")
+    setTravelMood("")
+    setOrigin("")
+    setStartDate("")
+  }, [])
+  
+
   const fetchData = async () => {
     const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
     const body = JSON.stringify({ "sender": "Sharmaji Family", "message": message });
@@ -74,11 +85,11 @@ function App() {
     let year = startDate.split("-")[0];
     let month = month_mapping[startDate.split("-")[1]];
     let date = startDate.split("-")[2];
-    const prompt = `Give me an itinerary for ${city} for ${days} days in starting ${date}th ${month} ${year}`;
+    const prompt = `Give me an itinerary for ${city} for ${days} days in starting ${date}th ${month} ${year}. Give me an array of objects, each having the activites of each day so that I can uniformly use it in my project for extraction`;
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -95,6 +106,7 @@ function App() {
     console.log(completion.choices[0].message.content); // itinerary response
     setShowItinerary(true);
     setItineraryData(completion.choices[0].message.content);
+    setShowModal(false);
     setLoading(false);
   }
 
@@ -117,7 +129,7 @@ function App() {
       </nav>
 
 
-      {!showModal && <div className="flex justify-center items-center h-fit my-5 ">
+      {!showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >
             <CategoryPrompt setCategory={setCategory} />
             {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}
@@ -131,7 +143,7 @@ function App() {
             </div>}
         </div>
       </div>}
-      {showItinerary && <ItineraryDetails data={JSON.parse(itineraryData)} />}
+      {showItinerary && <ItineraryDetails data={JSON.parse(itineraryData)} setShowItinerary={setShowItinerary} />}
     </div>
   );
 }

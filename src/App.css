@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
   
-
   
 .chatbot-container {
-    background-color: rgba(247, 249, 250, 0.6);
+    background-color: #f7f9fa99;
     width: 40%;
     height: 75vh; /* 80% of the viewport height */
     border: 1px solid #ccc;

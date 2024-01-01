@@ -2,12 +2,11 @@ import React from 'react';
 
 export default function HotelCard({data}) {
     return (
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             
-            <img className="p-8 rounded-t-lg" src={data['HotelInfo']['HotelPicture']} alt="Hotel Picture Not Available" />
+            <img className="rounded-t-lg max-h-64" src={data['HotelInfo']['HotelPicture']} alt="Hotel Picture Not Available" />
             
-            <div className="px-5 pb-5">
-                
+            <div className="px-3 py-2">
                 <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {data['HotelInfo']['HotelName']}</h5>
                 
@@ -31,8 +30,8 @@ export default function HotelCard({data}) {
                     </div>
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">{data['HotelInfo']['TripAdvisorRating']}</span>
                 </div>
-                <div className="flex flex-col items-center justify-between">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white my-2">₹ {Math.round(data['MinHotelPrice']['TotalPrice']*83.19)}</span>
+                <div className="flex justify-between">
+                    <span className="text-3xl font-bold text-gray-900 dark:text-white">₹ {Math.round(data['MinHotelPrice']['TotalPrice']*83.19)}</span>
                     <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View Details</a>
                 </div>
             </div>

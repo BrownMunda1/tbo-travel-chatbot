@@ -260,12 +260,12 @@ class ActionFetchHotels(Action):
                         total_price += hotel.get("MinHotelPrice").get("TotalPrice")
                         break
                 for hotel in temp:
-                    if len(temp_hotel_details) == 5: break
+                    if len(temp_hotel_details) == 3: break
                     if hotel.get("HotelInfo").get("Rating") in rating:
                         temp_hotel_details.append(hotel)
 
-        print(temp_hotel_details)
-        print("Hotel Price = ", total_price)
+        # print(temp_hotel_details)
+        print("Hotel Price = ", total_price*83.19)
 
 
         flight_body = {
@@ -352,11 +352,24 @@ class ActionFetchHotels(Action):
             elif hour>=17 and hour<=24 and (not evening_arrival):
                 evening_arrival = flight
 
-        
+        departureDetails = []
+        if len(morning_departure):
+            departureDetails.append(morning_departure)
+        if len(afternoon_departure):
+            departureDetails.append(afternoon_departure)
+        if len(evening_departure):
+            departureDetails.append(evening_departure)
+        arrivalDetails = []
+        if len(morning_arrival):
+            arrivalDetails.append(morning_arrival)
+        if len(afternoon_arrival):
+            arrivalDetails.append(afternoon_arrival)
+        if len(evening_arrival):
+            arrivalDetails.append(evening_arrival)
         result = {
-            "DepartureFlightDetails": [morning_departure,afternoon_departure,evening_departure],
+            "DepartureFlightDetails": departureDetails,
             "HotelDetailsList": hotel_details,
-            "ArrivalFlightDetails": [morning_arrival,afternoon_arrival,evening_arrival]
+            "ArrivalFlightDetails": arrivalDetails
         }
 
         print(result)

@@ -4,7 +4,7 @@ import QuePrompt from "./QuePrompt";
 import Response from "./Response";
 
 function CityPrompt(props) {
-    const BeachList = ['Goa','Puri','Kochi','Daman','Port Blair'];
+    const BeachList = ['Goa','Kochi','Daman','Port Blair','Pondicherry'];
     const ForeignList = ['Bali','Paris','Dubai','London','Singapore'];
     const MountainsList = ['Leh','Shimla','Srinagar','Meghalaya','Dharamshala'];
     const CityscapesList = ['Delhi','Mumbai','Udaipur','Varanasi','Chandigarh'];

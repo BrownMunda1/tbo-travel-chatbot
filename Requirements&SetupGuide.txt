@@ -1,0 +1,14 @@
+Requirements:
+npm install flowbite@2.2.1
+npm install openai@4.24.1
+npm install react-router-dom@6.21.1
+pip install rasa==3.6.15
+
+How to run:
+npm start in current folder
+cd .\chatbot-backend\
+then in two separate terminals:
+rasa run actions in first terminal
+rasa run --enable-api --cors "*" in second terminal
+
+Ready to go.

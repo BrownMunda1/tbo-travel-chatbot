@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import HotelCard from "./HotelCard";
 import FlightCard from "./FlightCard";
 import "../App.css";
 
 const DisplayDetails = ({handleItinerary, data}) => {
-    // console.log("details: ", props.data);
+    
+
     return (
         <div className="flex justify-center">
             <div className="absolute bg-[#f7f9fa99] py-3 p-10 my-20 rounded-lg">
@@ -32,8 +33,8 @@ const DisplayDetails = ({handleItinerary, data}) => {
                         })
                     }
                 </div>
-                <h1 className="flex justify-center font-40 text-3xl font-bold mb-3">Arrival Flight Recommendations</h1>
-                <p className="text-center mb-4 text-sm">Best Flights for Morning, Afternoon and Evening Departure as per availability</p>
+                <h1 className="flex justify-center font-40 text-3xl font-bold mt-5">Arrival Flight Recommendations</h1>
+                <p className="text-center my-3 text-sm">Best Flights for Morning, Afternoon and Evening Departure as per availability</p>
                 <div className="flex justify-center gap-5">
                     {
                         data['ArrivalFlightDetails'].map((data) => {

@@ -24,6 +24,9 @@ function App() {
   const [showDetails, setShowDetails] = useState(false);
   const [loading, setLoading] = useState(false)
 
+  const [data, setData] = useState(false)
+
+
 
   const fetchData = async () => {
     const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
@@ -40,11 +43,13 @@ function App() {
     const json = await response.json();
     console.log(json);
     console.log(JSON.parse(json[1]["text"]));
+    setData(JSON.parse(json[1]["text"]));
     setLoading(false);
+    setShowModal(true);
   }
 
   const handleSubmit = (e) => {
-    setShowModal(true);
+
     e.preventDefault();
     setLoading(true);
     fetchData();
@@ -53,7 +58,7 @@ function App() {
 
   const handleItinerary = async (e) => {
     console.log("here");
-    const prompt = `Give me an itinerary for Chandigarh for 2 days in low budget starting 26th jan 2024`;
+    const prompt = `Give me an itinerary for ${city} for ${days} days in starting 26th Jan 2024`;
     console.log(prompt);
 
     const client = new OpenAI({
@@ -71,13 +76,13 @@ function App() {
       model: "gpt-3.5-turbo-1106",
       response_format: { type: "json_object" },
     });
-    console.log(completion.choices[0].message.content);
+    console.log(completion.choices[0].message.content); // itinerary response
   }
 
   return (
     <div>
-      {loading && <Spinner/>}
-      {showModal && <DisplayDetails handleItinerary={handleItinerary}/>}
+      {loading && <Spinner />}
+      {showModal && <DisplayDetails handleItinerary={handleItinerary} data={data} />}
       <nav className=" border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <img src={require('./images/logo.png')} className="h-8 z-7" alt="Flowbite Logo" />
@@ -87,17 +92,17 @@ function App() {
       {!showModal && <div className="flex justify-center items-center h-fit my-5">
         <div className="chatbot-container">
 
-          <CategoryPrompt setCategory={setCategory}/>
-          {category === ""?"":<CityPrompt category={category} setCity={setCity}/>}
-          {city === ""?"":<BudgetPrompt setBudget={setBudget}/>}
-          {budget === ""?"":<DaysPrompt setDays={setDays}/>}
-          {days === ""?"":<OriginPrompt setOrigin={setOrigin}/>}
-          {origin === ""?"": <StartDatePrompt setStartDate={setStartDate} /> }
-          {startDate === ""?"":<TravelMoodPrompt setTravelMood={setTravelMood}/>}
-          {travelMood === ""?"": <div className='flex justify-center items-center gap-3'>
-                                  <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
-                                </div> }
-          
+          <CategoryPrompt setCategory={setCategory} />
+          {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}
+          {city === "" ? "" : <BudgetPrompt setBudget={setBudget} />}
+          {budget === "" ? "" : <DaysPrompt setDays={setDays} />}
+          {days === "" ? "" : <OriginPrompt setOrigin={setOrigin} />}
+          {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
+          {startDate === "" ? "" : <TravelMoodPrompt setTravelMood={setTravelMood} />}
+          {travelMood === "" ? "" : <div className='flex justify-center items-center gap-3'>
+            <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
+          </div>}
+
 
         </div>
       </div>}

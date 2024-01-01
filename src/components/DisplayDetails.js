@@ -12,6 +12,11 @@ const DisplayDetails = (props) => {
                     <Card />
                     <Card />
                 </div>
+                <div className="flex justify-center gap-5 mt-3">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
 
                 <h1 className="flex justify-center font-bold my-3">Hotel Recommendations</h1>
                 <div className="flex justify-center gap-5">

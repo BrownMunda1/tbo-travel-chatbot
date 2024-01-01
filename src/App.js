@@ -41,14 +41,13 @@ function App() {
     console.log(json);
     console.log(JSON.parse(json[1]["text"]));
     setLoading(false);
+    setShowModal(true);
   }
 
   const handleSubmit = (e) => {
-    setShowModal(true);
     e.preventDefault();
     setLoading(true);
     fetchData();
-
   }
 
   const handleItinerary = async (e) => {

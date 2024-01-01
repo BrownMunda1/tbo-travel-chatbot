@@ -11,6 +11,7 @@ import DisplayDetails from './components/DisplayDetails';
 import { OpenAI } from "openai";
 import Spinner from './components/Spinner';
 import ItineraryDetails from "./components/ItineraryDetails";
+import Basic from './components/Basic';
 
 
 
@@ -28,6 +29,8 @@ function App() {
   const [data, setData] = useState(false);
   const [showItinerary, setShowItinerary] = useState(false);
   const [itineraryData, setItineraryData] = useState();
+
+  const [showBasic, setShowBasic] = useState(true);
 
   useEffect(() => {
     setCategory("")
@@ -128,8 +131,9 @@ function App() {
         </div>
       </nav>
 
+      {showBasic && <Basic/>}
 
-      {!showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
+      {!showBasic && !showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >
             <CategoryPrompt setCategory={setCategory} />
             {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}

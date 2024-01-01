@@ -62,7 +62,6 @@ forms:
   travel_form:
     required_slots:
       - place 
-      - origin
       - budget
       - days
       - startDate
@@ -86,6 +85,8 @@ responses:
   - text: i will prepare an itinerary for {place} from {origin} in {startDate} for {budget} budget for {days} days ...
   utter_ask_place:
   - text: please mention the city where you want to go
+  utter_ask_startDate:
+  - text: please mention the date in "yyyy-mm-dd" format when you want to start your trip
   utter_ask_origin:
   - text: please mention th place from where you want to go
   utter_ask_budget:

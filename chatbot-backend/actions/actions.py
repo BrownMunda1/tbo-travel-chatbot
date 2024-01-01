@@ -174,7 +174,10 @@ class ActionFetchHotels(Action):
         destination = tracker.get_slot("place").lower()
         startDate = tracker.get_slot("startDate")
         budget = tracker.get_slot("budget").lower()
-        origin = tracker.get_slot("origin").lower()
+        origin = tracker.get_slot("origin")
+        if not origin:
+            origin = "delhi"
+        origin = origin.lower()
         days_of_travel = int(tracker.get_slot("days"))
         rating = budget_mapping[budget]
         dest_city_code = city_codes[destination]

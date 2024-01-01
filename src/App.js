@@ -143,7 +143,7 @@ function App() {
             {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
             {startDate === "" ? "" : <TravelMoodPrompt setTravelMood={setTravelMood} />}
             {travelMood === "" ? "" : <div className='flex justify-center items-center gap-3'>
-              <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#87DAEC] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
+              <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
             </div>}
         </div>
       </div>}

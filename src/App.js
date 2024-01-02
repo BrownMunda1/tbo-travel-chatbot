@@ -18,7 +18,7 @@ function App() {
   const [category, setCategory] = useState("");
   const [city, setCity] = useState("");
   const [budget, setBudget] = useState("");
-  const [days, setDays] = useState("");
+  const [days, setDays] = useState(3);
   const [travelMood, setTravelMood] = useState("");
   const [origin, setOrigin] = useState("")
   const [startDate, setStartDate] = useState("")
@@ -84,6 +84,7 @@ function App() {
   }
   const handleItinerary = async (e) => {
     console.log("here");
+    console.log("days", days);
     setLoading(true);
     let year = startDate.split("-")[0];
     let month = month_mapping[startDate.split("-")[1]];
@@ -92,7 +93,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({

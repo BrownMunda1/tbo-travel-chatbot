@@ -6,7 +6,7 @@ npm install react-router-dom@6.21.1
 pip install rasa==3.6.15
 
 How to run:
-Open 3 terminals
+Open 4 terminals
 
 Terminal 1: 
 npm run start in current folder
@@ -18,6 +18,10 @@ rasa run actions in first terminal
 Terminal 3:
 cd .\chatbot-backend\
 rasa run --enable-api --cors "*" --model models/20231231-102135-quick-taco.tar.gz in second terminal
+
+Terminal 4:
+cd .\chatbot-backend\
+rasa run --enable-api --cors "*" --model models/20240102-094620-parallel-elevation.tar.gz --port 5006
 
 If current api-key expires, please create an api key from https://platform.openai.com/api-keys and change it on line 95 App.js
 Ready to go.

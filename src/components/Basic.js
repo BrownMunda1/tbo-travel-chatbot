@@ -2,6 +2,8 @@ import './chatBot.css';
 import React, { useEffect, useState } from 'react';
 import { IoMdSend } from 'react-icons/io';
 import { BiBot, BiUser } from 'react-icons/bi';
+import QuePrompt from './QuePrompt';
+import Response from './Response';
 
 function Basic({ setData, setShowModal, setShowBasic, setLoading }) {
     const [chat, setChat] = useState([]);
@@ -44,7 +46,7 @@ function Basic({ setData, setShowModal, setShowBasic, setLoading }) {
         //chatData.push({sender : "user", sender_id : name, msg : msg});
 
 
-        await fetch('http://localhost:5005/webhooks/rest/webhook', {
+        await fetch('http://localhost:5006/webhooks/rest/webhook', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -130,15 +132,19 @@ function Basic({ setData, setShowModal, setShowBasic, setLoading }) {
                                         {user.sender === 'bot' ?
                                             (
 
-                                                <div className='msgalignstart'>
-                                                    <BiBot className="botIcon" /><h5 className="botmsg">{user.msg}</h5>
+                                                <div className='msgalignstart px-7'>
+                                                    {/* <BiBot className="botIcon" /><h5 className="botmsg">{user.msg}</h5> */}
+                                                    
+                                                    <QuePrompt question={user.msg}/>
                                                 </div>
 
                                             )
 
                                             : (
-                                                <div className='msgalignend'>
-                                                    <h5 className="usermsg">{user.msg}</h5><BiUser className="userIcon" />
+                                                <div className='msgalignend px-7'>
+                                                    {/* <h5 className="usermsg">{user.msg}</h5><BiUser className="userIcon" /> */}
+                                                    
+                                                    <Response response={user.msg}/>
                                                 </div>
                                             )
                                         }
@@ -152,7 +158,7 @@ function Basic({ setData, setShowModal, setShowBasic, setLoading }) {
                             <div className="row">
                                 <form style={{ display: 'flex' }} className="items-center justify-center" onSubmit={handleSubmit}>
                                     <div className="col-10 text-black w-[70%]" style={{ paddingRight: '0px' }}>
-                                        <input onChange={e => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp p-3"></input>
+                                        <input onChange={e => setInputMessage(e.target.value)} value={inputMessage} type="text" className="msginp p-3" placeholder='Type Here...'></input>
                                     </div>
                                     {/* <div className="col-2 cola">
                                         <button type="submit" className="circleBtn" ><IoMdSend className="sendBtn" /></button>

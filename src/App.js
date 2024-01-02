@@ -6,7 +6,6 @@ import CityPrompt from './components/CityPrompt';
 import DaysPrompt from './components/DaysPrompt';
 import OriginPrompt from './components/OriginPrompt';
 import StartDatePrompt from './components/StartDatePrompt';
-import TravelMoodPrompt from './components/TravelMoodPrompt';
 import DisplayDetails from './components/DisplayDetails';
 import { OpenAI } from "openai";
 import Spinner from './components/Spinner';
@@ -31,6 +30,7 @@ function App() {
   const [itineraryData, setItineraryData] = useState();
 
   const [showBasic, setShowBasic] = useState(false);
+  
 
   useEffect(() => {
     setCategory("")
@@ -41,7 +41,7 @@ function App() {
     setOrigin("")
     setStartDate("")
   }, [])
-  
+
 
   const fetchData = async () => {
     const message = `place: ${city}, origin: ${origin}, startDate: ${startDate}, budget: ${budget}, days: ${days}`;
@@ -92,7 +92,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -111,6 +111,9 @@ function App() {
     setItineraryData(completion.choices[0].message.content);
     setShowModal(false);
     setLoading(false);
+  }
+  const handleChatWithAI = (e) => {
+    setShowBasic(true);
   }
 
   window.scrollTo({
@@ -131,22 +134,26 @@ function App() {
         </div>
       </nav>
 
-      {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} />}
+      {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} setLoading={setLoading} />}
 
       {!showBasic && !showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >
-            <CategoryPrompt setCategory={setCategory} />
-            {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}
-            {city === "" ? "" : <BudgetPrompt setBudget={setBudget} />}
-            {budget === "" ? "" : <DaysPrompt setDays={setDays} />}
-            {days === "" ? "" : <OriginPrompt setOrigin={setOrigin} />}
-            {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
-            {startDate === "" ? "" : <div className='flex justify-center items-center gap-3'>
-              <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
-            </div>}
+          <CategoryPrompt setCategory={setCategory} />
+          {category === "" ? "" : <CityPrompt category={category} setCity={setCity} />}
+          {city === "" ? "" : <BudgetPrompt setBudget={setBudget} />}
+          {budget === "" ? "" : <DaysPrompt setDays={setDays} />}
+          {days === "" ? "" : <OriginPrompt setOrigin={setOrigin} />}
+          {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
+          {startDate === "" ? "" : <div className='flex justify-center items-center gap-3'>
+            <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
+          </div>}
         </div>
       </div>}
       {showItinerary && <ItineraryDetails data={JSON.parse(itineraryData)} setShowItinerary={setShowItinerary} />}
+      {!showBasic && !showModal && <div className='flex justify-center items-center mt-3'>
+
+        <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleChatWithAI}>Chat with AI</button>
+      </div>}
     </div>
   );
 }

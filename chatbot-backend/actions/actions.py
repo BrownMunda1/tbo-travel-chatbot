@@ -27,7 +27,7 @@ budget_mapping = {
 }
 
 airport_codes = {
-    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'new york': 130452,'newyork': 130452, 'pondicherry': "PNY", 'puri': 132593, 'port blair': "IXZ", 'daman': "NMB", 'jaisalmer': 122326, "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK", 'gaya': "GAY", 'amritsar': "ATQ", 'kolkata':"CCU", 'tirupati': "TIR", 'shirdi': "SAG"
+    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'pondicherry': "PNY",  'port blair': "IXZ", 'daman': "NMB", "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK", 'gaya': "GAY", 'amritsar': "ATQ", 'kolkata':"CCU", 'tirupati': "TIR", 'shirdi': "SAG"
 }
 
 cities = ['chandigarh', 'goa', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai' , 'bali', 'singapore', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'port blair', 'daman', 'leh', 'varanasi', 'dharamshala', 'meghalaya', 'kochi', 'shirdi', 'kolkata', 'tirupati','amritsar','gaya']
@@ -125,7 +125,7 @@ class ValidateTravelForm(FormValidationAction):
     ) -> Dict[Text,Any]:
         """Validate `days` value"""
         # print("i'm here3")
-        if slot_value.isnumeric():
+        if (type(slot_value)==int and slot_value>=3 and slot_value<=7) or (type(slot_value)==str and slot_value.isnumeric()):
             slot_value = int(slot_value)
             return {"days": slot_value}
         else: 
@@ -275,7 +275,7 @@ class ActionFetchHotels(Action):
 
         flight_body = {
             "EndUserIp": "192.168.10.10",
-            "TokenId": "5542cebd-f6d5-4e94-a11d-eea3f0e18e37",
+            "TokenId": "d016816e-7ef4-4d76-9c48-667a7edd70b5",
             "AdultCount": "1",
             "ChildCount": "0",
             "InfantCount": "0",
@@ -301,9 +301,9 @@ class ActionFetchHotels(Action):
             ],
             "Sources": None
         }
-        # print(flight_body)
+        print("FLIGHT BODY", flight_body)
         flight_response = requests.post("http://api.tektravels.com/BookingEngineService_Air/AirService.svc/rest/Search",json=flight_body,auth=("Hackathon","Hackathon@1234")).json().get("Response")
-        # print(flight_response)
+        print(flight_response)
         flight_cost = 0
         depart_flight=[]
         return_flight=[]

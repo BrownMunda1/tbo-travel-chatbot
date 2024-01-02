@@ -134,7 +134,9 @@ function App() {
         </div>
       </nav>
 
+
       {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} setLoading={setLoading} />}
+
 
       {!showBasic && !showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >

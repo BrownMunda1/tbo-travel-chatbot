@@ -1,14 +1,23 @@
 Requirements:
+npm install
 npm install flowbite@2.2.1
 npm install openai@4.24.1
 npm install react-router-dom@6.21.1
 pip install rasa==3.6.15
 
 How to run:
-npm start in current folder
-cd .\chatbot-backend\
-then in two separate terminals:
-rasa run actions in first terminal
-rasa run --enable-api --cors "*" in second terminal
+Open 3 terminals
 
+Terminal 1: 
+npm run start in current folder
+
+Terminal 2:
+cd .\chatbot-backend\
+rasa run actions in first terminal
+
+Terminal 3:
+cd .\chatbot-backend\
+rasa run --enable-api --cors "*" --model models/20231231-102135-quick-taco.tar.gz in second terminal
+
+If current api-key expires, please create an api key from https://platform.openai.com/api-keys and change it on line 95 App.js
 Ready to go.

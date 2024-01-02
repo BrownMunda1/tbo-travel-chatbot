@@ -92,7 +92,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -131,7 +131,7 @@ function App() {
         </div>
       </nav>
 
-      {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} />}
+      {/* {showBasic && <Basic setData={setData} setShowBasic={setShowBasic} setShowModal={setShowModal} />} */}
 
       {!showBasic && !showModal && !showItinerary && <div className="flex justify-center items-center h-fit my-5 ">
         <div className="chatbot-container" >

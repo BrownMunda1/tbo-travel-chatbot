@@ -7,7 +7,7 @@ function CityPrompt(props) {
     const BeachList = ['Goa','Kochi','Daman','Port Blair','Pondicherry'];
     const ForeignList = ['Bali','Paris','Dubai','London','Singapore'];
     const MountainsList = ['Leh','Shimla','Srinagar','Meghalaya','Dharamshala'];
-    const CityscapesList = ['Delhi','Mumbai','Udaipur','Varanasi','Chandigarh'];
+    const CityscapesList = ['Delhi','Mumbai','Udaipur','Kolkata','Chandigarh'];
     const PilgrimageList = ['Gaya','Shirdi','Tirupati','Amritsar', 'Varanasi'];
 
     let CitiesList = [];

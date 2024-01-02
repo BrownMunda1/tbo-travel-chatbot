@@ -93,7 +93,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({

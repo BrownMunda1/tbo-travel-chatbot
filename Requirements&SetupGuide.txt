@@ -17,11 +17,12 @@ rasa run actions in first terminal
 
 Terminal 3:
 cd .\chatbot-backend\
-rasa run --enable-api --cors "*" --model models/20231231-102135-quick-taco.tar.gz in second terminal
+rasa run --enable-api --cors "*" --model models/20231231-102135-quick-taco.tar.gz --port 5005
 
 Terminal 4:
 cd .\chatbot-backend\
 rasa run --enable-api --cors "*" --model models/20240102-094620-parallel-elevation.tar.gz --port 5006
 
 If current api-key expires, please create an api key from https://platform.openai.com/api-keys and change it on line 95 App.js
+
 Ready to go.

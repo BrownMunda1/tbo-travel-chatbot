@@ -295,7 +295,7 @@ class ActionFetchHotels(Action):
 
         flight_body = {
             "EndUserIp": "192.168.10.10",
-            "TokenId": "de37f9d4-60f2-4de5-b55e-2f4b5c857bfa",
+            "TokenId": "59e07fe5-c552-49b5-87e4-d5472172ccc4",
             "AdultCount": "1",
             "ChildCount": "0",
             "InfantCount": "0",

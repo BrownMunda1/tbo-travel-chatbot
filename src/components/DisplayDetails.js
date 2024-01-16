@@ -3,7 +3,7 @@ import HotelCard from "./HotelCard";
 import FlightCard from "./FlightCard";
 import "../App.css";
 
-const DisplayDetails = ({ handleItinerary, data }) => {
+const DisplayDetails = ({ handleItinerary, data, setHotel, setDepartureFlight, setArrivalFlight }) => {
 
 
     return (
@@ -17,7 +17,7 @@ const DisplayDetails = ({ handleItinerary, data }) => {
                                 data['DepartureFlightDetails'].map((data) => {
                                     console.log("here: ", data);
                                     return (
-                                        <FlightCard key={data['ResultIndex']} data={data} />
+                                        <FlightCard key={data['ResultIndex']} data={data} isDeparture={true} setDepartureFlight={setDepartureFlight} setArrivalFlight={setArrivalFlight} />
                                     )
                                 })
                             }
@@ -30,7 +30,7 @@ const DisplayDetails = ({ handleItinerary, data }) => {
                             {
                                 data['ArrivalFlightDetails'].map((data) => {
                                     return (
-                                        <FlightCard key={data['ResultIndex']} data={data} />
+                                        <FlightCard key={data['ResultIndex']} data={data} isDeparture={false} setDepartureFlight={setDepartureFlight} setArrivalFlight={setArrivalFlight} />
                                     )
                                 })
                             }
@@ -47,7 +47,7 @@ const DisplayDetails = ({ handleItinerary, data }) => {
                     {
                         data['HotelDetailsList'].map((data) => {
                             return (
-                                <HotelCard key={data['HotelBookingCode']} data={data} />
+                                <HotelCard key={data['HotelBookingCode']} data={data} setHotel={setHotel} />
                             )
                         })
                     }

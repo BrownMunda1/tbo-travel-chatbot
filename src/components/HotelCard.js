@@ -1,8 +1,17 @@
 import React from 'react';
 
-export default function HotelCard({data}) {
+export default function HotelCard({data, setHotel}) {
+
+    const handleClick = () => {
+        const hotel_info = {}
+        hotel_info['Hotel Name'] = data['HotelInfo']['HotelName']
+        hotel_info['Hotel Description'] = data['HotelInfo']['HotelDescription']
+        hotel_info['Hotel Address'] = data['HotelInfo']['HotelAddress']
+        setHotel(hotel_info);
+    }
+
     return (
-        <div className="w-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" onClick={handleClick}>
             
             <img className="rounded-t-lg max-h-64" src={data['HotelInfo']['HotelPicture']} alt="Hotel Picture Not Available" />
             

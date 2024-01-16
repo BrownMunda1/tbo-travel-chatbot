@@ -12,6 +12,7 @@ import Spinner from './components/Spinner';
 import ItineraryDetails from "./components/ItineraryDetails";
 import Basic from './components/Basic';
 import axios from 'axios';
+import TravelMoodPrompt from './components/TravelMoodPrompt';
 
 function App() {
   const [category, setCategory] = useState("");
@@ -29,6 +30,10 @@ function App() {
   const [itineraryData, setItineraryData] = useState();
 
   const [showBasic, setShowBasic] = useState(false);
+
+  const [hotel, setHotel] = useState({})
+  const [departureFlight, setDepartureFlight] = useState({})
+  const [arrivalFlight, setArrivalFlight] = useState({})
 
 
   useEffect(() => {
@@ -119,31 +124,30 @@ function App() {
 
   const handleShit = async (e) => {
     // const response = await GptResponse('hi tell me something about yourself strictly in json format');
+    setLoading(true);
     console.log("here");
+    console.log("hotel", hotel);
+    console.log("departure", departureFlight);
+    console.log("arrival", arrivalFlight);
+    const prompt = 
+    `Please create a detailed itinerary for a ${days}-day trip starting from ${startDate} to ${city}, starting from ${origin} for a ${travelMood} trip. 
+    Here are our flights and hotel details:
+    Departure Flight: ${JSON.stringify(departureFlight)},
+    Hotel: ${JSON.stringify(hotel)},
+    Arrival Flight: ${JSON.stringify(arrivalFlight)}
+    Prioritize visiting the best places near the hotel first, and provide specific dining recommendations. Also keep in mind the timings of the departure and arrival flights. Provide itinerary strictly in the following json object form:
+    {[
+     Day:1, //Daywise itinerary, preferably including the best timings 
+
+     PlacesToVisit: [/* Fill in the places to be included in itinerary*/],
+
+     PlacesToEatNearby: {/* Provide with 2-3 cafe options */}
+    ],
+    ...
+    }`
+    console.log(prompt);
     const payload = {
-      prompt: "hi tell me something about yourself strictly in json format",
-      // prompt: `Please create a detailed itinerary for a 5-day trip starting from 2024-03-19 to goa, starting from delhi and staying at Lalit Hotel for a adventure trip. Prioritize visiting places near the hotel first, and provide specific dining recommendations. Provide itinerary in the following json object form:
-
-      // const itinerary = {
-      
-      //  Day:1, //Daywise itinerary,
-      
-      //  PlacesToVisit: [/* Fill in the places to be included in itinerary*/],
-      
-      //  PlacesToEatNearby: [/* Provide with 2-3 cafe options */]
-      
-      // }`
-      // prompt: `Please create a detailed itinerary for a ${days}-day trip starting from ${startDate} to ${city}, starting from ${origin} and staying at ${hotel} for a ${travelPreference} trip. Prioritize visiting places near the hotel first, and provide specific dining recommendations. Provide itinerary in the following json object form:
-
-      // const itinerary = {
-      
-      //  Day:1, //Daywise itinerary,
-      
-      //  PlacesToVisit: [/* Fill in the places to be included in itinerary*/],
-      
-      //  PlacesToEatNearby: {/Provide with 2-3 cafe options/}
-      
-      // }`,
+      prompt: prompt
     };
     const authHeader = `Bearer chatgpt_HG7aGWVH2rSJ6y8WS0E4yo`;
     const headers = {
@@ -151,8 +155,10 @@ function App() {
     };
 
     const response = await axios.post("https://cors-anywhere.herokuapp.com/https://ai.rnilaweera.ovh/api/v1/user/bard", payload, { headers });
+    console.log(response.data.message);
     const answer = JSON.parse(response.data.message);
     console.log(answer,typeof(answer));
+    setLoading(false);
     // const answer = response.data.message;
     // console.log(answer,typeof(answer));
   }
@@ -167,7 +173,7 @@ function App() {
     <div>
     <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleShit}>TEST AI</button>
       {loading && <Spinner />}
-      {showModal && <DisplayDetails handleItinerary={handleItinerary} data={data} showItinerary={showItinerary} />}
+      {showModal && <DisplayDetails handleItinerary={handleShit} data={data} showItinerary={showItinerary} setArrivalFlight={setArrivalFlight} setDepartureFlight={setDepartureFlight} setHotel={setHotel} />}
 
       <nav className=" border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
@@ -187,7 +193,8 @@ function App() {
           {budget === "" ? "" : <DaysPrompt setDays={setDays} />}
           {days === "" ? "" : <OriginPrompt setOrigin={setOrigin} />}
           {origin === "" ? "" : <StartDatePrompt setStartDate={setStartDate} />}
-          {startDate === "" ? "" : <div className='flex justify-center items-center gap-3'>
+          {startDate === "" ? "" : <TravelMoodPrompt setTravelMood={setTravelMood} />}
+          {travelMood ==="" ? "" : <div className='flex justify-center items-center gap-3'>
             <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleSubmit}>Generate Result</button>
           </div>}
         </div>

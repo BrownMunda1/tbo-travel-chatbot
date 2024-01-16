@@ -1,14 +1,25 @@
 {
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
   "name": "chatbot-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ibrahemvx2000/bardapi": "^1.0.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.6.2",
+    "@xelcior/bard-api": "^1.0.1",
+    "ai-bard": "^1.0.4",
+    "bard-ai": "^2.0.3",
     "concurrently": "^8.2.2",
+    "dpm-googlebard1": "^1.0.0",
     "flowbite": "^2.2.1",
+    "google-bard-api": "^1.1.1",
+    "googlebard": "^1.0.7",
     "openai": "^4.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,6 +27,7 @@
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "react-scroll-to-bottom": "^4.2.0",
+    "rsnchat": "^2.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,7 +55,11 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "axios": "^1.6.5"
+  },
   "devDependencies": {
+    "axios": "^1.6.5",
     "tailwindcss": "^3.4.0"
   }
 }

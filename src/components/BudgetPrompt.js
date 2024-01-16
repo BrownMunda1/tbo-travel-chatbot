@@ -4,7 +4,7 @@ import QuePrompt from "./QuePrompt";
 import Response from "./Response";
 
 function BudgetPrompt(props) {
-    const categories = ['Low', 'Low-Mid', 'Mid', 'High'];
+    const categories = ['Economy', 'Premium', 'Luxury'];
     const [response, setResponse] = useState("");
 
     return (

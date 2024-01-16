@@ -1,0 +1,6563 @@
+[
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b0"
+        },
+        "Code": "105141",
+        "Name": "abu road",
+        "Category": "Mountains",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b1"
+        },
+        "Code": "102138",
+        "Name": "adoor",
+        "Category": "Cityscapes",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b2"
+        },
+        "Code": "101615",
+        "Name": "adyar",
+        "Category": "Cityscapes",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b3"
+        },
+        "Code": "100667",
+        "Name": "agartala",
+        "Category": "Cityscapes",
+        "airport_code": "IXA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b4"
+        },
+        "Code": "100578",
+        "Name": "agatti",
+        "Category": "Beach",
+        "airport_code": "AGX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b5"
+        },
+        "Code": "100589",
+        "Name": "agra",
+        "Category": "Cityscapes",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b6"
+        },
+        "Code": "100263",
+        "Name": "ahmedabad",
+        "Category": "Cityscapes",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b7"
+        },
+        "Code": "100363",
+        "Name": "ahmednagar",
+        "Category": "Cityscapes",
+        "airport_code": "SAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b8"
+        },
+        "Code": "100797",
+        "Name": "ahmedpur mandvi",
+        "Category": "Beach",
+        "airport_code": "BHU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22b9"
+        },
+        "Code": "100273",
+        "Name": "aizawl",
+        "Category": "Cityscapes",
+        "airport_code": "AJL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ba"
+        },
+        "Code": "100686",
+        "Name": "ajabgarh",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22bb"
+        },
+        "Code": "100804",
+        "Name": "ajmer",
+        "Category": "Cityscapes",
+        "airport_code": "KQH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22bc"
+        },
+        "Code": "100689",
+        "Name": "akola",
+        "Category": "Cityscapes",
+        "airport_code": "AKD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22bd"
+        },
+        "Code": "101625",
+        "Name": "alibag",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22be"
+        },
+        "Code": "100420",
+        "Name": "aligarh",
+        "Category": "Cityscapes",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22bf"
+        },
+        "Code": "148835",
+        "Name": "alipurduar",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c0"
+        },
+        "Code": "100307",
+        "Name": "allahabad",
+        "Category": "Cityscapes",
+        "airport_code": "IXD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c1"
+        },
+        "Code": "109524",
+        "Name": "alleppey",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c2"
+        },
+        "Code": "100203",
+        "Name": "almora",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c3"
+        },
+        "Code": "151339",
+        "Name": "along",
+        "Category": "Cityscapes",
+        "airport_code": "IXT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c4"
+        },
+        "Code": "101349",
+        "Name": "alto porvorim",
+        "Category": "Cityscapes",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c5"
+        },
+        "Code": "109093",
+        "Name": "alwar",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c6"
+        },
+        "Code": "100881",
+        "Name": "ambala",
+        "Category": "Cityscapes",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c7"
+        },
+        "Code": "105159",
+        "Name": "amer",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c8"
+        },
+        "Code": "101128",
+        "Name": "amravati",
+        "Category": "Cityscapes",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22c9"
+        },
+        "Code": "101129",
+        "Name": "amritsar",
+        "Category": "Cityscapes",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ca"
+        },
+        "Code": "109446",
+        "Name": "anand",
+        "Category": "Cityscapes",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22cb"
+        },
+        "Code": "105160",
+        "Name": "anandpur",
+        "Category": "Cityscapes",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22cc"
+        },
+        "Code": "102166",
+        "Name": "angul",
+        "Category": "Cityscapes",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22cd"
+        },
+        "Code": "101146",
+        "Name": "anjuna",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ce"
+        },
+        "Code": "101147",
+        "Name": "ankleshwar",
+        "Category": "Cityscapes",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22cf"
+        },
+        "Code": "104724",
+        "Name": "arambol",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d0"
+        },
+        "Code": "109167",
+        "Name": "arcot",
+        "Category": "Cityscapes",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d1"
+        },
+        "Code": "109973",
+        "Name": "aronda",
+        "Category": "Cityscapes",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d2"
+        },
+        "Code": "109872",
+        "Name": "arpora",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d3"
+        },
+        "Code": "101068",
+        "Name": "arrosim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d4"
+        },
+        "Code": "110211",
+        "Name": "asansol",
+        "Category": "Cityscapes",
+        "airport_code": "RDP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d5"
+        },
+        "Code": "150412",
+        "Name": "athirapally",
+        "Category": "Waterfall",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d6"
+        },
+        "Code": "105178",
+        "Name": "athirapilly",
+        "Category": "Waterfall",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d7"
+        },
+        "Code": "110248",
+        "Name": "auli",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d8"
+        },
+        "Code": "110349",
+        "Name": "aurangabad",
+        "Category": "Cityscapes",
+        "airport_code": "IXU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22d9"
+        },
+        "Code": "109665",
+        "Name": "auroville",
+        "Category": "Cityscapes",
+        "airport_code": "PNY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22da"
+        },
+        "Code": "110358",
+        "Name": "ayodhya",
+        "Category": "Pilgrimage",
+        "airport_code": "LKO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22db"
+        },
+        "Code": "110041",
+        "Name": "b. r. hills",
+        "Category": "Mountains",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22dc"
+        },
+        "Code": "111073",
+        "Name": "badami",
+        "Category": "Cityscapes",
+        "airport_code": "IXG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22dd"
+        },
+        "Code": "150171",
+        "Name": "baddi",
+        "Category": "Cityscapes",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22de"
+        },
+        "Code": "109814",
+        "Name": "badrinath",
+        "Category": "Pilgrimage",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22df"
+        },
+        "Code": "110640",
+        "Name": "baga",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e0"
+        },
+        "Code": "150697",
+        "Name": "bagdogra",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e1"
+        },
+        "Code": "101485",
+        "Name": "baindur",
+        "Category": "Beach",
+        "airport_code": "IXG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e2"
+        },
+        "Code": "110659",
+        "Name": "bakkhali",
+        "Category": "Beach",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e3"
+        },
+        "Code": "148857",
+        "Name": "balaghat",
+        "Category": "Cityscapes",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e4"
+        },
+        "Code": "105188",
+        "Name": "balangir",
+        "Category": "Cityscapes",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e5"
+        },
+        "Code": "111097",
+        "Name": "balasinore",
+        "Category": "Cityscapes",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e6"
+        },
+        "Code": "110977",
+        "Name": "balrampur",
+        "Category": "Cityscapes",
+        "airport_code": "IXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e7"
+        },
+        "Code": "150951",
+        "Name": "balurghat",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e8"
+        },
+        "Code": "111121",
+        "Name": "bandhavgarh-nationalpark",
+        "Category": "Wildlife",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22e9"
+        },
+        "Code": "110851",
+        "Name": "bandipur",
+        "Category": "Wildlife",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ea"
+        },
+        "Code": "111124",
+        "Name": "bangalore",
+        "Category": "Cityscapes",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22eb"
+        },
+        "Code": "110853",
+        "Name": "bangaram island",
+        "Category": "Beach",
+        "airport_code": "AGX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ec"
+        },
+        "Code": "110855",
+        "Name": "baramati",
+        "Category": "Cityscapes",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ed"
+        },
+        "Code": "110425",
+        "Name": "baratang island",
+        "Category": "Cityscapes",
+        "airport_code": "IXZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ee"
+        },
+        "Code": "105028",
+        "Name": "barauni",
+        "Category": "Cityscapes",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ef"
+        },
+        "Code": "110789",
+        "Name": "barbil",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f0"
+        },
+        "Code": "110512",
+        "Name": "bardez",
+        "Category": "Cityscapes",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f1"
+        },
+        "Code": "111009",
+        "Name": "bareilly",
+        "Category": "Cityscapes",
+        "airport_code": "BEK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f2"
+        },
+        "Code": "111142",
+        "Name": "barmer",
+        "Category": "Cityscapes",
+        "airport_code": "BKB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f3"
+        },
+        "Code": "111028",
+        "Name": "basara",
+        "Category": "Pilgrimage",
+        "airport_code": "NDC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f4"
+        },
+        "Code": "102213",
+        "Name": "beawar",
+        "Category": "Cityscapes",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f5"
+        },
+        "Code": "110564",
+        "Name": "behror",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f6"
+        },
+        "Code": "110566",
+        "Name": "bekal",
+        "Category": "Beach",
+        "airport_code": "CNN"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f7"
+        },
+        "Code": "111427",
+        "Name": "belgaum",
+        "Category": "Cityscapes",
+        "airport_code": "IXG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f8"
+        },
+        "Code": "110483",
+        "Name": "bellary",
+        "Category": "Cityscapes",
+        "airport_code": "BEP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22f9"
+        },
+        "Code": "111440",
+        "Name": "belur & halebid",
+        "Category": "Cityscapes",
+        "airport_code": "IXG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22fa"
+        },
+        "Code": "150242",
+        "Name": "benaulim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22fb"
+        },
+        "Code": "111655",
+        "Name": "benaulim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22fc"
+        },
+        "Code": "110618",
+        "Name": "betalbatim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22fd"
+        },
+        "Code": "111749",
+        "Name": "betul",
+        "Category": "Cityscapes",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22fe"
+        },
+        "Code": "108056",
+        "Name": "bhagalpur",
+        "Category": "Cityscapes",
+        "airport_code": "GAY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c22ff"
+        },
+        "Code": "111694",
+        "Name": "bhandardara",
+        "Category": "Cityscapes",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2300"
+        },
+        "Code": "111484",
+        "Name": "bharatpur",
+        "Category": "Wildlife",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2301"
+        },
+        "Code": "105046",
+        "Name": "bharmour",
+        "Category": "Cityscapes",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2302"
+        },
+        "Code": "111195",
+        "Name": "bharuch",
+        "Category": "Cityscapes",
+        "airport_code": "BHJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2303"
+        },
+        "Code": "105734",
+        "Name": "bhat",
+        "Category": "Cityscapes",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2304"
+        },
+        "Code": "111292",
+        "Name": "bhatinda",
+        "Category": "Cityscapes",
+        "airport_code": "BUP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2305"
+        },
+        "Code": "111485",
+        "Name": "bhavnagar",
+        "Category": "Cityscapes",
+        "airport_code": "BHU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2306"
+        },
+        "Code": "101318",
+        "Name": "bhayandar",
+        "Category": "Cityscapes",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2307"
+        },
+        "Code": "144227",
+        "Name": "bheeramballi",
+        "Category": "Cityscapes",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2308"
+        },
+        "Code": "105400",
+        "Name": "bhilai",
+        "Category": "Cityscapes",
+        "airport_code": "RPR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2309"
+        },
+        "Code": "105648",
+        "Name": "bhilwara",
+        "Category": "Cityscapes",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230a"
+        },
+        "Code": "111196",
+        "Name": "bhimtal",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230b"
+        },
+        "Code": "109000",
+        "Name": "bhiwadi",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230c"
+        },
+        "Code": "144228",
+        "Name": "bhiwadi",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230d"
+        },
+        "Code": "144229",
+        "Name": "bhiwandi",
+        "Category": "Cityscapes",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230e"
+        },
+        "Code": "111486",
+        "Name": "bhogapuram",
+        "Category": "Cityscapes",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c230f"
+        },
+        "Code": "111932",
+        "Name": "bhopal",
+        "Category": "Cityscape",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2310"
+        },
+        "Code": "105649",
+        "Name": "bhowali",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2311"
+        },
+        "Code": "111558",
+        "Name": "bhubaneswar",
+        "Category": "Cityscape",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2312"
+        },
+        "Code": "144230",
+        "Name": "bhuj",
+        "Category": "Cityscape",
+        "airport_code": "BHJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2313"
+        },
+        "Code": "108057",
+        "Name": "bhuntar",
+        "Category": "Mountains",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2314"
+        },
+        "Code": "105736",
+        "Name": "bijainagar",
+        "Category": "Pilgrimage",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2315"
+        },
+        "Code": "111499",
+        "Name": "bijaipur",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2316"
+        },
+        "Code": "111949",
+        "Name": "bijapur",
+        "Category": "Cityscape",
+        "airport_code": "HBX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2317"
+        },
+        "Code": "144247",
+        "Name": "bikaner",
+        "Category": "Cityscape",
+        "airport_code": "BKB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2318"
+        },
+        "Code": "111574",
+        "Name": "bilaspur",
+        "Category": "Cityscape",
+        "airport_code": "PAB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2319"
+        },
+        "Code": "111212",
+        "Name": "binsar",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231a"
+        },
+        "Code": "111216",
+        "Name": "bishangarh",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231b"
+        },
+        "Code": "112643",
+        "Name": "bodhgaya",
+        "Category": "Pilgrimage",
+        "airport_code": "GAY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231c"
+        },
+        "Code": "112649",
+        "Name": "bogmallo",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231d"
+        },
+        "Code": "112228",
+        "Name": "bokaro",
+        "Category": "Cityscape",
+        "airport_code": "IXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231e"
+        },
+        "Code": "111364",
+        "Name": "bokkapuram",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c231f"
+        },
+        "Code": "111264",
+        "Name": "bomdila",
+        "Category": "Mountains",
+        "airport_code": "TEZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2320"
+        },
+        "Code": "112272",
+        "Name": "brahmapur",
+        "Category": "Cityscape",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2321"
+        },
+        "Code": "113081",
+        "Name": "bundi",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2322"
+        },
+        "Code": "148834",
+        "Name": "burhanpur",
+        "Category": "Cityscape",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2323"
+        },
+        "Code": "112868",
+        "Name": "calangute",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2324"
+        },
+        "Code": "113128",
+        "Name": "calcutta",
+        "Category": "Cityscape",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2325"
+        },
+        "Code": "144475",
+        "Name": "calicut",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2326"
+        },
+        "Code": "113160",
+        "Name": "canacona",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2327"
+        },
+        "Code": "105699",
+        "Name": "candolim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2328"
+        },
+        "Code": "144510",
+        "Name": "candolim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2329"
+        },
+        "Code": "113347",
+        "Name": "cansaulim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232a"
+        },
+        "Code": "150965",
+        "Name": "car nicobar",
+        "Category": "Beach",
+        "airport_code": "CBD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232b"
+        },
+        "Code": "112913",
+        "Name": "caranzalem",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232c"
+        },
+        "Code": "113566",
+        "Name": "cauvery",
+        "Category": "Pilgrimage",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232d"
+        },
+        "Code": "114566",
+        "Name": "cavelossim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232e"
+        },
+        "Code": "113675",
+        "Name": "chail",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c232f"
+        },
+        "Code": "114601",
+        "Name": "chakan",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2330"
+        },
+        "Code": "150284",
+        "Name": "chalakudy",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2331"
+        },
+        "Code": "114703",
+        "Name": "chamba",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2332"
+        },
+        "Code": "114936",
+        "Name": "chamoli",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2333"
+        },
+        "Code": "105721",
+        "Name": "champakulam",
+        "Category": "Pilgrimage",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2334"
+        },
+        "Code": "114107",
+        "Name": "chandigarh",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2335"
+        },
+        "Code": "102259",
+        "Name": "chandipur",
+        "Category": "Beach",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2336"
+        },
+        "Code": "105246",
+        "Name": "chandrapur",
+        "Category": "Cityscape",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2337"
+        },
+        "Code": "113683",
+        "Name": "changanassery",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2338"
+        },
+        "Code": "105247",
+        "Name": "changodar",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2339"
+        },
+        "Code": "114117",
+        "Name": "charholi budruk",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233a"
+        },
+        "Code": "114960",
+        "Name": "chaukori",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233b"
+        },
+        "Code": "127343",
+        "Name": "chennai",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233c"
+        },
+        "Code": "114523",
+        "Name": "cherai",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233d"
+        },
+        "Code": "106208",
+        "Name": "cherai beach",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233e"
+        },
+        "Code": "108141",
+        "Name": "chhindwara",
+        "Category": "Cityscape",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c233f"
+        },
+        "Code": "114977",
+        "Name": "chhota udaipur",
+        "Category": "Cityscape",
+        "airport_code": "BDQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2340"
+        },
+        "Code": "114793",
+        "Name": "chidambaram",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2341"
+        },
+        "Code": "114986",
+        "Name": "chikmagalur",
+        "Category": "Mountains",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2342"
+        },
+        "Code": "114987",
+        "Name": "chikmaglur",
+        "Category": "Mountains",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2343"
+        },
+        "Code": "148870",
+        "Name": "chilling",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2344"
+        },
+        "Code": "114357",
+        "Name": "chinakakani",
+        "Category": "Cityscape",
+        "airport_code": "VGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2345"
+        },
+        "Code": "114660",
+        "Name": "chinnakanal",
+        "Category": "Mountains",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2346"
+        },
+        "Code": "114801",
+        "Name": "chintpuri",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2347"
+        },
+        "Code": "114272",
+        "Name": "chiplun",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2348"
+        },
+        "Code": "114803",
+        "Name": "chitrakoot",
+        "Category": "Cityscape",
+        "airport_code": "IXD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2349"
+        },
+        "Code": "114804",
+        "Name": "chittaurgarh",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234a"
+        },
+        "Code": "108144",
+        "Name": "chittorgarh",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234b"
+        },
+        "Code": "114758",
+        "Name": "choglamsar",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234c"
+        },
+        "Code": "114811",
+        "Name": "chorao island",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234d"
+        },
+        "Code": "114817",
+        "Name": "chowara",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234e"
+        },
+        "Code": "114823",
+        "Name": "chundale",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c234f"
+        },
+        "Code": "114554",
+        "Name": "churu",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2350"
+        },
+        "Code": "114326",
+        "Name": "cochin",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2351"
+        },
+        "Code": "144735",
+        "Name": "coimbatore",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2352"
+        },
+        "Code": "115840",
+        "Name": "colva",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2353"
+        },
+        "Code": "102287",
+        "Name": "coochbehar",
+        "Category": "Cityscape",
+        "airport_code": "COH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2354"
+        },
+        "Code": "115864",
+        "Name": "coonoor",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2355"
+        },
+        "Code": "115400",
+        "Name": "coorg",
+        "Category": "Mountains",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2356"
+        },
+        "Code": "115501",
+        "Name": "corbett-nationalpark",
+        "Category": "Wildlife",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2357"
+        },
+        "Code": "115526",
+        "Name": "covelong",
+        "Category": "Beach",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2358"
+        },
+        "Code": "150397",
+        "Name": "cuddapah",
+        "Category": "Cityscape",
+        "airport_code": "CDP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2359"
+        },
+        "Code": "116021",
+        "Name": "cuttack",
+        "Category": "Cityscape",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235a"
+        },
+        "Code": "116604",
+        "Name": "dabolim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235b"
+        },
+        "Code": "104936",
+        "Name": "dadahu",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235c"
+        },
+        "Code": "115176",
+        "Name": "dahej",
+        "Category": "Cityscape",
+        "airport_code": "BDQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235d"
+        },
+        "Code": "116613",
+        "Name": "dalhousie",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235e"
+        },
+        "Code": "116035",
+        "Name": "daman",
+        "Category": "Beach",
+        "airport_code": "NMB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c235f"
+        },
+        "Code": "116039",
+        "Name": "dandeli",
+        "Category": "Wildlife",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2360"
+        },
+        "Code": "116624",
+        "Name": "dankuni",
+        "Category": "Cityscape",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2361"
+        },
+        "Code": "115634",
+        "Name": "dapoli",
+        "Category": "Beach",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2362"
+        },
+        "Code": "105998",
+        "Name": "darbhanga",
+        "Category": "Cityscape",
+        "airport_code": "DBR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2363"
+        },
+        "Code": "116264",
+        "Name": "darjeeling",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2364"
+        },
+        "Code": "101849",
+        "Name": "daund",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2365"
+        },
+        "Code": "144874",
+        "Name": "dausa",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2366"
+        },
+        "Code": "148900",
+        "Name": "deepyokma",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2367"
+        },
+        "Code": "116164",
+        "Name": "dehradun",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2368"
+        },
+        "Code": "116074",
+        "Name": "deogarh",
+        "Category": "Cityscape",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2369"
+        },
+        "Code": "105482",
+        "Name": "deoghar",
+        "Category": "Pilgrimage",
+        "airport_code": "DGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236a"
+        },
+        "Code": "117352",
+        "Name": "devikulam",
+        "Category": "Mountains",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236b"
+        },
+        "Code": "106255",
+        "Name": "devprayag",
+        "Category": "Pilgrimage",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236c"
+        },
+        "Code": "104946",
+        "Name": "dhanachuli",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236d"
+        },
+        "Code": "106006",
+        "Name": "dhanaulti",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236e"
+        },
+        "Code": "150731",
+        "Name": "dhanbad",
+        "Category": "Cityscape",
+        "airport_code": "DBD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c236f"
+        },
+        "Code": "102310",
+        "Name": "dharampur",
+        "Category": "Cityscape",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2370"
+        },
+        "Code": "115880",
+        "Name": "dharamsala",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2371"
+        },
+        "Code": "144913",
+        "Name": "dharmapuri",
+        "Category": "Cityscape",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2372"
+        },
+        "Code": "105779",
+        "Name": "dhela",
+        "Category": "Wildlife",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2373"
+        },
+        "Code": "116338",
+        "Name": "dhikuli",
+        "Category": "Cityscape",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2374"
+        },
+        "Code": "115881",
+        "Name": "dholpur",
+        "Category": "Cityscape",
+        "airport_code": "AIP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2375"
+        },
+        "Code": "116087",
+        "Name": "dhule",
+        "Category": "Cityscape",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2376"
+        },
+        "Code": "115884",
+        "Name": "dibrugarh",
+        "Category": "Cityscape",
+        "airport_code": "DIB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2377"
+        },
+        "Code": "115894",
+        "Name": "digha",
+        "Category": "Beach",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2378"
+        },
+        "Code": "115896",
+        "Name": "dimapur",
+        "Category": "Cityscape",
+        "airport_code": "DMU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2379"
+        },
+        "Code": "106010",
+        "Name": "dindigul",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237a"
+        },
+        "Code": "151439",
+        "Name": "dirang",
+        "Category": "Mountains",
+        "airport_code": "GAU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237b"
+        },
+        "Code": "115899",
+        "Name": "diu",
+        "Category": "Beach",
+        "airport_code": "DIU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237c"
+        },
+        "Code": "144950",
+        "Name": "dooars",
+        "Category": "Wildlife",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237d"
+        },
+        "Code": "116460",
+        "Name": "dundlod",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237e"
+        },
+        "Code": "144996",
+        "Name": "dungarpur",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c237f"
+        },
+        "Code": "117048",
+        "Name": "durg",
+        "Category": "Cityscape",
+        "airport_code": "RPR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2380"
+        },
+        "Code": "115958",
+        "Name": "durgapur",
+        "Category": "Cityscape",
+        "airport_code": "RDP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2381"
+        },
+        "Code": "108863",
+        "Name": "dwarka",
+        "Category": "Pilgrimage",
+        "airport_code": "JGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2382"
+        },
+        "Code": "117110",
+        "Name": "edava",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2383"
+        },
+        "Code": "145110",
+        "Name": "ernakulam",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2384"
+        },
+        "Code": "118129",
+        "Name": "faridabad",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2385"
+        },
+        "Code": "102458",
+        "Name": "fatehabad",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2386"
+        },
+        "Code": "118805",
+        "Name": "fatehgarh",
+        "Category": "Cityscape",
+        "airport_code": "LKO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2387"
+        },
+        "Code": "117771",
+        "Name": "fatehpur sikri",
+        "Category": "Cityscape",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2388"
+        },
+        "Code": "105896",
+        "Name": "fort tiracol",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2389"
+        },
+        "Code": "117993",
+        "Name": "gandhidham",
+        "Category": "Cityscape",
+        "airport_code": "IXY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238a"
+        },
+        "Code": "119071",
+        "Name": "gandhinagar",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238b"
+        },
+        "Code": "101509",
+        "Name": "gangavathi",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238c"
+        },
+        "Code": "119613",
+        "Name": "gangotri",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238d"
+        },
+        "Code": "119221",
+        "Name": "gangtok",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238e"
+        },
+        "Code": "119222",
+        "Name": "ganpatipule",
+        "Category": "Beach",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c238f"
+        },
+        "Code": "119358",
+        "Name": "gaya",
+        "Category": "Pilgrimage",
+        "airport_code": "GAY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2390"
+        },
+        "Code": "118973",
+        "Name": "ghaziabad",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2391"
+        },
+        "Code": "106106",
+        "Name": "giridih",
+        "Category": "Cityscape",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2392"
+        },
+        "Code": "118719",
+        "Name": "glenburn",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2393"
+        },
+        "Code": "119805",
+        "Name": "goa",
+        "Category": "Beach",
+        "airport_code": "GOX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2394"
+        },
+        "Code": "108256",
+        "Name": "goa velha",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2395"
+        },
+        "Code": "118733",
+        "Name": "gokarna",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2396"
+        },
+        "Code": "120368",
+        "Name": "gopalpur on sea",
+        "Category": "Beach",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2397"
+        },
+        "Code": "120370",
+        "Name": "gorai beach",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2398"
+        },
+        "Code": "120371",
+        "Name": "gorakhpur",
+        "Category": "Cityscape",
+        "airport_code": "GOP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2399"
+        },
+        "Code": "102486",
+        "Name": "gosaba",
+        "Category": "Cityscape",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239a"
+        },
+        "Code": "108265",
+        "Name": "govardhan",
+        "Category": "Pilgrimage",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239b"
+        },
+        "Code": "145430",
+        "Name": "greater noida",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239c"
+        },
+        "Code": "102499",
+        "Name": "gudalur",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239d"
+        },
+        "Code": "105832",
+        "Name": "guirim",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239e"
+        },
+        "Code": "119924",
+        "Name": "gulmarg",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c239f"
+        },
+        "Code": "150594",
+        "Name": "guna",
+        "Category": "Cityscape",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a0"
+        },
+        "Code": "106131",
+        "Name": "guntur",
+        "Category": "Cityscape",
+        "airport_code": "VGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a1"
+        },
+        "Code": "119513",
+        "Name": "gurgaon",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a2"
+        },
+        "Code": "119517",
+        "Name": "guruvayur",
+        "Category": "Pilgrimage",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a3"
+        },
+        "Code": "121139",
+        "Name": "guwahati",
+        "Category": "Cityscapes",
+        "airport_code": "GAU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a4"
+        },
+        "Code": "120439",
+        "Name": "gwalior",
+        "Category": "Cityscapes",
+        "airport_code": "GWL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a5"
+        },
+        "Code": "120588",
+        "Name": "haldwani",
+        "Category": "Cityscapes",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a6"
+        },
+        "Code": "121175",
+        "Name": "hampi",
+        "Category": "Cityscapes",
+        "airport_code": "HBX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a7"
+        },
+        "Code": "119961",
+        "Name": "hansi",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a8"
+        },
+        "Code": "120206",
+        "Name": "hanumangarh",
+        "Category": "Cityscapes",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23a9"
+        },
+        "Code": "121186",
+        "Name": "haridwar",
+        "Category": "Pilgrimage",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23aa"
+        },
+        "Code": "120871",
+        "Name": "hassan",
+        "Category": "Cityscapes",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ab"
+        },
+        "Code": "119978",
+        "Name": "havelock island",
+        "Category": "Beach",
+        "airport_code": "IXZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ac"
+        },
+        "Code": "102512",
+        "Name": "hebbal",
+        "Category": "Cityscapes",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ad"
+        },
+        "Code": "148892",
+        "Name": "hemis skupachan",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ae"
+        },
+        "Code": "121355",
+        "Name": "hinjawadi",
+        "Category": "Cityscapes",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23af"
+        },
+        "Code": "105850",
+        "Name": "hisar",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b0"
+        },
+        "Code": "145660",
+        "Name": "hooghly",
+        "Category": "Cityscapes",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b1"
+        },
+        "Code": "121557",
+        "Name": "hoshiarpur",
+        "Category": "Cityscapes",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b2"
+        },
+        "Code": "121396",
+        "Name": "hospet",
+        "Category": "Cityscapes",
+        "airport_code": "HBX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b3"
+        },
+        "Code": "121290",
+        "Name": "hosur",
+        "Category": "Cityscapes",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b4"
+        },
+        "Code": "145687",
+        "Name": "howrah",
+        "Category": "Cityscapes",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b5"
+        },
+        "Code": "150235",
+        "Name": "hubli",
+        "Category": "Cityscapes",
+        "airport_code": "HBX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b6"
+        },
+        "Code": "145694",
+        "Name": "hubli-dharwad",
+        "Category": "Cityscapes",
+        "airport_code": "HBX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b7"
+        },
+        "Code": "121570",
+        "Name": "hudikeri",
+        "Category": "Cityscapes",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b8"
+        },
+        "Code": "145710",
+        "Name": "hyderabad",
+        "Category": "Cityscapes",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23b9"
+        },
+        "Code": "102531",
+        "Name": "ichalkaranji",
+        "Category": "Cityscapes",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ba"
+        },
+        "Code": "121984",
+        "Name": "igatpuri",
+        "Category": "Cityscapes",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23bb"
+        },
+        "Code": "122108",
+        "Name": "imphal",
+        "Category": "Cityscapes",
+        "airport_code": "IMF"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23bc"
+        },
+        "Code": "121726",
+        "Name": "indore",
+        "Category": "Cityscapes",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23bd"
+        },
+        "Code": "122732",
+        "Name": "itanagar",
+        "Category": "Cityscapes",
+        "airport_code": "HGI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23be"
+        },
+        "Code": "121509",
+        "Name": "jabalpur",
+        "Category": "Cityscapes",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23bf"
+        },
+        "Code": "150469",
+        "Name": "jagdalpur",
+        "Category": "Cityscapes",
+        "airport_code": "JGB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c0"
+        },
+        "Code": "122175",
+        "Name": "jaipur",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c1"
+        },
+        "Code": "122326",
+        "Name": "jaisalmer",
+        "Category": "Cityscapes",
+        "airport_code": "JSA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c2"
+        },
+        "Code": "122327",
+        "Name": "jalandhar",
+        "Category": "Cityscapes",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c3"
+        },
+        "Code": "122177",
+        "Name": "jalgaon",
+        "Category": "Cityscapes",
+        "airport_code": "JLG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c4"
+        },
+        "Code": "103931",
+        "Name": "jalna",
+        "Category": "Cityscapes",
+        "airport_code": "IXU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c5"
+        },
+        "Code": "123420",
+        "Name": "jalore",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c6"
+        },
+        "Code": "122328",
+        "Name": "jalpaiguri",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c7"
+        },
+        "Code": "105614",
+        "Name": "jambulne",
+        "Category": "Cityscapes",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c8"
+        },
+        "Code": "121783",
+        "Name": "jammu",
+        "Category": "Cityscapes",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23c9"
+        },
+        "Code": "122329",
+        "Name": "jamnagar",
+        "Category": "Cityscapes",
+        "airport_code": "JGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ca"
+        },
+        "Code": "123422",
+        "Name": "jamshedpur",
+        "Category": "Cityscapes",
+        "airport_code": "IXW"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23cb"
+        },
+        "Code": "122763",
+        "Name": "jeypore",
+        "Category": "Cityscapes",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23cc"
+        },
+        "Code": "105885",
+        "Name": "jhadol",
+        "Category": "Cityscapes",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23cd"
+        },
+        "Code": "122199",
+        "Name": "jhansi",
+        "Category": "Cityscapes",
+        "airport_code": "KNU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ce"
+        },
+        "Code": "148844",
+        "Name": "jhunjhunu",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23cf"
+        },
+        "Code": "123445",
+        "Name": "jispa",
+        "Category": "Mountains",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d0"
+        },
+        "Code": "145836",
+        "Name": "jodhpur",
+        "Category": "Cityscapes",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d1"
+        },
+        "Code": "122215",
+        "Name": "jorhat",
+        "Category": "Cityscapes",
+        "airport_code": "JRH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d2"
+        },
+        "Code": "105627",
+        "Name": "junagadh",
+        "Category": "Cityscapes",
+        "airport_code": "RAJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d3"
+        },
+        "Code": "122370",
+        "Name": "junagarh",
+        "Category": "Cityscapes",
+        "airport_code": "RAJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d4"
+        },
+        "Code": "123469",
+        "Name": "jwalamukhi",
+        "Category": "Cityscapes",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d5"
+        },
+        "Code": "145856",
+        "Name": "kadmat island",
+        "Category": "Beach",
+        "airport_code": "AGX"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d6"
+        },
+        "Code": "151112",
+        "Name": "kailashahar",
+        "Category": "Cityscapes",
+        "airport_code": "IXH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d7"
+        },
+        "Code": "123476",
+        "Name": "kakinada",
+        "Category": "Cityscapes",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d8"
+        },
+        "Code": "104092",
+        "Name": "kalady",
+        "Category": "Cityscapes",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23d9"
+        },
+        "Code": "122388",
+        "Name": "kaliel",
+        "Category": "Cityscapes",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23da"
+        },
+        "Code": "122511",
+        "Name": "kalimpong",
+        "Category": "Cityscapes",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23db"
+        },
+        "Code": "105633",
+        "Name": "kalpatta",
+        "Category": "Cityscapes",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23dc"
+        },
+        "Code": "121837",
+        "Name": "kalpetta",
+        "Category": "Cityscapes",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23dd"
+        },
+        "Code": "145872",
+        "Name": "kalyan",
+        "Category": "Cityscapes",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23de"
+        },
+        "Code": "151198",
+        "Name": "kamalpur",
+        "Category": "Cityscapes",
+        "airport_code": "IXA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23df"
+        },
+        "Code": "121841",
+        "Name": "kamba",
+        "Category": "Cityscapes",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e0"
+        },
+        "Code": "122406",
+        "Name": "kanadukathan",
+        "Category": "Cityscapes",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e1"
+        },
+        "Code": "122824",
+        "Name": "kanchipuram",
+        "Category": "Cityscapes",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e2"
+        },
+        "Code": "122253",
+        "Name": "kandaghat",
+        "Category": "Cityscapes",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e3"
+        },
+        "Code": "151469",
+        "Name": "kandla",
+        "Category": "Cityscapes",
+        "airport_code": "IXY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e4"
+        },
+        "Code": "122826",
+        "Name": "kangra valley",
+        "Category": "Cityscapes",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e5"
+        },
+        "Code": "122931",
+        "Name": "kanha",
+        "Category": "Wildlife",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e6"
+        },
+        "Code": "122256",
+        "Name": "kanniyakumari",
+        "Category": "Cityscapes",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e7"
+        },
+        "Code": "122522",
+        "Name": "kannur",
+        "Category": "Cityscapes",
+        "airport_code": "CNN"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e8"
+        },
+        "Code": "122932",
+        "Name": "kanpur",
+        "Category": "Cityscapes",
+        "airport_code": "KNU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23e9"
+        },
+        "Code": "123084",
+        "Name": "kanyakumari",
+        "Category": "Cityscapes",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ea"
+        },
+        "Code": "122525",
+        "Name": "kappad",
+        "Category": "Beach",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23eb"
+        },
+        "Code": "123503",
+        "Name": "karad",
+        "Category": "Cityscapes",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ec"
+        },
+        "Code": "123204",
+        "Name": "karaikudi",
+        "Category": "Cityscapes",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ed"
+        },
+        "Code": "148869",
+        "Name": "karauli",
+        "Category": "Cityscapes",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ee"
+        },
+        "Code": "122938",
+        "Name": "kargil",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ef"
+        },
+        "Code": "103950",
+        "Name": "karimnagar",
+        "Category": "Cityscapes",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f0"
+        },
+        "Code": "122275",
+        "Name": "karnal",
+        "Category": "Cityscapes",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f1"
+        },
+        "Code": "123217",
+        "Name": "karur",
+        "Category": "Cityscapes",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f2"
+        },
+        "Code": "123098",
+        "Name": "karwar",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f3"
+        },
+        "Code": "123218",
+        "Name": "kasarde",
+        "Category": "Cityscapes",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f4"
+        },
+        "Code": "122848",
+        "Name": "kasargod",
+        "Category": "Cityscapes",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f5"
+        },
+        "Code": "122950",
+        "Name": "kasauli",
+        "Category": "Cityscapes",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f6"
+        },
+        "Code": "123518",
+        "Name": "kashid",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f7"
+        },
+        "Code": "123519",
+        "Name": "kashipur",
+        "Category": "Cityscapes",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f8"
+        },
+        "Code": "102540",
+        "Name": "kasol",
+        "Category": "Cityscapes",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23f9"
+        },
+        "Code": "123108",
+        "Name": "kathgodam",
+        "Category": "Cityscapes",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23fa"
+        },
+        "Code": "108361",
+        "Name": "katihar",
+        "Category": "Cityscapes",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23fb"
+        },
+        "Code": "124184",
+        "Name": "katra",
+        "Category": "Pilgrimage",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23fc"
+        },
+        "Code": "123227",
+        "Name": "kausani",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23fd"
+        },
+        "Code": "123527",
+        "Name": "kaziranga",
+        "Category": "Wildlife",
+        "airport_code": "JRH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23fe"
+        },
+        "Code": "123231",
+        "Name": "kedarnath",
+        "Category": "Pilgrimage",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c23ff"
+        },
+        "Code": "122978",
+        "Name": "kerala",
+        "Category": "Cityscapes",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2400"
+        },
+        "Code": "150615",
+        "Name": "keshod",
+        "Category": "Cityscapes",
+        "airport_code": "IXK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2401"
+        },
+        "Code": "123258",
+        "Name": "khajjiar",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2402"
+        },
+        "Code": "122580",
+        "Name": "khajuraho",
+        "Category": "Cityscape",
+        "airport_code": "HJR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2403"
+        },
+        "Code": "123259",
+        "Name": "khandala",
+        "Category": "Mountains",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2404"
+        },
+        "Code": "102545",
+        "Name": "khandela",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2405"
+        },
+        "Code": "106186",
+        "Name": "khandwa",
+        "Category": "Cityscape",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2406"
+        },
+        "Code": "101671",
+        "Name": "khas nagrota",
+        "Category": "Cityscape",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2407"
+        },
+        "Code": "122998",
+        "Name": "khilchipur",
+        "Category": "Cityscape",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2408"
+        },
+        "Code": "123676",
+        "Name": "khimsar",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2409"
+        },
+        "Code": "108369",
+        "Name": "kihim",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240a"
+        },
+        "Code": "148902",
+        "Name": "kishangarh",
+        "Category": "Cityscape",
+        "airport_code": "KQH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240b"
+        },
+        "Code": "101204",
+        "Name": "kochi",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240c"
+        },
+        "Code": "123608",
+        "Name": "kodaikanal",
+        "Category": "Mountains",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240d"
+        },
+        "Code": "123875",
+        "Name": "kolhapur",
+        "Category": "Cityscape",
+        "airport_code": "KLH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240e"
+        },
+        "Code": "123877",
+        "Name": "kollam",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c240f"
+        },
+        "Code": "123879",
+        "Name": "konark",
+        "Category": "Cityscape",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2410"
+        },
+        "Code": "103877",
+        "Name": "kondotty",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2411"
+        },
+        "Code": "124966",
+        "Name": "kota",
+        "Category": "Cityscape",
+        "airport_code": "KTU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2412"
+        },
+        "Code": "123312",
+        "Name": "kotagiri",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2413"
+        },
+        "Code": "124008",
+        "Name": "kothamangalam",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2414"
+        },
+        "Code": "101696",
+        "Name": "koti",
+        "Category": "Cityscape",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2415"
+        },
+        "Code": "123314",
+        "Name": "kotputli",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2416"
+        },
+        "Code": "123891",
+        "Name": "kottayam",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2417"
+        },
+        "Code": "101967",
+        "Name": "kottivakkam",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2418"
+        },
+        "Code": "123897",
+        "Name": "kovalam",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2419"
+        },
+        "Code": "123334",
+        "Name": "krishnagiri",
+        "Category": "Mountains",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241a"
+        },
+        "Code": "123914",
+        "Name": "kuchaman",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241b"
+        },
+        "Code": "103727",
+        "Name": "kudal",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241c"
+        },
+        "Code": "124997",
+        "Name": "kudasan",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241d"
+        },
+        "Code": "146047",
+        "Name": "kullu",
+        "Category": "Mountains",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241e"
+        },
+        "Code": "123344",
+        "Name": "kumarakom",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c241f"
+        },
+        "Code": "125002",
+        "Name": "kumbakonam",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2420"
+        },
+        "Code": "150174",
+        "Name": "kumbalgarh",
+        "Category": "Mountains",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2421"
+        },
+        "Code": "123774",
+        "Name": "kumbhalgarh",
+        "Category": "Mountains",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2422"
+        },
+        "Code": "146051",
+        "Name": "kumily",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2423"
+        },
+        "Code": "103888",
+        "Name": "kundapur",
+        "Category": "Cityscape",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2424"
+        },
+        "Code": "103728",
+        "Name": "kurnool",
+        "Category": "Cityscape",
+        "airport_code": "KJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2425"
+        },
+        "Code": "105541",
+        "Name": "kuruppanthara",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2426"
+        },
+        "Code": "124044",
+        "Name": "kushalnagar",
+        "Category": "Cityscape",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2427"
+        },
+        "Code": "124045",
+        "Name": "kushinagar",
+        "Category": "Cityscape",
+        "airport_code": "KBK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2428"
+        },
+        "Code": "122798",
+        "Name": "kutch",
+        "Category": "Cityscape",
+        "airport_code": "BHJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2429"
+        },
+        "Code": "146091",
+        "Name": "lachung",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242a"
+        },
+        "Code": "150363",
+        "Name": "ladakh",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242b"
+        },
+        "Code": "146104",
+        "Name": "lahaul and spiti",
+        "Category": "Mountains",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242c"
+        },
+        "Code": "124514",
+        "Name": "lakkidi",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242d"
+        },
+        "Code": "103751",
+        "Name": "lansdowne",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242e"
+        },
+        "Code": "148903",
+        "Name": "lataguri",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c242f"
+        },
+        "Code": "125485",
+        "Name": "latur",
+        "Category": "Cityscape",
+        "airport_code": "LTU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2430"
+        },
+        "Code": "146184",
+        "Name": "lava",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2431"
+        },
+        "Code": "125144",
+        "Name": "leh",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2432"
+        },
+        "Code": "148896",
+        "Name": "lingshed",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2433"
+        },
+        "Code": "126630",
+        "Name": "lonavala",
+        "Category": "Mountains",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2434"
+        },
+        "Code": "126666",
+        "Name": "lucknow",
+        "Category": "Cityscape",
+        "airport_code": "LKO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2435"
+        },
+        "Code": "125928",
+        "Name": "ludhiana",
+        "Category": "Cityscape",
+        "airport_code": "LUH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2436"
+        },
+        "Code": "125651",
+        "Name": "luni",
+        "Category": "Cityscape",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2437"
+        },
+        "Code": "104313",
+        "Name": "madikeri",
+        "Category": "Cityscape",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2438"
+        },
+        "Code": "127067",
+        "Name": "madurai",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2439"
+        },
+        "Code": "125684",
+        "Name": "mahabaleshwar",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243a"
+        },
+        "Code": "126117",
+        "Name": "mahabalipuram",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243b"
+        },
+        "Code": "103781",
+        "Name": "mahad",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243c"
+        },
+        "Code": "104316",
+        "Name": "mahansar",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243d"
+        },
+        "Code": "126265",
+        "Name": "maheshwar",
+        "Category": "Cityscape",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243e"
+        },
+        "Code": "104318",
+        "Name": "majorda",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c243f"
+        },
+        "Code": "127352",
+        "Name": "majorda beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2440"
+        },
+        "Code": "146447",
+        "Name": "malappuram",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2441"
+        },
+        "Code": "102599",
+        "Name": "malayattoor",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2442"
+        },
+        "Code": "150632",
+        "Name": "malda",
+        "Category": "Cityscape",
+        "airport_code": "LDA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2443"
+        },
+        "Code": "127105",
+        "Name": "malpura",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2444"
+        },
+        "Code": "126958",
+        "Name": "malvan",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2445"
+        },
+        "Code": "126139",
+        "Name": "mamallapuram",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2446"
+        },
+        "Code": "126388",
+        "Name": "manali",
+        "Category": "Mountains",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2447"
+        },
+        "Code": "104156",
+        "Name": "mandarmoni",
+        "Category": "Beach",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2448"
+        },
+        "Code": "126802",
+        "Name": "mandawa",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2449"
+        },
+        "Code": "146462",
+        "Name": "mandi",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244a"
+        },
+        "Code": "104482",
+        "Name": "mandrem",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244b"
+        },
+        "Code": "127113",
+        "Name": "mandu",
+        "Category": "Cityscape",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244c"
+        },
+        "Code": "126805",
+        "Name": "mangalore",
+        "Category": "Cityscape",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244d"
+        },
+        "Code": "104157",
+        "Name": "manipal",
+        "Category": "Cityscape",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244e"
+        },
+        "Code": "126810",
+        "Name": "manmad",
+        "Category": "Cityscape",
+        "airport_code": "SAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c244f"
+        },
+        "Code": "104323",
+        "Name": "mapusa",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2450"
+        },
+        "Code": "146481",
+        "Name": "maradu",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2451"
+        },
+        "Code": "146484",
+        "Name": "marari beach",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2452"
+        },
+        "Code": "126817",
+        "Name": "mararikulam",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2453"
+        },
+        "Code": "106481",
+        "Name": "margao",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2454"
+        },
+        "Code": "146533",
+        "Name": "mashobra",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2455"
+        },
+        "Code": "146545",
+        "Name": "matheran",
+        "Category": "Mountains",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2456"
+        },
+        "Code": "127857",
+        "Name": "mathura",
+        "Category": "Cityscape",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2457"
+        },
+        "Code": "126911",
+        "Name": "mayiladuthurai",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2458"
+        },
+        "Code": "104040",
+        "Name": "mcleod ganj",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2459"
+        },
+        "Code": "146575",
+        "Name": "meerut",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245a"
+        },
+        "Code": "104345",
+        "Name": "meppadi",
+        "Category": "Mountains",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245b"
+        },
+        "Code": "128829",
+        "Name": "mettupalayam",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245c"
+        },
+        "Code": "150356",
+        "Name": "midnapur",
+        "Category": "Cityscape",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245d"
+        },
+        "Code": "106510",
+        "Name": "mirik",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245e"
+        },
+        "Code": "128914",
+        "Name": "mobor beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c245f"
+        },
+        "Code": "106514",
+        "Name": "mohali",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2460"
+        },
+        "Code": "102819",
+        "Name": "mohan",
+        "Category": "Cityscape",
+        "airport_code": "LKO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2461"
+        },
+        "Code": "103825",
+        "Name": "mohania",
+        "Category": "Cityscape",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2462"
+        },
+        "Code": "101894",
+        "Name": "mollem",
+        "Category": "Wildlife",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2463"
+        },
+        "Code": "129615",
+        "Name": "moradabad",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2464"
+        },
+        "Code": "102834",
+        "Name": "morbi",
+        "Category": "Cityscape",
+        "airport_code": "RAJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2465"
+        },
+        "Code": "129044",
+        "Name": "morjim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2466"
+        },
+        "Code": "146752",
+        "Name": "mount abu",
+        "Category": "Mountains",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2467"
+        },
+        "Code": "129690",
+        "Name": "mukkam",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2468"
+        },
+        "Code": "129415",
+        "Name": "mukteshwar",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2469"
+        },
+        "Code": "146768",
+        "Name": "mukundgarh",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246a"
+        },
+        "Code": "129695",
+        "Name": "mullor",
+        "Category": "Cityscape",
+        "airport_code": "IXZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246b"
+        },
+        "Code": "144306",
+        "Name": "mumbai",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246c"
+        },
+        "Code": "128573",
+        "Name": "munnar",
+        "Category": "Mountains",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246d"
+        },
+        "Code": "146776",
+        "Name": "munsiyari",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246e"
+        },
+        "Code": "129232",
+        "Name": "muradabad",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c246f"
+        },
+        "Code": "128030",
+        "Name": "murbad",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2470"
+        },
+        "Code": "129104",
+        "Name": "murinjapuzha",
+        "Category": "Cityscape",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2471"
+        },
+        "Code": "129434",
+        "Name": "murud",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2472"
+        },
+        "Code": "130341",
+        "Name": "mussoorie",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2473"
+        },
+        "Code": "150392",
+        "Name": "muzaffarnagar",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2474"
+        },
+        "Code": "151536",
+        "Name": "muzaffarpur",
+        "Category": "Cityscape",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2475"
+        },
+        "Code": "128698",
+        "Name": "mysore",
+        "Category": "Cityscape",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2476"
+        },
+        "Code": "104506",
+        "Name": "nadiad",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2477"
+        },
+        "Code": "130352",
+        "Name": "nadukani",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2478"
+        },
+        "Code": "129447",
+        "Name": "nagapattinam",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2479"
+        },
+        "Code": "129777",
+        "Name": "nagarhole national park",
+        "Category": "Wildlife",
+        "airport_code": "MYQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247a"
+        },
+        "Code": "104260",
+        "Name": "naggar",
+        "Category": "Cityscape",
+        "airport_code": "KUU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247b"
+        },
+        "Code": "129778",
+        "Name": "nagoa",
+        "Category": "Beach",
+        "airport_code": "DIU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247c"
+        },
+        "Code": "129723",
+        "Name": "nagpur",
+        "Category": "Cityscape",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247d"
+        },
+        "Code": "130354",
+        "Name": "nahar magra",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247e"
+        },
+        "Code": "129726",
+        "Name": "nainital",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c247f"
+        },
+        "Code": "130357",
+        "Name": "nakinda",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2480"
+        },
+        "Code": "129257",
+        "Name": "nalagarh",
+        "Category": "Cityscape",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2481"
+        },
+        "Code": "130105",
+        "Name": "nalkeri",
+        "Category": "Cityscape",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2482"
+        },
+        "Code": "104509",
+        "Name": "namakkal",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2483"
+        },
+        "Code": "130358",
+        "Name": "namchi",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2484"
+        },
+        "Code": "129732",
+        "Name": "nanded",
+        "Category": "Cityscape",
+        "airport_code": "NDC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2485"
+        },
+        "Code": "102033",
+        "Name": "narkanda",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2486"
+        },
+        "Code": "129163",
+        "Name": "narlai",
+        "Category": "Cityscape",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2487"
+        },
+        "Code": "146814",
+        "Name": "nashik",
+        "Category": "Cityscape",
+        "airport_code": "ISK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2488"
+        },
+        "Code": "146820",
+        "Name": "nattika",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2489"
+        },
+        "Code": "128734",
+        "Name": "navi mumbai",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248a"
+        },
+        "Code": "146825",
+        "Name": "nawalgarh",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248b"
+        },
+        "Code": "150203",
+        "Name": "nedumbassery",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248c"
+        },
+        "Code": "129816",
+        "Name": "neeleshwar",
+        "Category": "Beach",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248d"
+        },
+        "Code": "130137",
+        "Name": "neemrana",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248e"
+        },
+        "Code": "129189",
+        "Name": "neil island",
+        "Category": "Beach",
+        "airport_code": "IXZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c248f"
+        },
+        "Code": "129289",
+        "Name": "nellore",
+        "Category": "Cityscape",
+        "airport_code": "TIR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2490"
+        },
+        "Code": "129827",
+        "Name": "nerul",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2491"
+        },
+        "Code": "130443",
+        "Name": "new delhi",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2492"
+        },
+        "Code": "150649",
+        "Name": "neyveli",
+        "Category": "Cityscape",
+        "airport_code": "NVY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2493"
+        },
+        "Code": "104531",
+        "Name": "nilgiri",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2494"
+        },
+        "Code": "129477",
+        "Name": "nimaj",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2495"
+        },
+        "Code": "130205",
+        "Name": "noida",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2496"
+        },
+        "Code": "150162",
+        "Name": "north lakhimpur",
+        "Category": "Cityscape",
+        "airport_code": "IXI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2497"
+        },
+        "Code": "106556",
+        "Name": "north paravur",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2498"
+        },
+        "Code": "150357",
+        "Name": "nyerak",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2499"
+        },
+        "Code": "131276",
+        "Name": "omkareshwar",
+        "Category": "Pilgrimage",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249a"
+        },
+        "Code": "130990",
+        "Name": "ooty",
+        "Category": "Mountains",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249b"
+        },
+        "Code": "130252",
+        "Name": "orchha",
+        "Category": "Cityscape",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249c"
+        },
+        "Code": "130799",
+        "Name": "orissa",
+        "Category": "Cityscape",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249d"
+        },
+        "Code": "132015",
+        "Name": "pachmarhi",
+        "Category": "Mountains",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249e"
+        },
+        "Code": "130852",
+        "Name": "padappai",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c249f"
+        },
+        "Code": "131375",
+        "Name": "pahalgam",
+        "Category": "Mountains",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a0"
+        },
+        "Code": "131721",
+        "Name": "pakhal",
+        "Category": "Cityscape",
+        "airport_code": "TIR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a1"
+        },
+        "Code": "132025",
+        "Name": "palakkad",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a2"
+        },
+        "Code": "147070",
+        "Name": "palampur",
+        "Category": "Mountains",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a3"
+        },
+        "Code": "130749",
+        "Name": "palani",
+        "Category": "Pilgrimage",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a4"
+        },
+        "Code": "130316",
+        "Name": "palanpur",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a5"
+        },
+        "Code": "147075",
+        "Name": "pali",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a6"
+        },
+        "Code": "131392",
+        "Name": "palolem beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a7"
+        },
+        "Code": "131394",
+        "Name": "panchgani",
+        "Category": "Mountains",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a8"
+        },
+        "Code": "131002",
+        "Name": "panchkula",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24a9"
+        },
+        "Code": "147083",
+        "Name": "pandikkad",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24aa"
+        },
+        "Code": "106580",
+        "Name": "pangong tso lake",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ab"
+        },
+        "Code": "147088",
+        "Name": "panipat",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ac"
+        },
+        "Code": "131398",
+        "Name": "panjim",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ad"
+        },
+        "Code": "131437",
+        "Name": "panna",
+        "Category": "Cityscape",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ae"
+        },
+        "Code": "150800",
+        "Name": "pantnagar",
+        "Category": "Cityscape",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24af"
+        },
+        "Code": "131544",
+        "Name": "panvel",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b0"
+        },
+        "Code": "131406",
+        "Name": "paragpur",
+        "Category": "Cityscape",
+        "airport_code": "DHM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b1"
+        },
+        "Code": "131552",
+        "Name": "paravur",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b2"
+        },
+        "Code": "132055",
+        "Name": "parra",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b3"
+        },
+        "Code": "147106",
+        "Name": "parwanoo",
+        "Category": "Cityscape",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b4"
+        },
+        "Code": "106662",
+        "Name": "pateri",
+        "Category": "Cityscape",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b5"
+        },
+        "Code": "131027",
+        "Name": "pathanamthitta",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b6"
+        },
+        "Code": "132705",
+        "Name": "pathankot",
+        "Category": "Cityscape",
+        "airport_code": "IXP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b7"
+        },
+        "Code": "106663",
+        "Name": "patiala",
+        "Category": "Cityscape",
+        "airport_code": "LUH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b8"
+        },
+        "Code": "132429",
+        "Name": "patna",
+        "Category": "Cityscape",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24b9"
+        },
+        "Code": "131028",
+        "Name": "patnitop",
+        "Category": "Mountains",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ba"
+        },
+        "Code": "147140",
+        "Name": "pelling",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24bb"
+        },
+        "Code": "132089",
+        "Name": "pench",
+        "Category": "Wildlife",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24bc"
+        },
+        "Code": "132724",
+        "Name": "pench nationalpark",
+        "Category": "Wildlife",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24bd"
+        },
+        "Code": "102750",
+        "Name": "perambalur",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24be"
+        },
+        "Code": "103270",
+        "Name": "perinthalmanna",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24bf"
+        },
+        "Code": "132133",
+        "Name": "periyar",
+        "Category": "Wildlife",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c0"
+        },
+        "Code": "131597",
+        "Name": "pernem",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c1"
+        },
+        "Code": "132753",
+        "Name": "phagwara",
+        "Category": "Cityscape",
+        "airport_code": "LUH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c2"
+        },
+        "Code": "131523",
+        "Name": "phalodi",
+        "Category": "Cityscape",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c3"
+        },
+        "Code": "106676",
+        "Name": "phaltan",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c4"
+        },
+        "Code": "133418",
+        "Name": "pimpri-chinchwad",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c5"
+        },
+        "Code": "132183",
+        "Name": "pinjore",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c6"
+        },
+        "Code": "133214",
+        "Name": "pokhran",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c7"
+        },
+        "Code": "132282",
+        "Name": "pollachi",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c8"
+        },
+        "Code": "150358",
+        "Name": "pondicherry",
+        "Category": "Cityscape",
+        "airport_code": "PNY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24c9"
+        },
+        "Code": "132292",
+        "Name": "ponmudi",
+        "Category": "Mountains",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ca"
+        },
+        "Code": "133497",
+        "Name": "poovar",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24cb"
+        },
+        "Code": "133551",
+        "Name": "porbandar",
+        "Category": "Cityscape",
+        "airport_code": "PBD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24cc"
+        },
+        "Code": "133556",
+        "Name": "port blair",
+        "Category": "Cityscape",
+        "airport_code": "IXZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24cd"
+        },
+        "Code": "132561",
+        "Name": "puducherry",
+        "Category": "Cityscape",
+        "airport_code": "PNY"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ce"
+        },
+        "Code": "106703",
+        "Name": "pudukkotai",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24cf"
+        },
+        "Code": "134170",
+        "Name": "pulamanthole",
+        "Category": "Cityscape",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d0"
+        },
+        "Code": "133133",
+        "Name": "pune",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d1"
+        },
+        "Code": "147410",
+        "Name": "purakkad",
+        "Category": "Beach",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d2"
+        },
+        "Code": "132593",
+        "Name": "puri",
+        "Category": "Cityscape",
+        "airport_code": "BBI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d3"
+        },
+        "Code": "134001",
+        "Name": "pushkar",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d4"
+        },
+        "Code": "134178",
+        "Name": "puttaparthi",
+        "Category": "Cityscape",
+        "airport_code": "PUT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d5"
+        },
+        "Code": "147442",
+        "Name": "raigad",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d6"
+        },
+        "Code": "133672",
+        "Name": "raipur",
+        "Category": "Cityscape",
+        "airport_code": "RPR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d7"
+        },
+        "Code": "134040",
+        "Name": "rajahmundry",
+        "Category": "Cityscape",
+        "airport_code": "RJA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d8"
+        },
+        "Code": "102941",
+        "Name": "rajakkad",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24d9"
+        },
+        "Code": "102942",
+        "Name": "rajapalayam",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24da"
+        },
+        "Code": "134041",
+        "Name": "rajgarh",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24db"
+        },
+        "Code": "133175",
+        "Name": "rajgir",
+        "Category": "Cityscape",
+        "airport_code": "PAT"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24dc"
+        },
+        "Code": "134211",
+        "Name": "rajkot",
+        "Category": "Cityscape",
+        "airport_code": "RAJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24dd"
+        },
+        "Code": "151654",
+        "Name": "ramagundam",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24de"
+        },
+        "Code": "133177",
+        "Name": "ramakkalmedu",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24df"
+        },
+        "Code": "134213",
+        "Name": "ramathra fort",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e0"
+        },
+        "Code": "133179",
+        "Name": "rameshwaram",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e1"
+        },
+        "Code": "132621",
+        "Name": "ramgarh",
+        "Category": "Cityscape",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e2"
+        },
+        "Code": "134214",
+        "Name": "ramnagar",
+        "Category": "Cityscape",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e3"
+        },
+        "Code": "133676",
+        "Name": "ranakpur",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e4"
+        },
+        "Code": "133760",
+        "Name": "ranchi",
+        "Category": "Cityscape",
+        "airport_code": "IXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e5"
+        },
+        "Code": "133838",
+        "Name": "ranikhet",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e6"
+        },
+        "Code": "134224",
+        "Name": "ranthambore nationalpark",
+        "Category": "Wildlife",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e7"
+        },
+        "Code": "102675",
+        "Name": "ratlam",
+        "Category": "Cityscape",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e8"
+        },
+        "Code": "133687",
+        "Name": "ratnagiri",
+        "Category": "Beach",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24e9"
+        },
+        "Code": "133295",
+        "Name": "ravangla",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ea"
+        },
+        "Code": "102683",
+        "Name": "renigunta",
+        "Category": "Cityscape",
+        "airport_code": "TIR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24eb"
+        },
+        "Code": "150930",
+        "Name": "rewa",
+        "Category": "Cityscape",
+        "airport_code": "REW"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ec"
+        },
+        "Code": "147501",
+        "Name": "rewari",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ed"
+        },
+        "Code": "102954",
+        "Name": "rinchenpong",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ee"
+        },
+        "Code": "134932",
+        "Name": "rishikesh",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ef"
+        },
+        "Code": "147554",
+        "Name": "rohet",
+        "Category": "Cityscape",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f0"
+        },
+        "Code": "103217",
+        "Name": "rohetgarh",
+        "Category": "Cityscape",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f1"
+        },
+        "Code": "134058",
+        "Name": "rohtak",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f2"
+        },
+        "Code": "150180",
+        "Name": "roorkee",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f3"
+        },
+        "Code": "134643",
+        "Name": "rourkela",
+        "Category": "Cityscape",
+        "airport_code": "RRK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f4"
+        },
+        "Code": "135778",
+        "Name": "rudraprayag",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f5"
+        },
+        "Code": "150359",
+        "Name": "rudrapur",
+        "Category": "Cityscape",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f6"
+        },
+        "Code": "150936",
+        "Name": "rupsi",
+        "Category": "Cityscape",
+        "airport_code": "RUP"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f7"
+        },
+        "Code": "103325",
+        "Name": "saharanpur",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f8"
+        },
+        "Code": "147607",
+        "Name": "sahibzada ajit singh nagar",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24f9"
+        },
+        "Code": "103491",
+        "Name": "salasar",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24fa"
+        },
+        "Code": "135916",
+        "Name": "salem",
+        "Category": "Cityscape",
+        "airport_code": "SXV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24fb"
+        },
+        "Code": "135694",
+        "Name": "saligao",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24fc"
+        },
+        "Code": "103344",
+        "Name": "samayapuram",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24fd"
+        },
+        "Code": "103345",
+        "Name": "sambalpur",
+        "Category": "Cityscape",
+        "airport_code": "VGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24fe"
+        },
+        "Code": "103346",
+        "Name": "samode",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c24ff"
+        },
+        "Code": "106770",
+        "Name": "sanand",
+        "Category": "Cityscape",
+        "airport_code": "AMD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2500"
+        },
+        "Code": "135522",
+        "Name": "sanchi",
+        "Category": "Cityscape",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2501"
+        },
+        "Code": "136501",
+        "Name": "sangli",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2502"
+        },
+        "Code": "136093",
+        "Name": "sardargarh",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2503"
+        },
+        "Code": "135586",
+        "Name": "sariska national park",
+        "Category": "Wildlife",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2504"
+        },
+        "Code": "136555",
+        "Name": "sasan gir",
+        "Category": "Wildlife",
+        "airport_code": "DIU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2505"
+        },
+        "Code": "136409",
+        "Name": "satara",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2506"
+        },
+        "Code": "147780",
+        "Name": "satna",
+        "Category": "Cityscape",
+        "airport_code": "TNI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2507"
+        },
+        "Code": "148897",
+        "Name": "satpura",
+        "Category": "Mountains",
+        "airport_code": "BHO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2508"
+        },
+        "Code": "136656",
+        "Name": "sawai madhopur",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2509"
+        },
+        "Code": "136748",
+        "Name": "secunderabad",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250a"
+        },
+        "Code": "136766",
+        "Name": "seoni",
+        "Category": "Cityscape",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250b"
+        },
+        "Code": "150360",
+        "Name": "shahpur",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250c"
+        },
+        "Code": "137380",
+        "Name": "shahpura",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250d"
+        },
+        "Code": "136285",
+        "Name": "shamirpet",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250e"
+        },
+        "Code": "107371",
+        "Name": "shamshabad",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c250f"
+        },
+        "Code": "137568",
+        "Name": "shantiniketan",
+        "Category": "Cityscape",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2510"
+        },
+        "Code": "136801",
+        "Name": "shekhawati",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2511"
+        },
+        "Code": "138670",
+        "Name": "shillong",
+        "Category": "Mountains",
+        "airport_code": "SHL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2512"
+        },
+        "Code": "138673",
+        "Name": "shimla",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2513"
+        },
+        "Code": "147891",
+        "Name": "shimoga",
+        "Category": "Mountains",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2514"
+        },
+        "Code": "148898",
+        "Name": "shingrak",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2515"
+        },
+        "Code": "137316",
+        "Name": "shirdi",
+        "Category": "Pilgrimage",
+        "airport_code": "SAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2516"
+        },
+        "Code": "137750",
+        "Name": "shivpuri",
+        "Category": "Cityscapes",
+        "airport_code": "GWL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2517"
+        },
+        "Code": "106639",
+        "Name": "sholayur",
+        "Category": "Nature",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2518"
+        },
+        "Code": "137404",
+        "Name": "siana",
+        "Category": "Wildlife",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2519"
+        },
+        "Code": "136312",
+        "Name": "sikar",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251a"
+        },
+        "Code": "150361",
+        "Name": "silchar",
+        "Category": "Cityscape",
+        "airport_code": "IXS"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251b"
+        },
+        "Code": "147912",
+        "Name": "siliguri",
+        "Category": "Cityscape",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251c"
+        },
+        "Code": "147914",
+        "Name": "silvassa",
+        "Category": "Cityscape",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251d"
+        },
+        "Code": "137470",
+        "Name": "sindhudi",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251e"
+        },
+        "Code": "106649",
+        "Name": "singrauli",
+        "Category": "Cityscape",
+        "airport_code": "VNS"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c251f"
+        },
+        "Code": "138706",
+        "Name": "sinquerim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2520"
+        },
+        "Code": "138010",
+        "Name": "siolim",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2521"
+        },
+        "Code": "106650",
+        "Name": "sirkazhi",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2522"
+        },
+        "Code": "103180",
+        "Name": "sirsa",
+        "Category": "Cityscape",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2523"
+        },
+        "Code": "107226",
+        "Name": "sitalakhet",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2524"
+        },
+        "Code": "106898",
+        "Name": "sitlakhet",
+        "Category": "Mountains",
+        "airport_code": "PGH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2525"
+        },
+        "Code": "106651",
+        "Name": "skara",
+        "Category": "Cityscape",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2526"
+        },
+        "Code": "138127",
+        "Name": "solan",
+        "Category": "Mountains",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2527"
+        },
+        "Code": "138128",
+        "Name": "solapur",
+        "Category": "Cityscape",
+        "airport_code": "SSE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2528"
+        },
+        "Code": "138049",
+        "Name": "somnath",
+        "Category": "Pilgrimage",
+        "airport_code": "DIU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2529"
+        },
+        "Code": "138484",
+        "Name": "sonamarg",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252a"
+        },
+        "Code": "138523",
+        "Name": "sravasti",
+        "Category": "Pilgrimage",
+        "airport_code": "LKO"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252b"
+        },
+        "Code": "107250",
+        "Name": "sri ganganagar",
+        "Category": "Cityscape",
+        "airport_code": "ATQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252c"
+        },
+        "Code": "137118",
+        "Name": "srikakulam",
+        "Category": "Cityscape",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252d"
+        },
+        "Code": "139456",
+        "Name": "srinagar",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252e"
+        },
+        "Code": "103198",
+        "Name": "srinagar",
+        "Category": "Mountains",
+        "airport_code": "SXR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c252f"
+        },
+        "Code": "138370",
+        "Name": "sriperumbudur",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2530"
+        },
+        "Code": "108572",
+        "Name": "stok",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2531"
+        },
+        "Code": "107078",
+        "Name": "sultan bathery",
+        "Category": "Nature",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2532"
+        },
+        "Code": "140235",
+        "Name": "sunderban",
+        "Category": "Wildlife",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2533"
+        },
+        "Code": "107275",
+        "Name": "sungal",
+        "Category": "Mountains",
+        "airport_code": "IXJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2534"
+        },
+        "Code": "139526",
+        "Name": "surat",
+        "Category": "Cityscape",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2535"
+        },
+        "Code": "107754",
+        "Name": "suratgarh",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2536"
+        },
+        "Code": "139669",
+        "Name": "tala",
+        "Category": "Cityscape",
+        "airport_code": "JAI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2537"
+        },
+        "Code": "139974",
+        "Name": "tarangambadi",
+        "Category": "Beach",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2538"
+        },
+        "Code": "150362",
+        "Name": "tarapith",
+        "Category": "Pilgrimage",
+        "airport_code": "CCU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2539"
+        },
+        "Code": "139699",
+        "Name": "tawang",
+        "Category": "Mountains",
+        "airport_code": "GAU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253a"
+        },
+        "Code": "139069",
+        "Name": "tezpur",
+        "Category": "Cityscape",
+        "airport_code": "TEZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253b"
+        },
+        "Code": "106383",
+        "Name": "thakurdwara",
+        "Category": "Cityscape",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253c"
+        },
+        "Code": "139071",
+        "Name": "thalassery",
+        "Category": "Beach",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253d"
+        },
+        "Code": "140020",
+        "Name": "thane",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253e"
+        },
+        "Code": "139605",
+        "Name": "thanjavur",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c253f"
+        },
+        "Code": "138628",
+        "Name": "thanneermukkom",
+        "Category": "Nature",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2540"
+        },
+        "Code": "139609",
+        "Name": "thekkady",
+        "Category": "Wildlife",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2541"
+        },
+        "Code": "139744",
+        "Name": "theni",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2542"
+        },
+        "Code": "140415",
+        "Name": "thiksey",
+        "Category": "Cityscape",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2543"
+        },
+        "Code": "148901",
+        "Name": "thiruvananthapuram",
+        "Category": "Cityscape",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2544"
+        },
+        "Code": "106955",
+        "Name": "thodupuzha",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2545"
+        },
+        "Code": "140032",
+        "Name": "thrissur",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2546"
+        },
+        "Code": "106958",
+        "Name": "thumkunta",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2547"
+        },
+        "Code": "150287",
+        "Name": "tib bago",
+        "Category": "Mountains",
+        "airport_code": "IXL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2548"
+        },
+        "Code": "107782",
+        "Name": "tinsukia",
+        "Category": "Cityscape",
+        "airport_code": "DIB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2549"
+        },
+        "Code": "148240",
+        "Name": "tiruchirappalli",
+        "Category": "Cityscape",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254a"
+        },
+        "Code": "140310",
+        "Name": "tirunelveli",
+        "Category": "Cityscape",
+        "airport_code": "IXM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254b"
+        },
+        "Code": "140311",
+        "Name": "tirupati",
+        "Category": "Pilgrimage",
+        "airport_code": "TIR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254c"
+        },
+        "Code": "141054",
+        "Name": "tiruppur",
+        "Category": "Cityscape",
+        "airport_code": "CJB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254d"
+        },
+        "Code": "106394",
+        "Name": "tiruttani",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254e"
+        },
+        "Code": "139315",
+        "Name": "tiruvannamalai",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c254f"
+        },
+        "Code": "106963",
+        "Name": "titwala",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2550"
+        },
+        "Code": "106849",
+        "Name": "trimbak",
+        "Category": "Pilgrimage",
+        "airport_code": "ISK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2551"
+        },
+        "Code": "139820",
+        "Name": "trivandrum",
+        "Category": "Cityscape",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2552"
+        },
+        "Code": "106856",
+        "Name": "tura",
+        "Category": "Mountains",
+        "airport_code": "GAU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2553"
+        },
+        "Code": "141528",
+        "Name": "turia",
+        "Category": "Nature",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2554"
+        },
+        "Code": "141231",
+        "Name": "tuticorin",
+        "Category": "Cityscape",
+        "airport_code": "TCR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2555"
+        },
+        "Code": "140098",
+        "Name": "uchiyarda",
+        "Category": "Wildlife",
+        "airport_code": "JDH"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2556"
+        },
+        "Code": "140522",
+        "Name": "udaipur",
+        "Category": "Cityscape",
+        "airport_code": "UDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2557"
+        },
+        "Code": "148363",
+        "Name": "udupi",
+        "Category": "Cityscape",
+        "airport_code": "IXE"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2558"
+        },
+        "Code": "140701",
+        "Name": "ujjain",
+        "Category": "Pilgrimage",
+        "airport_code": "IDR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2559"
+        },
+        "Code": "141832",
+        "Name": "umaria",
+        "Category": "Nature",
+        "airport_code": "JLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255a"
+        },
+        "Code": "141097",
+        "Name": "una",
+        "Category": "Cityscape",
+        "airport_code": "SLV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255b"
+        },
+        "Code": "148374",
+        "Name": "unchagaon",
+        "Category": "Nature",
+        "airport_code": "DEL"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255c"
+        },
+        "Code": "107938",
+        "Name": "uruli kanchan",
+        "Category": "Nature",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255d"
+        },
+        "Code": "141578",
+        "Name": "utorda beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255e"
+        },
+        "Code": "140143",
+        "Name": "uttarkashi",
+        "Category": "Mountains",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c255f"
+        },
+        "Code": "141587",
+        "Name": "vadodara",
+        "Category": "Cityscape",
+        "airport_code": "BDQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2560"
+        },
+        "Code": "148406",
+        "Name": "vagamon",
+        "Category": "Mountains",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2561"
+        },
+        "Code": "148407",
+        "Name": "vagator",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2562"
+        },
+        "Code": "107944",
+        "Name": "vaikom",
+        "Category": "Cityscape",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2563"
+        },
+        "Code": "140575",
+        "Name": "vainguinim beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2564"
+        },
+        "Code": "107210",
+        "Name": "vajrahalli",
+        "Category": "Cityscape",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2565"
+        },
+        "Code": "140593",
+        "Name": "vallikunnam",
+        "Category": "Nature",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2566"
+        },
+        "Code": "141615",
+        "Name": "vandanmedu",
+        "Category": "Nature",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2567"
+        },
+        "Code": "141147",
+        "Name": "vapi",
+        "Category": "Cityscape",
+        "airport_code": "STV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2568"
+        },
+        "Code": "141618",
+        "Name": "varanasi",
+        "Category": "Pilgrimage",
+        "airport_code": "VNS"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2569"
+        },
+        "Code": "141450",
+        "Name": "varca beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256a"
+        },
+        "Code": "141976",
+        "Name": "varkala",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256b"
+        },
+        "Code": "141980",
+        "Name": "vasai",
+        "Category": "Cityscape",
+        "airport_code": "BOM"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256c"
+        },
+        "Code": "107855",
+        "Name": "vasco da gama",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256d"
+        },
+        "Code": "148446",
+        "Name": "vayalar",
+        "Category": "Nature",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256e"
+        },
+        "Code": "141630",
+        "Name": "vazhoor",
+        "Category": "Nature",
+        "airport_code": "COK"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c256f"
+        },
+        "Code": "148450",
+        "Name": "velangani",
+        "Category": "Pilgrimage",
+        "airport_code": "TRZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2570"
+        },
+        "Code": "148459",
+        "Name": "vellore",
+        "Category": "Cityscape",
+        "airport_code": "MAA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2571"
+        },
+        "Code": "142295",
+        "Name": "velsao beach",
+        "Category": "Beach",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2572"
+        },
+        "Code": "142563",
+        "Name": "veraval",
+        "Category": "Cityscape",
+        "airport_code": "DIU"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2573"
+        },
+        "Code": "107957",
+        "Name": "verem",
+        "Category": "Cityscape",
+        "airport_code": "GOI"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2574"
+        },
+        "Code": "148500",
+        "Name": "vijayawada",
+        "Category": "Cityscape",
+        "airport_code": "VGA"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2575"
+        },
+        "Code": "142198",
+        "Name": "visakhapatnam",
+        "Category": "Cityscape",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2576"
+        },
+        "Code": "107390",
+        "Name": "vishakapatnam",
+        "Category": "Cityscape",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2577"
+        },
+        "Code": "141371",
+        "Name": "vizhinjam",
+        "Category": "Beach",
+        "airport_code": "TRV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2578"
+        },
+        "Code": "107391",
+        "Name": "vizianagaram",
+        "Category": "Cityscape",
+        "airport_code": "VTZ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2579"
+        },
+        "Code": "141391",
+        "Name": "vrindavan",
+        "Category": "Pilgrimage",
+        "airport_code": "AGR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257a"
+        },
+        "Code": "151612",
+        "Name": "vythiri",
+        "Category": "Nature",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257b"
+        },
+        "Code": "107703",
+        "Name": "wakad",
+        "Category": "Cityscape",
+        "airport_code": "PNQ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257c"
+        },
+        "Code": "107887",
+        "Name": "wandoor",
+        "Category": "Nature",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257d"
+        },
+        "Code": "141960",
+        "Name": "wankaner",
+        "Category": "Cityscape",
+        "airport_code": "RAJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257e"
+        },
+        "Code": "151614",
+        "Name": "warangal",
+        "Category": "Cityscape",
+        "airport_code": "HYD"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c257f"
+        },
+        "Code": "148630",
+        "Name": "wayanad",
+        "Category": "Nature",
+        "airport_code": "CCJ"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2580"
+        },
+        "Code": "143727",
+        "Name": "whitefield",
+        "Category": "Cityscape",
+        "airport_code": "BLR"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2581"
+        },
+        "Code": "143481",
+        "Name": "w\u00fcste thar",
+        "Category": "Desert",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2582"
+        },
+        "Code": "143639",
+        "Name": "yamunotri",
+        "Category": "Pilgrimage",
+        "airport_code": "DED"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2583"
+        },
+        "Code": "143798",
+        "Name": "yavatmal",
+        "Category": "Cityscape",
+        "airport_code": "NAG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2584"
+        },
+        "Code": "148767",
+        "Name": "yelagiri",
+        "Category": "Mountains",
+        "airport_code": "PYG"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2585"
+        },
+        "Code": "143329",
+        "Name": "yercaud",
+        "Category": "Mountains",
+        "airport_code": "SXV"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2586"
+        },
+        "Code": "150396",
+        "Name": "yuksom",
+        "Category": "Mountains",
+        "airport_code": "IXB"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2587"
+        },
+        "Code": "150387",
+        "Name": "zaribago",
+        "Category": "Mountains",
+        "airport_code": "ZER"
+    },
+    {
+        "_id": {
+            "$oid": "65a58e50a82ed9aa773c2588"
+        },
+        "Code": "150248",
+        "Name": "zirakpur",
+        "Category": "Cityscape",
+        "airport_code": "IXC"
+    }
+]

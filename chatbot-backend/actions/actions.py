@@ -8,6 +8,9 @@ import json
 from datetime import datetime, timedelta
 from functools import cmp_to_key
 import datetime as dt
+from pymongo import MongoClient
+
+# agra, hyderabad, bangalore, dehradun, lucknow, mysore, pune, surat, Bareilly, newyork, dublin, venice, melbourne, sydney, lakshadweep, Calicut, jaipur,
 
 city_codes = {'chandigarh': 114107, 'gangtok': 119221, 'goa': 119805, 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': 138673, 'udaipur': 140522, 'new delhi': 130443,'delhi': 130443, 'srinagar': 139456, 'mumbai': 144306, 'dubai': 115936, 'bali': 110670, 'singapore': 138703, 'thailand': 107167, 'tokyo': 148251, 'rio de janeiro': 134921, 'auckland': 109654, 'paris': 131408, 'melbourne': 127718, 'london': 126632, 'new york': 130452,'newyork': 130452, 'pondicherry': 150358, 'puri': 132593, 'port blair': 133556, 'daman': 116035, 'jaisalmer': 122326, 'leh': 125144, 'varanasi': 141618, 'banaras': 141618, 'dharamshala': 115880, 'meghalaya': 138670, 'shillong': 138670, 'kochi':101204, 'shirdi':137316, 'kolkata':113128, 'tirupati': 140311, 'amritsar': 101129, 'gaya':119358}
 
@@ -20,15 +23,12 @@ travel_type = {
 }
 
 budget_mapping = {
-    'low': ['OneStar','TwoStar'],
-    'low-mid': ['ThreeStar'],
-    'mid': ['FourStar'],
-    'high': ['FiveStar']
+    'economy': ['OneStar','TwoStar'],
+    'premium': ['ThreeStar', 'FourStar'],
+    'luxury': ['FiveStar']
 }
 
-airport_codes = {
-    'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'pondicherry': "PNY",  'port blair': "IXZ", 'daman': "NMB", "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK", 'gaya': "GAY", 'amritsar': "ATQ", 'kolkata':"CCU", 'tirupati': "TIR", 'shirdi': "SAG"
-}
+airport_codes = {'chandigarh': "IXC", 'gangtok': 119221, 'goa': "GOX", 'kasauli': 122950, 'ladakh': 150363, 'manali': 126388, 'munnar': 128573, 'nainital': 129726, 'shimla': "SLV", 'udaipur': "UDR", 'new delhi': "DEL",'delhi': "DEL", 'srinagar': "SXR", 'mumbai': "BOM", 'dubai': "DXB", 'bali': "BLC", 'singapore': "SIN", 'thailand': "BKK", 'tokyo': "HND", 'rio de janeiro': 134921, 'auckland': 109654, 'paris': "LBG", 'melbourne': 127718, 'london': "LHR", 'pondicherry': "PNY",  'port blair': "IXZ", 'daman': "NMB", "varanasi": "VNS", "banaras": "VNS","leh": "IXL", "dharamshala": "DHM", "meghalaya": "SHL", "shillong": "SHL", "kochi": "COK", 'gaya': "GAY", 'amritsar': "ATQ", 'kolkata':"CCU", 'tirupati': "TIR", 'shirdi': "SAG"}
 
 cities = ['chandigarh', 'goa', 'shimla', 'udaipur', 'new delhi','delhi', 'srinagar', 'mumbai', 'dubai' , 'bali', 'singapore', 'paris', 'melbourne', 'london', 'new york','newyork', 'pondicherry', 'port blair', 'daman', 'leh', 'varanasi', 'dharamshala', 'meghalaya', 'kochi', 'shirdi', 'kolkata', 'tirupati','amritsar','gaya']
 
@@ -110,7 +110,8 @@ class ValidateTravelForm(FormValidationAction):
     ) -> Dict[Text,Any]:
         """Validate `budget` value"""
         # print("i'm here3")
-        if slot_value.lower() not in ['low','low-mid','mid','high']:
+        print(slot_value)
+        if slot_value.lower() not in budget_mapping.keys():
             dispatcher.utter_message(text=f"Enter a valid budget, we only support 'low', 'low-mid', 'mid' and 'high'")
             return {"budget": None}
         else: 
@@ -158,7 +159,7 @@ class ActionFetchDetailsFromText(Action):
         print(text_entered)
         print(placename,placevalue,originname,originvalue,startdatename,startdatevalue,budgetname,budgetvalue,daysname,daysvalue)
         return [SlotSet(placename,placevalue), SlotSet(originname,originvalue), SlotSet(startdatename,startdatevalue), SlotSet(budgetname,budgetvalue), SlotSet(daysname,daysvalue)]
-
+    
 
 class ActionFetchHotels(Action):
     def name(self) -> Text:
@@ -172,6 +173,8 @@ class ActionFetchHotels(Action):
         current_time = now.strftime("%H:%M:%S")
         print("Current Time =", current_time)
         
+        
+
         destination = tracker.get_slot("place").lower()
         startDate = tracker.get_slot("startDate")
         budget = tracker.get_slot("budget").lower()
@@ -185,6 +188,23 @@ class ActionFetchHotels(Action):
         dest_city_code = city_codes[destination]
 
         print(destination,origin)
+
+        print("Fetching from mongodb")
+
+        client = MongoClient("mongodb://localhost:27017/")
+        db = client.tbo
+        collection = db.cities
+        destination_db_result = collection.find({"Name":  destination.lower()})
+        destination_details ={}
+        for document in destination_db_result:
+            destination_details = document
+
+        origin_db_result = collection.find({"Name": origin.lower()})
+        origin_details ={}
+        for document in origin_db_result:
+            origin_details = document
+        print(destination_details)
+        print(origin_details)
 
         def compare_hotels(h1, h2):
             rating1 = h1.get("HotelInfo").get("TripAdvisorRating")
@@ -231,8 +251,8 @@ class ActionFetchHotels(Action):
             "CheckIn": startDate,
             "CheckOut": last_day,
             "HotelCodes": "",
-            "CityCode": str(dest_city_code),
-            "CityName": destination.capitalize(),
+            "CityCode": destination_details["Code"],
+            "CityName": destination_details["Code"],
             "CountryName": "India",
             "GuestNationality": "IN",
             "PreferredCurrencyCode": "INR",
@@ -275,7 +295,7 @@ class ActionFetchHotels(Action):
 
         flight_body = {
             "EndUserIp": "192.168.10.10",
-            "TokenId": "d016816e-7ef4-4d76-9c48-667a7edd70b5",
+            "TokenId": "de37f9d4-60f2-4de5-b55e-2f4b5c857bfa",
             "AdultCount": "1",
             "ChildCount": "0",
             "InfantCount": "0",
@@ -285,15 +305,15 @@ class ActionFetchHotels(Action):
             "PreferredAirlines": None,
             "Segments": [
                 {
-                    "Origin": airport_codes[origin],
-                    "Destination": airport_codes[destination],
+                    "Origin": origin_details.get("airport_code"),
+                    "Destination": destination_details.get("airport_code"),
                     "FlightCabinClass": "1",
                     "PreferredDepartureTime": startDate + "T00: 00: 00",
                     "PreferredArrivalTime": startDate + "T00: 00: 00"
                 },
                 {
-                    "Origin": airport_codes[destination],
-                    "Destination": airport_codes[origin],
+                    "Origin": destination_details.get("airport_code"),
+                    "Destination": origin_details.get("airport_code"),
                     "FlightCabinClass": "1",
                     "PreferredDepartureTime": last_day + "T00: 00: 00",
                     "PreferredArrivalTime": last_day + "T00: 00: 00"

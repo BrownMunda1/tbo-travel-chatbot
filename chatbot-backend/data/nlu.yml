@@ -91,12 +91,12 @@ nlu:
     - want to travel
 - intent: inform
   examples: |
-    - i want to go to [kasauli](place) in [low](budget) from 
-    - i want to go on a trip to [kasauli](place) in [low](budget)
-    - i want to go to [kasauli](place) in [december](startDate) in [low](budget) for [4](days) from 
-    - i want to go to a trip in [december](startDate) in [low](budget) from 
-    - for [kasauli](place) in [december](startDate) in [low](budget)
-    - [kasauli](place) in [low](budget) for [4](days) from 
+    - i want to go to [kasauli](place) in [economy](budget) from 
+    - i want to go on a trip to [kasauli](place) in [economy](budget)
+    - i want to go to [kasauli](place) in [december](startDate) in [economy](budget) for [4](days) from 
+    - i want to go to a trip in [december](startDate) in [economy](budget) from 
+    - for [kasauli](place) in [december](startDate) in [economy](budget)
+    - [kasauli](place) in [economy](budget) for [4](days) from 
     - [shimla](place)
     - [delhi](place)
     - [new delhi](place)
@@ -138,9 +138,10 @@ nlu:
     - [2024-10-01](startDate)
     - [2024-11-01](startDate)
     - [2024-12-01](startDate)
-    - [low](budget)
-    - [mid](budget)
-    - [high](budget)
+    - [economy](budget)
+    - [standard](budget)
+    - [premium](budget)
+    - [luxury](budget)
     - [3](days)
     - [4](days)
     - [5](days)

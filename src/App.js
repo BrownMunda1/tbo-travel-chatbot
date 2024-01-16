@@ -11,8 +11,7 @@ import { OpenAI } from "openai";
 import Spinner from './components/Spinner';
 import ItineraryDetails from "./components/ItineraryDetails";
 import Basic from './components/Basic';
-
-
+import axios from 'axios';
 
 function App() {
   const [category, setCategory] = useState("");
@@ -30,7 +29,7 @@ function App() {
   const [itineraryData, setItineraryData] = useState();
 
   const [showBasic, setShowBasic] = useState(false);
-  
+
 
   useEffect(() => {
     setCategory("")
@@ -93,7 +92,7 @@ function App() {
     console.log(prompt);
 
     const client = new OpenAI({
-      apiKey: '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',
+      apiKey: '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',
       dangerouslyAllowBrowser: true
     });
     const completion = await client.chat.completions.create({
@@ -115,6 +114,47 @@ function App() {
   }
   const handleChatWithAI = (e) => {
     setShowBasic(true);
+    setShowItinerary(false);
+  }
+
+  const handleShit = async (e) => {
+    // const response = await GptResponse('hi tell me something about yourself strictly in json format');
+    console.log("here");
+    const payload = {
+      prompt: "hi tell me something about yourself strictly in json format",
+      // prompt: `Please create a detailed itinerary for a 5-day trip starting from 2024-03-19 to goa, starting from delhi and staying at Lalit Hotel for a adventure trip. Prioritize visiting places near the hotel first, and provide specific dining recommendations. Provide itinerary in the following json object form:
+
+      // const itinerary = {
+      
+      //  Day:1, //Daywise itinerary,
+      
+      //  PlacesToVisit: [/* Fill in the places to be included in itinerary*/],
+      
+      //  PlacesToEatNearby: [/* Provide with 2-3 cafe options */]
+      
+      // }`
+      // prompt: `Please create a detailed itinerary for a ${days}-day trip starting from ${startDate} to ${city}, starting from ${origin} and staying at ${hotel} for a ${travelPreference} trip. Prioritize visiting places near the hotel first, and provide specific dining recommendations. Provide itinerary in the following json object form:
+
+      // const itinerary = {
+      
+      //  Day:1, //Daywise itinerary,
+      
+      //  PlacesToVisit: [/* Fill in the places to be included in itinerary*/],
+      
+      //  PlacesToEatNearby: {/Provide with 2-3 cafe options/}
+      
+      // }`,
+    };
+    const authHeader = `Bearer chatgpt_HG7aGWVH2rSJ6y8WS0E4yo`;
+    const headers = {
+      Authorization: authHeader,
+    };
+
+    const response = await axios.post("https://cors-anywhere.herokuapp.com/https://ai.rnilaweera.ovh/api/v1/user/bard", payload, { headers });
+    const answer = JSON.parse(response.data.message);
+    console.log(answer,typeof(answer));
+    // const answer = response.data.message;
+    // console.log(answer,typeof(answer));
   }
 
   window.scrollTo({
@@ -125,7 +165,7 @@ function App() {
 
   return (
     <div>
-
+    <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleShit}>TEST AI</button>
       {loading && <Spinner />}
       {showModal && <DisplayDetails handleItinerary={handleItinerary} data={data} showItinerary={showItinerary} />}
 
@@ -153,7 +193,7 @@ function App() {
         </div>
       </div>}
       {showItinerary && <ItineraryDetails data={JSON.parse(itineraryData)} setShowItinerary={setShowItinerary} />}
-      {!showBasic && !showModal && <div className='flex justify-center items-center mt-3'>
+      {!showBasic && !showModal && !showItinerary && <div className='flex justify-center items-center mt-3'>
 
         <button className='h-fit w-fit max-w-[320px] p-3 border-gray-200 bg-[#3C9C61] rounded-lg dark:bg-gray-700' onClick={handleChatWithAI}>Chat with AI</button>
       </div>}

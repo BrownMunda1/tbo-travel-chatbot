@@ -4,7 +4,7 @@ export default function FlightCard({data}) {
     return (
         
         <div className="w-fit max-w-sm bg-white border border-gray-200 rounded-lg shadow sm:px-5 dark:bg-gray-800 dark:border-gray-700">
-            <h5 className="text-xl mt-2 font-bold text-black-500 dark:text-gray-400">{data['Segments'][0][0]['Origin']['Airport']['CityName']} - {data['Segments'][0][0]['Destination']['Airport']['CityName']}</h5>
+            <h5 className="text-xl mt-2 font-bold text-black-500 dark:text-gray-400">{data['Segments'][0][0]['Origin']['Airport']['CityName']} - {data['Segments'][0].at(-1)['Destination']['Airport']['CityName']}</h5>
             <div className="flex items-baseline text-gray-900 dark:text-white">
                 <span className="text-2xl font-semibold">₹</span>
                 <span className="text-3xl ml-1 font-extrabold tracking-tight">{data['Fare']['OfferedFare']}</span>

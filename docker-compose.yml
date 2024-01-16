@@ -1,0 +1,65 @@
+version: '3.9'
+services:
+  rasa-server-normal:
+    image: rasa/rasa:latest
+    working_dir: /app
+    build: "./chatbot-backend"
+    restart: always
+    volumes:
+      - ./:/app
+    command:  run --enable-api --cors "*" --model models/20231231-102135-quick-taco.tar.gz --port 5005
+    ports:
+      - '5005:5005'
+    networks:
+      - all
+
+  rasa-server-bot:
+    image: rasa/rasa:latest
+    working_dir: /app
+    build: "./chatbot-backend"
+    restart: always
+    volumes:
+      - ./:/app
+    command: run --enable-api --cors "*" --model models/20240102-094620-parallel-elevation.tar.gz --port 5006
+    ports:
+      - '5006:5006'
+    networks:
+      - all
+
+  rasa-actions-server:
+    image: rasa/rasa-sdk:latest
+    working_dir: /app
+    build: "./chatbot-backend"
+    restart: always
+    volumes:
+      - ./actions:/app/actions
+    command: run actions
+    ports:
+      - '5055:5055'
+    expose:
+      - 5055
+    networks:
+      - all
+
+  # change this
+  frontend:
+    image: rasa/rasa-sdk:latest
+    working_dir: /app
+    build: "./chatbot-backend"
+    restart: always
+    volumes:
+      - ./actions:/app/actions
+    command: run actions
+    ports:
+      - '3000:3000'
+    expose:
+      - 3000
+    networks:
+      - all
+
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"

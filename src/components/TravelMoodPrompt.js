@@ -11,7 +11,7 @@ function TravelMoodPrompt(props) {
         <>
             <QuePrompt question="What kind of travel experience are you looking for?" />
             {response === ""?<ListGroup type="travelMood" list={categories} setTravelMood={props.setTravelMood} setResponse={setResponse}/>:""}
-            {response === ""?"":<Response response={response}/>}
+            {response === ""?"":<Response response={response} setResponse={setResponse} edit="edit"/>}
         </>
     );
 }

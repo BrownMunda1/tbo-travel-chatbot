@@ -11,7 +11,7 @@ function BudgetPrompt(props) {
         <>
             <QuePrompt question="To help plan your ideal trip, could you please provide an estimated budget range for your journey?"/>
             {response === ""?<ListGroup type="budget" list={categories} setBudget={props.setBudget} setResponse={setResponse}/>:""}
-            {response === ""?"":<Response response={response}/>}
+            {response === ""?"":<Response response={response} setResponse={setResponse} edit="edit"/>}
         </>
     );
 }

@@ -11,7 +11,7 @@ export default function DaysPrompt(props) {
         <>
             <QuePrompt question="How many days are you planning to spend on your trip?" />
             {response === ""?<ListGroup type="days" list={categories} setDays={props.setDays} setResponse={setResponse}/>:""}
-            {response === ""?"":<Response response={response}/>}
+            {response === ""?"":<Response response={response} setResponse={setResponse} edit="edit"/>}
         </>
     );
 }

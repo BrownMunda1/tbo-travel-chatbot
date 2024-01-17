@@ -151,7 +151,7 @@ function App() {
     const payload = {
       prompt: prompt
     };
-    // const authHeader = `Bearer chatgpt_BFpXPpTVj1GvAqmdgJomJa`;
+    const authHeader = `Bearer chatgpt_BFpXPpTVj1GvAqmdgJomJa`;
     const headers = {
       Authorization: authHeader,
     };

@@ -130,12 +130,12 @@ function App() {
     console.log("departure", departureFlight);
     console.log("arrival", arrivalFlight);
     const prompt = 
-    `Please create a detailed itinerary for a ${days}-day trip starting from ${startDate} to ${city}, starting from ${origin} for a ${travelMood} trip. 
+    `Please create a detailed itinerary for a ${days}-day trip starting from ${startDate} to ${city}, for a ${travelMood} trip with a ${budget} budget.
     Here are our flights and hotel details:
     Departure Flight: ${JSON.stringify(departureFlight)},
     Hotel: ${JSON.stringify(hotel)},
     Arrival Flight: ${JSON.stringify(arrivalFlight)}
-    Prioritize visiting the best places near the hotel first, and provide specific dining recommendations. Also keep in mind the timings of the departure and arrival flights. Provide itinerary strictly in the following json object form:
+    Prioritize visiting the best places near the hotel first, and provide specific dining recommendations. Also keep in mind the timings of the departure and arrival flights. If possible give the best timings of visiting and the distance from the hotel along with the prices. Provide itinerary strictly in the following json object form:
     {[
      Day:1, //Daywise itinerary, preferably including the best timings 
 
@@ -144,17 +144,19 @@ function App() {
      PlacesToEatNearby: {/* Provide with 2-3 cafe options */}
     ],
     ...
-    }`
+    }
+    I'm saying again, I want the result to be only an JSON object, no intro and outro texts, and the JSON object should be strictly in the above mentioned format without bold text and without comments.
+    `
     console.log(prompt);
     const payload = {
       prompt: prompt
     };
-    const authHeader = `Bearer chatgpt_HG7aGWVH2rSJ6y8WS0E4yo`;
+    // const authHeader = `Bearer chatgpt_BFpXPpTVj1GvAqmdgJomJa`;
     const headers = {
       Authorization: authHeader,
     };
 
-    const response = await axios.post("https://cors-anywhere.herokuapp.com/https://ai.rnilaweera.ovh/api/v1/user/bard", payload, { headers });
+    const response = await axios.post("https://ankit-cors-anywhere.onrender.com/https://ai.rnilaweera.ovh/api/v1/user/bard", payload, { headers });
     console.log(response.data.message);
     const answer = JSON.parse(response.data.message);
     console.log(answer,typeof(answer));

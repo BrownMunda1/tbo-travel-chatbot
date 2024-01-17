@@ -5,7 +5,6 @@ export default function HotelCard({data, setHotel}) {
     const handleClick = () => {
         const hotel_info = {}
         hotel_info['Hotel Name'] = data['HotelInfo']['HotelName']
-        hotel_info['Hotel Description'] = data['HotelInfo']['HotelDescription']
         hotel_info['Hotel Address'] = data['HotelInfo']['HotelAddress']
         setHotel(hotel_info);
     }
